@@ -1,0 +1,19 @@
+{
+  "name": "memorandum-ai-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site memorandum-ai.com — conseil en IA pour les dirigeants de PME, avec l'IA en action.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "check:content": "node scripts/check-content.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "engines": {
+    "node": ">=18.18"
+  }
+}

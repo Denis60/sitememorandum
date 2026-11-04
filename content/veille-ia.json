@@ -1,0 +1,219 @@
+{
+  "messages": {
+    "1": "S’adapter vite",
+    "2": "Une opportunité, pas un boulet",
+    "3": "Un sujet de management",
+    "4": "Faire est facile, avoir des idées est difficile"
+  },
+  "days": [
+    {
+      "date": "2026-11-04",
+      "label": "Mercredi 4 novembre 2026",
+      "topics": [
+        {
+          "t": "« Botsitting » : superviser l’IA demande autant d’effort que former un nouveau",
+          "m": 3,
+          "ideas": [
+            "Six utilisateurs sur dix jugent qu’obtenir un bon travail de l’IA demande autant d’effort que former un nouveau salarié.",
+            "Les managers sont les plus touchés : 41 % passent au moins trois heures par semaine à superviser l’IA.",
+            "La pratique réduit ce coût : les utilisateurs quotidiens trouvent l’IA moins exigeante."
+          ],
+          "src": "Founder Reports, via KRDO",
+          "d": "3 novembre 2026",
+          "url": "https://krdo.com/stacker-ai/2026/11/03/most-workers-say-getting-good-work-from-ai-takes-as-much-effort-as-training-a-new-hire/"
+        },
+        {
+          "t": "Ce que l’on croit savoir sur l’IA périme en seize mois",
+          "m": 1,
+          "ideas": [
+            "Selon Stanford, 44 % des constats célèbres sur les limites des modèles ne sont plus vrais.",
+            "Ce que l’IA « ne sait pas faire » expire le plus vite ; ses biais de comportement persistent.",
+            "Ce que vous avez testé il y a un an doit être retesté : usages, interdits et formations compris."
+          ],
+          "src": "The Decoder",
+          "d": "3 novembre 2026",
+          "url": "https://the-decoder.com/rapid-llm-development-is-outrunning-the-research-meant-to-explain-it-study-finds/"
+        },
+        {
+          "t": "Une IA conçoit un objet électronique en moins d’une semaine",
+          "m": 4,
+          "ideas": [
+            "Boîtier, circuit et logiciel : prototyper un produit physique devient rapide et peu coûteux.",
+            "Plusieurs allers-retours restent nécessaires sur les contraintes de fabrication.",
+            "L’avantage se déplace vers la qualité de l’idée et la connaissance du client. Résultats annoncés par OpenAI, non vérifiés."
+          ],
+          "src": "The Decoder",
+          "d": "3 novembre 2026",
+          "url": "https://the-decoder.com/openai-says-gpt-6-astra-designed-a-hardware-device-from-scratch-in-under-a-week/"
+        },
+        {
+          "t": "Claude Code refuse désormais de cloner des jeux existants",
+          "m": 4,
+          "ideas": [
+            "Copier un produit existant n’a jamais été aussi facile avec l’IA.",
+            "La copie ne protège donc plus : l’idée originale fait la différence.",
+            "Imiter un concurrent avec l’IA expose à un risque juridique."
+          ],
+          "src": "The Decoder",
+          "d": "3 novembre 2026",
+          "url": "https://the-decoder.com/anthropic-cracks-down-on-game-cloning-in-claude-code-after-wave-of-ai-built-knockoffs/"
+        },
+        {
+          "t": "Le fisc cible ses contrôles avec l’IA",
+          "m": 1,
+          "ideas": [
+            "Environ un contrôle fiscal sur deux part désormais d’un signalement algorithmique.",
+            "Les déclarations sont croisées automatiquement avec des centaines de bases de données.",
+            "La cohérence de vos données devient un enjeu ; un agent humain valide tout redressement."
+          ],
+          "src": "Finactuel",
+          "d": "29 mai 2026",
+          "url": "https://finactuel.fr/controle-fiscal-intelligence-artificielle-fisc/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "label": "Mardi 3 novembre 2026",
+      "topics": [
+        {
+          "t": "Goldman Sachs retire les outils de code IA à ses non-informaticiens",
+          "m": 3,
+          "ideas": [
+            "Après des mois d’usage libre, les outils de code IA sont réservés aux ingénieurs.",
+            "L’exploration doit déboucher sur des règles : qui fabrique, qui valide, qui maintient.",
+            "Sans ce cadre, les prototypes deviennent un risque."
+          ],
+          "src": "The Decoder",
+          "d": "2 novembre 2026",
+          "url": "https://the-decoder.com/goldman-sachs-pulls-ai-coding-tools-from-traders-and-bankers/"
+        },
+        {
+          "t": "« Personne ne sait licencier un agent IA »",
+          "m": 3,
+          "ideas": [
+            "81 % des DSI n’ont pas de vue complète sur les agents créés hors des circuits officiels.",
+            "72 % ne savent pas vérifier si leurs agents produisent le résultat attendu.",
+            "Un agent se gère comme un collaborateur : une mission, un responsable, un coût suivi, une évaluation."
+          ],
+          "src": "Dataiku",
+          "d": "24 septembre 2026",
+          "url": "https://www.dataiku.com/company/news/global-ai-confessions-report-cio-edition-2026"
+        },
+        {
+          "t": "Anthropic : revenus multipliés par douze, perte de 23 milliards",
+          "m": 1,
+          "ideas": [
+            "Les fournisseurs d’IA vendent aujourd’hui à perte.",
+            "Les prix actuels ne dureront pas.",
+            "Construire des usages rentables même si la facture augmente, et garder la possibilité de changer de modèle."
+          ],
+          "src": "The Decoder",
+          "d": "2 novembre 2026",
+          "url": "https://the-decoder.com/anthropic-grows-revenue-twelvefold-but-posts-23-billion-loss/"
+        },
+        {
+          "t": "Agents IA : la fin de la récréation sur les coûts",
+          "m": 2,
+          "ideas": [
+            "Un agent consomme 4 à 15 fois plus qu’une simple conversation.",
+            "Les fournisseurs réduisent déjà leurs quotas.",
+            "Avant de lancer un agent, chiffrer son coût par tâche et le comparer au gain réel."
+          ],
+          "src": "The Decoder",
+          "d": "2 novembre 2026",
+          "url": "https://the-decoder.com/spacexsi-apparently-cuts-grok-bot-quotas-weeks-after-musk-called-it-his-fastest-growing-product/"
+        },
+        {
+          "t": "OVHcloud se lance dans les modèles d’IA",
+          "m": 2,
+          "ideas": [
+            "OVHcloud publiera son propre modèle en open source fin novembre.",
+            "L’offre d’IA européenne s’étoffe.",
+            "Un argument de plus pour garder ses données sensibles en Europe et ne pas dépendre d’un seul fournisseur."
+          ],
+          "src": "Presse-citron",
+          "d": "20 octobre 2026",
+          "url": "https://www.presse-citron.net/une-nouvelle-ia-francaise-arrive-fin-novembre-apres-mistral-cest-ovhcloud-qui-se-lance-dans-la-course/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-02",
+      "label": "Lundi 2 novembre 2026",
+      "topics": [
+        {
+          "t": "Microsoft propose le départ à 60 000 salariés",
+          "m": 1,
+          "ideas": [
+            "Un départ volontaire est proposé à un quart des salariés, équipes IA protégées.",
+            "Les grands groupes financent l’IA en réorientant les postes.",
+            "Pour une PME, la question est : quelles compétences faire monter en puissance ?"
+          ],
+          "src": "The Decoder",
+          "d": "31 octobre 2026",
+          "url": "https://the-decoder.com/microsoft-offers-a-quarter-of-its-workforce-voluntary-severance-while-shielding-ai-critical-teams/"
+        },
+        {
+          "t": "Proton voulait réévaluer ses salariés sur l’IA, puis recule",
+          "m": 3,
+          "ideas": [
+            "Imposer l’IA par la peur crée du rejet, chez les équipes comme chez les clients.",
+            "L’entreprise a annulé et reconnu un échec de communication.",
+            "L’adoption se pilote comme un projet de management : sens, formation, règles claires."
+          ],
+          "src": "404 Media",
+          "d": "30 octobre 2026",
+          "url": "https://www.404media.co/protons-ceo-cancels-ai-re-interviews/"
+        },
+        {
+          "t": "Les champions de l’IA s’épuisent",
+          "m": 3,
+          "ideas": [
+            "40 % des salariés les plus avancés sur l’IA disent que leur charge a augmenté.",
+            "79 % aident leurs collègues en plus de leur travail.",
+            "Reconnaître et organiser le rôle des référents IA, sous peine de les perdre."
+          ],
+          "src": "Journal du Geek",
+          "d": "31 octobre 2026",
+          "url": "https://www.journaldugeek.com/2026/10/31/maintenant-que-lia-est-la-ou-sont-nos-semaines-de-4-jours-et-le-repos-promis/"
+        },
+        {
+          "t": "Les textes de Claude seront marqués, AI Act oblige",
+          "m": 1,
+          "ideas": [
+            "Les contenus générés par IA deviennent détectables.",
+            "Mieux vaut assumer et encadrer l’usage de l’IA dans ses livrables que le cacher."
+          ],
+          "src": "The Decoder",
+          "d": "31 octobre 2026",
+          "url": "https://the-decoder.com/anthropics-watermark-rollout-leaves-a-loophole-on-two-older-claude-models/"
+        },
+        {
+          "t": "ChatGPT : fin de l’illimité, place au budget de jetons",
+          "m": 2,
+          "ideas": [
+            "Le coût de l’IA devient variable, comme une consommation.",
+            "Plus la tâche est complexe, plus le forfait s’épuise vite.",
+            "Suivre l’usage réel des équipes et choisir le bon modèle pour chaque tâche."
+          ],
+          "src": "The Decoder",
+          "d": "1er novembre 2026",
+          "url": "https://the-decoder.com/openais-upcoming-chat-and-work-merger-in-chatgpt-signals-the-end-of-all-you-can-prompt-pricing/"
+        },
+        {
+          "t": "Lire les prompts de ses salariés : ce que la loi permet",
+          "m": 3,
+          "ideas": [
+            "L’accès est possible de façon ciblée, nécessaire, transparente et proportionnée.",
+            "Une surveillance systématique, sans finalité ni information des salariés, est exclue.",
+            "Avant de contrôler, rédiger une charte IA : outils, usages, données interdites, accès aux historiques."
+          ],
+          "src": "Village de la Justice",
+          "d": "4 septembre 2026",
+          "url": "https://www.village-justice.com/articles/conversations-avec-chatgpt-claude-travail-quels-droits-pour-employeur-salarie,58877.html"
+        }
+      ]
+    }
+  ]
+}

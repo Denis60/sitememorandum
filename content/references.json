@@ -1,0 +1,113 @@
+{
+  "references": [
+    {
+      "enLigne": true,
+      "home": true,
+      "nom": "Eklalight",
+      "who": "Eklalight · grossiste en luminaires depuis 2014, TPE",
+      "titre": "Un assistant IA pour répondre aux cahiers des charges",
+      "big": "÷ 2 à 5",
+      "bigTxt": "le temps d’analyse d’un cahier des charges, selon sa complexité",
+      "probleme": "Pour chaque appel d’offres, il faut lire le cahier des charges technique, chercher les bons luminaires dans des catalogues très graphiques, puis chiffrer. Plusieurs heures par dossier : faute de capacité, l’entreprise renonçait à une partie des appels d’offres.",
+      "fait": [
+        "Deux approches extrêmes écartées : tout confier à une IA en une étape, ou structurer tous les catalogues.",
+        "Un prototype n8n avec un lexique métier et des instructions en français, testé sur 9 dossiers réels.",
+        "Un passage à Claude Cowork : l’expert dialogue avec l’IA et juge les propositions en un coup d’œil."
+      ],
+      "resultat": "Claude Cowork est installé et utilisé par l’équipe. Le savoir-faire de l’entreprise est désormais capitalisé.",
+      "cite": "Maintenant, la compétence de mon entreprise est un asset, valorisable.",
+      "msg": 2
+    },
+    {
+      "enLigne": true,
+      "home": true,
+      "nom": "Safran",
+      "who": "Safran Electronics & Defense · aéronautique",
+      "titre": "LooK, le copilote IA du retour d’expérience",
+      "probleme": "Un programme international de transferts industriels d’une taille inédite pour le groupe. Les premiers projets doivent sécuriser les suivants, mais le retour d’expérience était écrit en fin de projet, dans des formats hétérogènes.",
+      "fait": [
+        "Un cadrage avec la tour de contrôle, les chefs de projet et les experts.",
+        "Un démonstrateur : un agent IA dans Teams qui recueille incidents et bonnes pratiques, et répond aux questions des chefs de projet.",
+        "Une solution simple dans l’environnement Microsoft du client."
+      ],
+      "resultat": "Le concept et sa pertinence ont été validés en comité de pilotage.",
+      "cite": "En fait, ça marche.",
+      "msg": 3
+    },
+    {
+      "enLigne": true,
+      "nom": "Camaëlle",
+      "who": "Camaëlle · peintures décoratives biosourcées, PME",
+      "titre": "Automatiser et sécuriser la politique tarifaire",
+      "probleme": "Les prix vivent dans deux fichiers Excel, puis sont ressaisis à la main vers le site, les documents imprimés et les revendeurs, sans contrôle croisé.",
+      "fait": [
+        "Une démonstration : prix diffusés automatiquement vers le site, et vers les catalogues par un script que le graphiste contrôle.",
+        "Une analyse fine du processus avec chaque personne impliquée.",
+        "Une cible validée en atelier : une base de prix unique alimentée via Claude, des contrôles avant chaque diffusion."
+      ],
+      "resultat": "Mission en cours.",
+      "msg": 4
+    },
+    {
+      "enLigne": true,
+      "nom": "Hygie31",
+      "who": "Hygie31 · réseau de pharmacies",
+      "titre": "Un programme IA au service des pharmaciens adhérents",
+      "probleme": "« Qu’est-ce que l’IA peut apporter à la performance de notre réseau d’officines ? », avec une priorité aux bénéfices visibles par les pharmaciens.",
+      "fait": [
+        "Une idéation partie du métier : 20 entretiens, 7 projets retenus.",
+        "Un diagnostic du réseau à base d’IA prédictive, qui trouve pour chaque pharmacie ses propres leviers de performance.",
+        "Un bot de formation à la méthode de vente, en jeu de rôle, pour les équipes officinales."
+      ],
+      "resultat": "Le bot de formation a été utilisé avec beaucoup de succès à la convention annuelle des adhérents.",
+      "msg": 3
+    },
+    {
+      "enLigne": true,
+      "nom": null,
+      "who": "Économiste de la construction",
+      "titre": "Le compte rendu de chantier, de la dictée aux relances",
+      "probleme": "Des tâches documentaires lourdes et répétées : comptes rendus de chantier, dépouillement des consultations, contrôles des certificats de paiement.",
+      "fait": [
+        "Un diagnostic avec le dirigeant et des entretiens de l’équipe menés par l’intervieweur IA de Memorandum.",
+        "Un premier cas d’usage : la dictée sur chantier produit le compte rendu, tient le registre des points et prépare les relances.",
+        "Une compétence partagée par l’équipe, améliorée chaque semaine."
+      ],
+      "resultat": "Mission en cours, bilan prévu en décembre 2026.",
+      "msg": 4
+    },
+    {
+      "enLigne": true,
+      "nom": null,
+      "who": "Distribution spécialisée",
+      "titre": "La bonne offre pour chaque magasin",
+      "probleme": "Adapter l’assortiment d’environ 1 000 magasins à la vocation et à la performance de chacun.",
+      "fait": [
+        "Un référentiel de données sourcé : magasins, ventes, tickets de caisse, zones de chalandise.",
+        "Une segmentation du réseau en vocations, à partir des magasins les plus performants.",
+        "Un classement des références par groupe de magasins, livré dans des fichiers que les équipes merchandising savent lire."
+      ],
+      "resultat": "Assortiments revus, références retirées, chiffre d’affaires et rendement au m² en hausse.",
+      "cite": "On apprend chaque jour quelque chose.",
+      "msg": 2
+    },
+    {
+      "enLigne": false,
+      "nom": "Aubert & Duval",
+      "who": "Aubert & Duval · métallurgie",
+      "titre": "L’IA dans le quotidien des acheteurs",
+      "probleme": "",
+      "fait": [],
+      "resultat": ""
+    },
+    {
+      "enLigne": false,
+      "nom": "CID",
+      "who": "CID · informatique",
+      "titre": "Les collaborateurs proposent, l’IA met en forme, l’administrateur valide",
+      "probleme": "",
+      "fait": [],
+      "resultat": ""
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "sectors": [
+    {
+      "id": "coiffure",
+      "label": "Salons de coiffure",
+      "edition": "Rapport mensuel n° 4 · 4 octobre 2026",
+      "headline": "La recherche locale par IA devient réelle en France",
+      "scope": "Coiffure, beauté, services de proximité : salon indépendant ou petit réseau local. Des solutions applicables sous 3 à 12 mois, à budget raisonnable.",
+      "meta": "Période analysée : 20 août – 4 octobre 2026 · 10 signaux retenus",
+      "resume": [
+        "ChatGPT Maps est ouvert en France depuis fin septembre (fiches, avis, bouton d’appel) ; Google prépare Ask Maps, qui répondra à partir de la fiche du salon.",
+        "L’Observatoire FIDUCIAL 2026 fixe les repères : 6,6 visites par client et par an, ticket moyen de 42,70 €, une croissance absorbée par le temps du dirigeant.",
+        "La facturation électronique bute sur les données (rejets, annuaire, inscriptions inachevées) : pas de sanction en 2026, mais 2027 se prépare maintenant.",
+        "Prix unique à 21,90 € chez Coiff&Co, produits professionnels en grande distribution : la valeur se déplace vers la transparence tarifaire et la prescription."
+      ],
+      "recoLabel": "Recommandation",
+      "reco": "quatre actions à coût nul ce mois-ci : tester sa visibilité dans les IA, ouvrir les cartes cadeaux en ligne avant mi-novembre, contrôler sa facturation électronique, passer sa fiche Google en mode FAQ.",
+      "home": [
+        "ChatGPT Maps est ouvert ; Google prépare Ask Maps, qui répondra à partir de la fiche du salon.",
+        "La facturation électronique bute sur les données, pas sur les logiciels.",
+        "La valeur se déplace vers la transparence tarifaire et la prescription."
+      ],
+      "signals": [
+        [
+          "ChatGPT Maps disponible en France : la recherche de commerces de proximité devient conversationnelle",
+          "Acquisition"
+        ],
+        [
+          "Fiche Google : de l’outil de classement à la base de connaissances lue par Gemini",
+          "Acquisition"
+        ],
+        [
+          "Observatoire FIDUCIAL 2026 : la fréquence de visite remonte, le dirigeant absorbe la charge",
+          "Pilotage"
+        ],
+        [
+          "Facturation électronique, un mois après : les blocages viennent des données",
+          "Administratif"
+        ],
+        [
+          "Prix unique à 21,90 €, options à la carte, bornes en libre-service",
+          "Prix"
+        ],
+        [
+          "Produits professionnels en grande distribution : vers la vente de prescription",
+          "Vente additionnelle"
+        ],
+        [
+          "Cartes cadeaux et cures intégrées à la fiche client des outils de réservation",
+          "Fidélisation"
+        ],
+        [
+          "Agents vocaux : le prix d’entrée baisse, la réservation directe reste payante",
+          "Accueil"
+        ],
+        [
+          "Santé physique du dirigeant : la profession multiplie les dispositifs de prévention",
+          "Ressources humaines"
+        ],
+        [
+          "Essayage virtuel dans ChatGPT : les clientes arrivent avec une simulation de leur coupe",
+          "Conseil"
+        ]
+      ]
+    },
+    {
+      "id": "titres",
+      "label": "Services aux émetteurs / titres",
+      "edition": "Édition mensuelle n° 4 · 4 octobre 2026",
+      "headline": "Le registre de l’émetteur reste la source de vérité",
+      "scope": "Tenue de registre, services aux émetteurs et aux actionnaires, infrastructures de marché : IA et transformation du secteur.",
+      "meta": "Période analysée : 20 août – 4 octobre 2026 · 15 signaux retenus, dont 9 suivis depuis les éditions précédentes",
+      "resume": [
+        "Euronext Securities a mis en service le 24 septembre son modèle de dépositaire central européen, avec une émission gratuite pour les émetteurs.",
+        "Aux États-Unis, la SEC autorise la négociation d’actions tokenisées à condition qu’elles confèrent les mêmes droits, vote compris, avec droit d’opposition de l’émetteur.",
+        "Le modèle où le registre du teneur reste la source de vérité réunit plusieurs acteurs indépendants : il passe en tendance émergente.",
+        "En Europe, Pontes règle en monnaie de banque centrale depuis le 21 septembre ; l’ESMA demande un cadre pour les titres tokenisés."
+      ],
+      "recoLabel": "À suivre",
+      "reco": "la réunion de la coalition des titres tokenisés au NYSE le 27 octobre, le passage au règlement T+1 et la proposition de révision de la directive droits des actionnaires attendue au quatrième trimestre.",
+      "home": [
+        "Les régulateurs encadrent les titres tokenisés en préservant les droits de l’actionnaire.",
+        "Plusieurs acteurs indépendants convergent : tendance émergente.",
+        "Échéance proche : le passage au règlement T+1."
+      ],
+      "signals": [
+        [
+          "Mise en service du modèle de dépositaire central européen d’Euronext Securities",
+          "Cœur de métier · tendance confirmée"
+        ],
+        [
+          "SEC : exemption pour la négociation d’actions tokenisées, droits préservés",
+          "Régulation"
+        ],
+        [
+          "SEC : la blockchain comme fichier maître, sous contrôle exclusif du teneur de registre",
+          "Régulation · tendance émergente"
+        ],
+        [
+          "Une coalition pour des titres tokenisés reliés au registre de l’émetteur",
+          "Concurrence · tendance émergente"
+        ],
+        [
+          "Brésil : le registre officiel mis en miroir sur une blockchain publique",
+          "Infrastructure"
+        ],
+        [
+          "Corée : numérisation de bout en bout du vote des investisseurs internationaux",
+          "Assemblées générales"
+        ],
+        [
+          "Revue de MiCA : l’ESMA demande un cadre pour les titres tokenisés",
+          "Régulation"
+        ],
+        [
+          "Pontes : règlement en monnaie de banque centrale des transactions sur registre distribué",
+          "Infrastructure"
+        ],
+        [
+          "Règlement T+1 : l’échéance du 7 décembre 2026 maintenue",
+          "Échéance"
+        ],
+        [
+          "Directive droits des actionnaires : proposition attendue au quatrième trimestre",
+          "Régulation"
+        ]
+      ]
+    }
+  ]
+}
