@@ -1,13 +1,20 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
-// Adresse du webhook n8n qui reçoit les demandes (variable Netlify NEXT_PUBLIC_DIAG_WEBHOOK_URL).
-const WEBHOOK = process.env.NEXT_PUBLIC_DIAG_WEBHOOK_URL || '';
+// Service Diag IA (variables Netlify : NEXT_PUBLIC_DIAG_API_URL, NEXT_PUBLIC_TURNSTILE_SITE_KEY).
+const API = (process.env.NEXT_PUBLIC_DIAG_API_URL || 'https://diag-ia-backend.onrender.com').replace(/\/$/, '');
+const TURNSTILE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
+const CONTACT = 'denis.oblin@memorandum-ai.com';
 
-const PUBLIC_DOMAINS = ['gmail.com', 'googlemail.com', 'yahoo.fr', 'yahoo.com', 'hotmail.com', 'hotmail.fr', 'outlook.com', 'outlook.fr', 'live.fr', 'live.com', 'msn.com', 'orange.fr', 'wanadoo.fr', 'free.fr', 'sfr.fr', 'neuf.fr', 'laposte.net', 'icloud.com', 'me.com', 'gmx.fr', 'gmx.com', 'bbox.fr', 'aol.com', 'protonmail.com', 'proton.me'];
+const MSG_UNAVAILABLE = `Le service est momentanément indisponible. Réessayez dans quelques minutes ou écrivez à ${CONTACT}.`;
 
-function luhn(s) {
+function cleanSiren(v) {
+  return v.replace(/[\s.]/g, '');
+}
+
+function luhnOk(s) {
+  if (s === '356000000') return true; // La Poste
   let sum = 0;
   for (let i = 0; i < s.length; i++) {
     let d = +s[s.length - 1 - i];
@@ -17,65 +24,209 @@ function luhn(s) {
   return sum % 10 === 0;
 }
 
-export default function DiagForm() {
-  const [errors, setErrors] = useState({});
-  const [state, setState] = useState('idle'); // idle | sending | sent | failed
+function sirenValid(s) {
+  return /^\d{9}$/.test(s) && luhnOk(s);
+}
 
-  async function onSubmit(e) {
-    e.preventDefault();
-    const f = e.currentTarget;
-    const mail = f.mail.value.trim().toLowerCase();
-    const siren = f.siren.value.replace(/\s/g, '');
-    const dom = mail.split('@')[1] || '';
-    const err = {};
-    if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(mail)) err.mail = 'Saisissez une adresse e-mail complète, par exemple prenom.nom@entreprise.fr.';
-    else if (PUBLIC_DOMAINS.includes(dom)) err.mail = 'Utilisez votre adresse professionnelle : les messageries grand public ne sont pas acceptées.';
-    if (!/^\d{9}$/.test(siren)) err.siren = 'Le SIREN compte 9 chiffres.';
-    else if (!luhn(siren)) err.siren = 'Ce numéro n’est pas un SIREN valide : vérifiez les chiffres.';
-    if (!f.consent.checked) err.consent = 'Cochez la case pour accepter l’utilisation de vos données.';
-    setErrors(err);
-    if (Object.keys(err).length) return;
-    if (f.site.value) { setState('sent'); return; } // champ piège anti-robots
-    if (!WEBHOOK) { setState('failed'); return; }
-    setState('sending');
-    try {
-      const r = await fetch(WEBHOOK, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: mail, siren, consentement: true, source: 'site-memorandum-ai', date: new Date().toISOString() }),
+function readUtm() {
+  try {
+    const p = new URLSearchParams(window.location.search);
+    const utm = {};
+    for (const k of ['source', 'medium', 'campaign', 'term', 'content']) {
+      const v = p.get('utm_' + k);
+      if (v) utm[k] = v.slice(0, 200);
+    }
+    return Object.keys(utm).length ? utm : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+export default function DiagForm({ onDark }) {
+  const [errors, setErrors] = useState({});
+  const [phase, setPhase] = useState('idle'); // idle | sending | done
+  const [slow, setSlow] = useState(false);
+  const [notice, setNotice] = useState('');
+  const [success, setSuccess] = useState('');
+  const [company, setCompany] = useState(null); // { text, warn }
+  const tsRef = useRef(null);
+  const tsWidget = useRef(null);
+  const tsToken = useRef('');
+  const lookupSeq = useRef(0);
+
+  // Widget Cloudflare Turnstile (mode managed)
+  useEffect(() => {
+    if (!TURNSTILE_KEY) return undefined;
+    let cancelled = false;
+    function render() {
+      if (cancelled || !window.turnstile || !tsRef.current || tsWidget.current !== null) return;
+      tsWidget.current = window.turnstile.render(tsRef.current, {
+        sitekey: TURNSTILE_KEY,
+        language: 'fr',
+        callback: (t) => { tsToken.current = t; },
+        'expired-callback': () => { tsToken.current = ''; },
+        'error-callback': () => { tsToken.current = ''; },
       });
-      setState(r.ok ? 'sent' : 'failed');
+    }
+    if (window.turnstile) render();
+    else {
+      let s = document.getElementById('cf-turnstile-script');
+      if (!s) {
+        s = document.createElement('script');
+        s.id = 'cf-turnstile-script';
+        s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        s.async = true;
+        s.defer = true;
+        document.head.appendChild(s);
+      }
+      s.addEventListener('load', render);
+    }
+    return () => { cancelled = true; };
+  }, []);
+
+  function resetTurnstile() {
+    tsToken.current = '';
+    try { if (window.turnstile && tsWidget.current !== null) window.turnstile.reset(tsWidget.current); } catch { /* rien */ }
+  }
+
+  // Confirmation du nom d'entreprise (registre public), sans jamais bloquer l'envoi
+  async function lookup(raw) {
+    const siren = cleanSiren(raw);
+    const seq = ++lookupSeq.current;
+    if (!sirenValid(siren)) { setCompany(null); return; }
+    try {
+      const r = await fetch(`https://recherche-entreprises.api.gouv.fr/search?q=${siren}&per_page=1`);
+      const j = await r.json();
+      if (seq !== lookupSeq.current) return;
+      const e = (j.results || []).find((x) => x.siren === siren);
+      if (!e) { setCompany({ text: 'Entreprise non trouvée, vérifiez le SIREN', warn: true }); return; }
+      if (e.etat_administratif === 'C') { setCompany({ text: 'Cette entreprise est indiquée comme cessée', warn: true }); return; }
+      const ville = e.siege && (e.siege.libelle_commune || e.siege.commune);
+      setCompany({ text: `✓ ${e.nom_complet}${ville ? ' — ' + ville : ''}`, warn: false });
     } catch {
-      setState('failed');
+      if (seq === lookupSeq.current) setCompany({ text: 'Entreprise non trouvée, vérifiez le SIREN', warn: true });
     }
   }
 
+  async function onSubmit(e) {
+    e.preventDefault();
+    if (phase !== 'idle') return;
+    const f = e.currentTarget;
+    const email = f.email.value.trim().toLowerCase();
+    const siren = cleanSiren(f.siren.value);
+    const err = {};
+    if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(email)) err.email = 'Adresse e-mail invalide.';
+    if (!sirenValid(siren)) err.siren = 'SIREN invalide : 9 chiffres attendus.';
+    if (!f.consentement.checked) err.consentement = 'Merci de cocher la case de consentement.';
+    setErrors(err);
+    setNotice('');
+    if (Object.keys(err).length) return;
+
+    // Champ piège rempli : on n'envoie rien et on affiche le succès
+    if (f.website.value) {
+      setSuccess(successText(email));
+      setPhase('done');
+      return;
+    }
+
+    setPhase('sending');
+    setSlow(false);
+    const slowTimer = setTimeout(() => setSlow(true), 8000);
+    const ctrl = new AbortController();
+    const killTimer = setTimeout(() => ctrl.abort(), 60000);
+    const body = { email, siren, consentement: true, turnstile_token: tsToken.current, page: window.location.origin + window.location.pathname };
+    const utm = readUtm();
+    if (utm) body.utm = utm;
+
+    let status = 0;
+    let code = '';
+    try {
+      const r = await fetch(`${API}/v1/public/demandes`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+        signal: ctrl.signal,
+        credentials: 'omit',
+        referrerPolicy: 'strict-origin',
+      });
+      status = r.status;
+      try { code = (await r.json()).code || ''; } catch { code = ''; }
+    } catch {
+      status = 0;
+    } finally {
+      clearTimeout(slowTimer);
+      clearTimeout(killTimer);
+    }
+
+    if (status === 202 && code === 'confirmation_envoyee') {
+      setSuccess(successText(email));
+      setPhase('done');
+      return;
+    }
+
+    setPhase('idle');
+    setSlow(false);
+    if (status === 400 && code === 'email_invalide') setErrors({ email: 'Adresse e-mail invalide.' });
+    else if (status === 400 && code === 'siren_invalide') setErrors({ siren: 'SIREN invalide : 9 chiffres attendus.' });
+    else if (status === 400 && code === 'consentement_requis') setErrors({ consentement: 'Merci de cocher la case de consentement.' });
+    else if (status === 403 && code === 'captcha_invalide') { setNotice('Vérification anti-robot échouée, merci de réessayer.'); resetTurnstile(); }
+    else if (status === 404 && code === 'siren_inconnu') setErrors({ siren: 'Nous ne trouvons pas d’entreprise active avec ce SIREN.' });
+    else if (status === 429 && code === 'trop_de_demandes') setNotice(`Trop de demandes depuis votre connexion. Réessayez plus tard ou écrivez à ${CONTACT}.`);
+    else setNotice(MSG_UNAVAILABLE);
+    if (status !== 403) resetTurnstile();
+  }
+
   return (
-    <form className="panel" onSubmit={onSubmit} noValidate>
-      <h2 className="h3">Demander mon diagnostic</h2>
+    <form className="panel" onSubmit={onSubmit} noValidate aria-labelledby="diag-form-title">
+      <h2 className="h3" id="diag-form-title">Demander mon diagnostic IA</h2>
+
       <div className="field">
-        <label htmlFor="diag-mail">Adresse e-mail professionnelle</label>
-        <input id="diag-mail" name="mail" type="email" autoComplete="email" placeholder="prenom.nom@entreprise.fr" aria-invalid={!!errors.mail} aria-describedby="diag-mail-err" />
-        {errors.mail ? <span className="error" id="diag-mail-err">{errors.mail}</span> : null}
+        <label htmlFor="diag-email">E-mail professionnel</label>
+        <input id="diag-email" name="email" type="email" required autoComplete="email" placeholder="prenom.nom@entreprise.fr"
+          aria-invalid={!!errors.email} aria-describedby={errors.email ? 'diag-email-err' : undefined} disabled={phase === 'done'} />
+        {errors.email ? <span className="error" id="diag-email-err">{errors.email}</span> : null}
       </div>
+
       <div className="field">
         <label htmlFor="diag-siren">SIREN de l’entreprise</label>
-        <input id="diag-siren" name="siren" inputMode="numeric" autoComplete="off" placeholder="9 chiffres" aria-invalid={!!errors.siren} aria-describedby="diag-siren-hint diag-siren-err" />
-        <span className="hint" id="diag-siren-hint">Il figure sur vos factures et votre extrait Kbis.</span>
+        <input id="diag-siren" name="siren" type="text" required inputMode="numeric" autoComplete="off" placeholder="9 chiffres"
+          onChange={(e) => lookup(e.target.value)}
+          aria-invalid={!!errors.siren} aria-describedby={`diag-siren-hint diag-siren-co${errors.siren ? ' diag-siren-err' : ''}`} disabled={phase === 'done'} />
+        <span className="hint" id="diag-siren-hint">9 chiffres, sur votre Kbis ou sur annuaire-entreprises.data.gouv.fr</span>
+        <span className={company && company.warn ? 'hint warn' : 'hint ok'} id="diag-siren-co" aria-live="polite">{company ? company.text : ''}</span>
         {errors.siren ? <span className="error" id="diag-siren-err">{errors.siren}</span> : null}
       </div>
-      <div className="field" aria-hidden="true" style={{ position: 'absolute', left: '-9999px' }}>
-        <label htmlFor="diag-site">Ne pas remplir</label>
-        <input id="diag-site" name="site" tabIndex={-1} autoComplete="off" />
+
+      <div style={{ display: 'none' }} aria-hidden="true">
+        <label htmlFor="diag-website">Site web</label>
+        <input id="diag-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
-      <label className="check" htmlFor="diag-consent"><input id="diag-consent" name="consent" type="checkbox" /><span>J’accepte que mes données soient utilisées pour réaliser le diagnostic, selon la <Link href="/mentions-legales/">politique de confidentialité</Link>.</span></label>
-      {errors.consent ? <span className="error">{errors.consent}</span> : null}
-      <button className="btn primary" type="submit" disabled={state === 'sending'}>{state === 'sending' ? 'Envoi…' : 'Envoyer ma demande'}</button>
-      <div role="status" aria-live="polite">
-        {state === 'sent' ? <p className="notice ok">Demande reçue. Vous allez recevoir un e-mail pour confirmer votre adresse. Après validation, le lien vers l’entretien vous sera envoyé.</p> : null}
-        {state === 'failed' ? <p className="notice">La demande n’a pas pu être envoyée. Écrivez-nous à denis.oblin@memorandum-ai.com en indiquant votre entreprise.</p> : null}
+
+      <label className="check" htmlFor="diag-consentement">
+        <input id="diag-consentement" name="consentement" type="checkbox" required aria-describedby={errors.consentement ? 'diag-consent-err' : undefined} disabled={phase === 'done'} />
+        <span>J’accepte que Memorandum AI traite mon adresse e-mail et les informations publiques de mon entreprise pour réaliser le diagnostic demandé. Données conservées 6 mois au plus. <Link href="/mentions-legales/">Politique de confidentialité</Link></span>
+      </label>
+      {errors.consentement ? <span className="error" id="diag-consent-err">{errors.consentement}</span> : null}
+
+      {TURNSTILE_KEY ? <div ref={tsRef} className="turnstile" /> : null}
+
+      {phase !== 'done' ? (
+        <button className="btn primary" type="submit" disabled={phase === 'sending'}>
+          {phase === 'sending' ? 'Envoi en cours…' : 'Demander mon diagnostic IA'}
+        </button>
+      ) : null}
+
+      <div aria-live="polite" role="status">
+        {phase === 'sending' && slow ? <p className="small muted">Merci de patienter quelques secondes.</p> : null}
+        {success ? <p className="notice ok">{success}</p> : null}
+        {notice ? <p className="notice">{notice}</p> : null}
       </div>
+
       <p className="small muted">Vous préférez parler directement ? <Link className="link" href="/contact/">Prendre rendez-vous</Link></p>
     </form>
   );
+}
+
+function successText(email) {
+  return `Merci ! Un e-mail de confirmation vient de vous être envoyé à ${email}. Cliquez sur le lien qu’il contient pour lancer la préparation de votre diagnostic. Pensez à vérifier vos indésirables.`;
 }

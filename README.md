@@ -38,7 +38,7 @@ Le script `scripts/check-content.mjs` tourne avant chaque build. Il bloque la mi
 
 1. **Veille IA → site** (chaque jour, après la production de la veille) : lire le Google Doc « Veille IA – AAAA-MM-JJ », ignorer le bloc « Mode d'emploi vocal », extraire chaque sujet (titre, idées fortes, message lié, source), ajouter le jour en tête de `content/veille-ia.json` en gardant les 14 derniers jours, puis commit sur `main` via l'API GitHub.
 2. **Signaux faibles → site** (le 4 de chaque mois) : convertir le rapport du mois au format de `content/signaux-faibles.json` et remplacer le secteur concerné. Le secteur Uptevia est publié sous le nom « Services aux émetteurs / titres », sans citer Uptevia.
-3. **Diagnostic** : webhook n8n recevant `{ email, siren, consentement, source, date }`. Contrôles : SIREN dans l'API Recherche d'entreprises, mail de confirmation, plafond par entreprise, puis validation manuelle de Denis avant l'envoi du lien vers l'entretien (dispositif « automatisation diag ia »). L'adresse du webhook se règle dans Netlify : variable `NEXT_PUBLIC_DIAG_WEBHOOK_URL`, puis redéployer.
+3. **Diagnostic** : le formulaire appelle directement le service Diag IA (`POST {DIAG_API_URL}/v1/public/demandes`, voir `Denis60/diag-ia`). Variables Netlify : `NEXT_PUBLIC_DIAG_API_URL` (par défaut `https://diag-ia-backend.onrender.com`) et `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (clé de site Cloudflare Turnstile, publique). Aucun secret dans le site. Le backend doit autoriser l'origine du site dans `CORS_ALLOW_ORIGINS`.
 4. **Blog et références** : case « Publier sur le site » dans la base Airtable CRM → n8n met à jour `content/blog.json` ou `content/references.json`.
 
 ## Mise en ligne (Netlify + GitHub)

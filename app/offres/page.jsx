@@ -24,7 +24,7 @@ export default function Offres() {
               <li><strong>Bilan</strong> : pertinence, appropriation, coûts complets.</li>
             </ol>
           </div>
-          <div className="btns"><Link className="btn primary" href="/diagnostic/">Commencer par le diagnostic</Link><Link className="btn outline" href="/references/">Voir des missions réalisées</Link></div>
+          <div className="btns"><Link className="btn primary" href="/diagnostic-ia/">Commencer par le diagnostic</Link><Link className="btn outline" href="/references/">Voir des missions réalisées</Link></div>
         </div>
       </section>
     </>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NAV } from '../lib/site';
 
-const SECTION_OF = { 'veille-ia': 'ia-en-action', 'signaux-faibles': 'ia-en-action', diagnostic: 'ia-en-action' };
+const SECTION_OF = { 'veille-ia': 'ia-en-action', 'signaux-faibles': 'ia-en-action', 'diagnostic-ia': 'ia-en-action' };
 
 export default function Header() {
   const path = usePathname() || '/';
@@ -20,7 +20,8 @@ export default function Header() {
           {NAV.map((n) => (
             <Link key={n.key} href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</Link>
           ))}
-          <Link className="btn primary" href="/contact/" aria-current={current === 'contact' ? 'page' : undefined}>Prendre rendez-vous</Link>
+          <Link href="/contact/" aria-current={current === 'contact' ? 'page' : undefined}>Contact</Link>
+          <Link className="btn primary" href={path === '/' ? '#diagnostic' : '/diagnostic-ia/'}>Demander mon diagnostic IA</Link>
         </nav>
       </div>
     </header>

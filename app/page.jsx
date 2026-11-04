@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { DAYS, SECTORS, REFERENCES, ARTICLES, lowerFirst } from '../lib/site';
-import { Bullets, CaseCard, ArticleCard, MESSAGES_LIST, Steps } from '../components/Parts';
+import { Bullets, CaseCard, ArticleCard, MESSAGES_LIST } from '../components/Parts';
+import DiagSection from '../components/DiagSection';
 
 export default function Home() {
   const today = DAYS[0];
@@ -14,7 +15,7 @@ export default function Home() {
             <h1 className="h1">L’IA au service des dirigeants de PME. Concrète, utile, déjà à l’œuvre.</h1>
             <p className="lead">Memorandum accompagne votre entreprise de l’idée au nouveau processus qui tourne. Et le prouve ici même : veilles, analyses et diagnostic sont produits par l’IA, sous vos yeux.</p>
             <div className="btns">
-              <Link className="btn gold" href="/diagnostic/">Lancer mon diagnostic IA</Link>
+              <Link className="btn gold" href="#diagnostic">Demander mon diagnostic IA</Link>
               <Link className="btn ghost" href="/ia-en-action/">Voir l’IA en action</Link>
             </div>
           </div>
@@ -92,17 +93,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="band night">
-        <div className="wrap hero">
-          <div className="stack" style={{ gap: 20 }}>
-            <p className="eyebrow">Diagnostic IA gratuit</p>
-            <h2 className="h2">Laissez l’IA vous interviewer sur votre entreprise.</h2>
-            <p className="lead">Un entretien par chat, à votre rythme, puis une première synthèse restituée lors d’un rendez-vous gratuit.</p>
-            <div className="btns"><Link className="btn gold" href="/diagnostic/">Demander mon diagnostic</Link><Link className="btn ghost" href="/contact/">Prendre rendez-vous directement</Link></div>
-          </div>
-          <Steps />
-        </div>
-      </section>
+      <DiagSection />
 
       <section className="band">
         <div className="wrap stack lg">

@@ -14,7 +14,7 @@ export default function Contact() {
           <div className="card soft">
             <h2 className="h3">Ou laissez l’IA commencer</h2>
             <p className="muted">Le diagnostic IA prépare notre rendez-vous : vous arrivez avec une première synthèse sur votre entreprise.</p>
-            <Link className="btn primary" href="/diagnostic/" style={{ alignSelf: 'flex-start' }}>Demander mon diagnostic</Link>
+            <Link className="btn primary" href="/diagnostic-ia/" style={{ alignSelf: 'flex-start' }}>Demander mon diagnostic</Link>
           </div>
         </div>
       </section>
