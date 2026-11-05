@@ -52,6 +52,14 @@ export default function Agenda() {
   const [notice, setNotice] = useState('');
   const [confirme, setConfirme] = useState('');
   const tsRef = useRef(null);
+  // Au choix d'un créneau : la journée choisie remonte en haut de l'écran pour laisser voir le formulaire.
+  const choisir = (c, bouton) => {
+    setChoix(c);
+    const jour = bouton.closest('.agenda-jour');
+    if (!jour) return;
+    const doux = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    requestAnimationFrame(() => jour.scrollIntoView({ behavior: doux ? 'smooth' : 'auto', block: 'start' }));
+  };
   const ts = useTurnstile(tsRef);
 
   async function charger() {
@@ -121,7 +129,7 @@ export default function Agenda() {
             <p className="small" style={{ fontWeight: 600 }}>{cap(fmtJour.format(new Date(j.creneaux[0])))}</p>
             <div className="agenda-creneaux">
               {j.creneaux.map((c) => (
-                <button key={c} type="button" className={`chip${choix === c ? ' on' : ''}`} aria-pressed={choix === c} onClick={() => setChoix(c)}>
+                <button key={c} type="button" className={`chip${choix === c ? ' on' : ''}`} aria-pressed={choix === c} onClick={(e) => choisir(c, e.currentTarget)}>
                   {fmtHeure.format(new Date(c))}
                 </button>
               ))}
