@@ -54,26 +54,11 @@ export default function Home() {
 
       <section className="band tint">
         <div className="wrap stack lg">
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'end', gap: 16 }}>
-            <div className="stack" style={{ maxWidth: 720 }}><p className="eyebrow">Références</p><h2 className="h2">Des PME aux grands groupes industriels.</h2></div>
-            <Link className="link" href="/references/">Toutes les références →</Link>
-          </div>
-          <ul className="clients" aria-label="Clients">
-            {REFERENCES.filter((r) => r.nom).map((r) => <li key={r.nom}>{r.nom}</li>)}
-          </ul>
-          <div className="grid">
-            {REFERENCES.filter((r) => r.home).map((r) => <CaseCard key={r.titre} r={r} />)}
-          </div>
-        </div>
-      </section>
-
-      <section className="band">
-        <div className="wrap stack lg">
-          <div className="stack" style={{ maxWidth: 760 }}>
+          <div className="stack">
             <p className="eyebrow">L’IA en action</p>
-            <h2 className="h2">Ce que l’IA détecte ce mois-ci dans les secteurs suivis.</h2>
-            <p className="muted">Nous réalisons des veilles sectorielles continues : repérer les signaux faibles au fil de l’eau et en déduire des tendances. Voici trois exemples de suivi sectoriel : services aux émetteurs / titres, salons de coiffure et accompagnement IA.</p>
-            <p className="muted">Vous voulez ce type de suivi pour votre secteur ? <Link className="link" href="/contact/">Dites-le nous !</Link></p>
+            <h2 className="h2 one-line">Ce que l’IA détecte ce mois-ci dans les secteurs suivis.</h2>
+            <p className="muted" style={{ maxWidth: 760 }}>Nous réalisons des veilles sectorielles continues : repérer les signaux faibles au fil de l’eau et en déduire des tendances. Voici trois exemples variés de suivis sectoriels (dont le mien). Ces signaux faibles sont accumulés automatiquement chaque mois et alimentent une analyse plus profonde sur les tendances de transformation (exploitation des signaux des 6 ou 12 derniers mois).</p>
+            <p className="muted" style={{ maxWidth: 760 }}>Vous voulez ce type de suivi pour votre secteur ? <Link className="link" href="/contact/">Dites-le nous !</Link></p>
           </div>
           <div className="grid">
             {sectors.map((s) => (
@@ -88,12 +73,27 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="band">
+        <div className="wrap stack lg">
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'end', gap: 16 }}>
+            <div className="stack" style={{ maxWidth: 720 }}><p className="eyebrow">Références</p><h2 className="h2">Des PME aux grands groupes industriels.</h2></div>
+            <Link className="link" href="/references/">Toutes les références →</Link>
+          </div>
+          <ul className="clients" aria-label="Clients">
+            {REFERENCES.filter((r) => r.nom).map((r) => <li key={r.nom}>{r.nom}</li>)}
+          </ul>
+          <div className="grid">
+            {REFERENCES.filter((r) => r.home).map((r) => <CaseCard key={r.titre} r={r} />)}
+          </div>
+        </div>
+      </section>
+
       <DiagSection />
 
       <section className="band">
         <div className="wrap stack lg">
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'end', gap: 16 }}>
-            <div className="stack" style={{ maxWidth: 720 }}><p className="eyebrow">Blog</p><h2 className="h2">Une question de dirigeant par semaine.</h2></div>
+            <div className="stack" style={{ maxWidth: 720 }}><p className="eyebrow">Blog</p><h2 className="h2">Une réflexion continue, ouverte.</h2></div>
             <Link className="link" href="/blog/">Le blog →</Link>
           </div>
           <div className="grid">{[...PUBLISHED, ...UPCOMING].slice(0, 3).map((a) => <ArticleCard key={a.titre} a={a} />)}</div>

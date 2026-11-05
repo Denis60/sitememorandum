@@ -9,8 +9,8 @@ export default function Footer() {
         <span>{SITE.email} · {SITE.city}</span>
         <nav aria-label="Liens de pied de page">
           <Link href="/offres/">Offres</Link>
-          <Link href="/references/">Références</Link>
           <Link href="/ia-en-action/">L’IA en action</Link>
+          <Link href="/references/">Références</Link>
           <Link href="/blog/">Blog</Link>
           <Link href="/mentions-legales/">Mentions légales</Link>
         </nav>

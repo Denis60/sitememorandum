@@ -5,7 +5,7 @@ import { SITE } from '../lib/site';
 
 export const metadata = {
   metadataBase: new URL(SITE.url),
-  title: { default: 'Memorandum AI — l’IA au service des dirigeants de PME', template: '%s · Memorandum AI' },
+  title: { default: 'Memorandum AI — L’IA au cœur des PME', template: '%s · Memorandum AI' },
   description: 'Conseil, automatisation et intégration de l’IA pour les PME. Veille IA quotidienne, signaux faibles sectoriels et diagnostic IA gratuit.',
   openGraph: { type: 'website', locale: 'fr_FR', siteName: 'Memorandum AI', images: ['/logo.png'] },
   icons: { icon: '/logo-m.png' },

@@ -184,3 +184,5 @@ form.panel .link { color: var(--gold-text); }
 .hero-text { gap: 40px; padding-top: 40px; }
 .hero-text .h1 { line-height: 1.15; }
 @media (max-width: 720px) { .hero-text { gap: 28px; padding-top: 8px; } }
+
+@media (min-width: 1100px) { .h2.one-line { white-space: nowrap; } }
