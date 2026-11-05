@@ -17,6 +17,7 @@ export default function Home() {
               <Link className="btn gold" href="#diagnostic">Lancer le diagnostic personnalisé</Link>
               <Link className="btn ghost" href="/ia-en-action/">Voir l’IA en action</Link>
             </div>
+            <p className="hero-proof"><strong>÷ 2 à 5</strong><span>Analyse d’un cahier des charges 2 à 5 fois plus rapide, testée sur 9 dossiers réels — Eklalight. <Link className="link" href="/blog/analyser-cahier-des-charges-ia/">Lire le cas →</Link></span></p>
           </div>
           <div className="night-card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>

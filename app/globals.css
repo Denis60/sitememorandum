@@ -194,3 +194,7 @@ form.panel .link { color: var(--gold-text); }
 .head-photo { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
 .head-photo img { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--line); }
 @media (max-width: 720px) { .head-photo img { width: 96px; height: 96px; } }
+
+.hero-proof { display: flex; gap: 16px; align-items: center; max-width: 560px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.15); color: var(--on-night-muted); font-size: 15px; }
+.hero-proof strong { font-family: var(--font-head, inherit); font-size: 28px; color: var(--gold-on-night); white-space: nowrap; }
+.hero-proof .link { color: var(--gold-on-night); }
