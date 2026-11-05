@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import { DAYS, SECTORS, REFERENCES, ARTICLES, lowerFirst } from '../lib/site';
+import { DAYS, SECTORS, REFERENCES, ARTICLES, SITE, lowerFirst } from '../lib/site';
 import { Bullets, CaseCard, ArticleCard, MESSAGES_LIST } from '../components/Parts';
 import DiagSection from '../components/DiagSection';
 
 export default function Home() {
   const today = DAYS[0];
+  const ORDRE = ['titres', 'coiffure'];
+  const sectors = [...SECTORS].sort((a, b) => ORDRE.indexOf(a.id) - ORDRE.indexOf(b.id));
   const lastSector = SECTORS[0];
   return (
     <>
@@ -13,7 +15,7 @@ export default function Home() {
           <div className="stack" style={{ gap: 24 }}>
             <p className="fresh"><i aria-hidden="true"></i><span>Veille IA du {lowerFirst(today.label)} · Signaux faibles : {lowerFirst(lastSector.edition.split(' · ')[1])}</span></p>
             <h1 className="h1">L’IA au service des dirigeants de PME. Concrète, utile, déjà à l’œuvre.</h1>
-            <p className="lead">Memorandum accompagne votre entreprise de l’idée au nouveau processus qui tourne. Et le prouve ici même : veilles, analyses et diagnostic sont produits par l’IA, sous vos yeux.</p>
+            <p className="lead">Memorandum accompagne votre entreprise de l’idée au nouveau processus qui tourne.</p>
             <div className="btns">
               <Link className="btn gold" href="#diagnostic">Demander mon diagnostic IA</Link>
               <Link className="btn ghost" href="/ia-en-action/">Voir l’IA en action</Link>
@@ -73,10 +75,11 @@ export default function Home() {
           <div className="stack" style={{ maxWidth: 760 }}>
             <p className="eyebrow">L’IA en action</p>
             <h2 className="h2">Ce que l’IA détecte ce mois-ci dans les secteurs suivis.</h2>
-            <p className="muted">Chaque mois, un dispositif IA repère, source et classe les signaux faibles d’un secteur. Deux secteurs sont suivis à titre d’exemple.</p>
+            <p className="muted">Nous réalisons des veilles sectorielles continues : repérer les signaux faibles au fil de l’eau et en déduire des tendances. Voici trois exemples de suivi sectoriel : services aux émetteurs / titres, salons de coiffure et accompagnement IA.</p>
+            <p className="muted">Vous voulez ce type de suivi pour votre secteur ? <Link className="link" href="/contact/">Dites-le nous !</Link></p>
           </div>
           <div className="grid">
-            {SECTORS.map((s) => (
+            {sectors.map((s) => (
               <article className="card" key={s.id}>
                 <p className="small muted">{s.label} · {s.edition}</p>
                 <h3 className="h3">{s.headline}</h3>
@@ -85,9 +88,9 @@ export default function Home() {
               </article>
             ))}
             <article className="card soft">
-              <h3 className="h3">Et votre secteur ?</h3>
-              <p className="muted">Nous pouvons suivre votre secteur et vous présenter le premier rapport lors d’un rendez-vous gratuit.</p>
-              <Link className="btn primary" href="/contact/" style={{ alignSelf: 'flex-start' }}>Ajouter mon secteur</Link>
+              <p className="small muted">Accompagnement IA · premier rapport à venir</p>
+              <h3 className="h3">Accompagnement IA</h3>
+              <p className="muted">Ce suivi démarre : ses premiers signaux faibles seront publiés ici prochainement.</p>
             </article>
           </div>
         </div>
@@ -109,8 +112,13 @@ export default function Home() {
         <div className="wrap hero">
           <div className="stack">
             <p className="eyebrow">Qui je suis</p>
-            <h2 className="h2">Denis Oblin, consultant en data et intelligence artificielle</h2>
-            <p className="muted">De l’IA prédictive à l’IA générative, des transformations menées jusqu’au bout en entreprise. J’enseigne à Polytechnique et j’interviens en conférence, comme à Dataquitaine en 2025.</p>
+            <h2 className="h2"><a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">Denis Oblin</a></h2>
+            <ul className="bullets muted">
+              <li>Mastère spécialisé en IA à Télécom Paris et certificat « AI for Business » de l’École polytechnique</li>
+              <li>Enseignant en « AI Business Transformation » à l’Institut Polytechnique de Paris</li>
+              <li>Ambassadeur du programme <a className="link" href="https://www.economie.gouv.fr/actualites/osez-lia-un-plan-pour-diffuser-lia-dans-toutes-les-entreprises" target="_blank" rel="noopener noreferrer">Osez l’IA</a> du ministère de l’Économie</li>
+              <li>Cofondateur de Rendez-vous en terrain numérique (RTN), l’événement digital mensuel d’Angoulême : <a className="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdoK-db3MX8OSTDcKy6phXWfcXxs46Ox_xmTnMmXpevObmzaQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">inscrivez-vous</a></li>
+            </ul>
             <Link className="link" href="/a-propos/">En savoir plus →</Link>
           </div>
           <ol className="messages" aria-label="Quatre convictions">{MESSAGES_LIST.map((m) => <li key={m}>{m}</li>)}</ol>

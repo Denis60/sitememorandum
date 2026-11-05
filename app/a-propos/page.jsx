@@ -1,6 +1,8 @@
+import Link from 'next/link';
 import { PageHead } from '../../components/Parts';
+import { SITE } from '../../lib/site';
 
-export const metadata = { title: 'À propos', description: 'Denis Oblin, consultant en data et intelligence artificielle, enseignant à Polytechnique, basé à Cognac.', alternates: { canonical: '/a-propos/' } };
+export const metadata = { title: 'À propos', description: 'Denis Oblin, consultant en data et intelligence artificielle, enseignant à l’Institut Polytechnique de Paris, basé à Cognac.', alternates: { canonical: '/a-propos/' } };
 
 export default function APropos() {
   return (
@@ -9,9 +11,10 @@ export default function APropos() {
       <section className="band">
         <div className="wrap hero" style={{ alignItems: 'start' }}>
           <div className="stack">
-            <p>De l’IA prédictive à l’IA générative, j’ai mené des transformations jusqu’au bout en entreprise : modèles d’assortiment pour un réseau de distribution, diagnostic de performance d’un réseau de pharmacies, assistants IA pour une TPE comme pour un grand groupe industriel.</p>
-            <p>J’enseigne à Polytechnique. J’interviens aussi en conférence, comme à Dataquitaine en mars 2025 sur l’animation d’un réseau de distribution avec une IA sobre.</p>
+            <p>J’ai démarré dans le conseil en stratégie et organisation, puis exercé plusieurs années en direction opérationnelle dans la banque et l’assurance.</p>
+            <p>Depuis 2014, après un an de formation à Télécom Paris, je me consacre au conseil en transformation des entreprises par l’IA, prédictive puis générative.</p>
             <p>Basé à Cognac, j’interviens à Angoulême, Bordeaux, Toulouse, Paris et à distance.</p>
+            <p><Link className="btn primary" href="/contact/">Rencontrons-nous</Link> <a className="link" href={SITE.linkedin} target="_blank" rel="noopener noreferrer" style={{ marginLeft: 16 }}>Mon profil LinkedIn →</a></p>
           </div>
           <div className="stack">
             <h2 className="h3">Quatre convictions</h2>

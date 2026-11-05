@@ -2,8 +2,8 @@ import Link from 'next/link';
 import DiagSection from '../../components/DiagSection';
 
 export const metadata = {
-  title: 'Diagnostic de potentiel IA — offert',
-  description: 'En une semaine, nous identifions avec vos équipes les usages concrets de l’IA dans votre entreprise. Résultats présentés de vive voix par Denis Oblin.',
+  title: 'Analyse de potentiel IA par l’IA',
+  description: 'Notre agent IA dialogue avec vous et vos équipes, présente les innovations de votre secteur et analyse vos documents. Restitution de vive voix, rapport détaillé offert.',
   alternates: { canonical: '/diagnostic-ia/' },
 };
 

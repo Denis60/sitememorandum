@@ -52,6 +52,7 @@ p, ul, ol { margin: 0; }
 .btn.gold { background: var(--gold-btn); color: var(--night); }
 .btn.ghost { border-color: var(--on-night-muted); color: var(--on-night); background: transparent; }
 .btn.outline { border-color: var(--field); color: var(--ink); background: var(--bg); }
+.btn.icon { padding: 12px; min-width: 48px; }
 .btn:hover { filter: brightness(1.06); }
 .btns { display: flex; flex-wrap: wrap; gap: 12px; }
 .link { font-weight: 600; color: var(--gold-text); }
