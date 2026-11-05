@@ -4,7 +4,7 @@ import { PageHead } from '../../components/Parts';
 export const metadata = { title: 'Offres', description: 'Conseil et cadrage, automatisation et intégration de l’IA, transmission par l’exemple : comment se passe une mission Memorandum.', alternates: { canonical: '/offres/' } };
 
 const FAQ = [
-  ['Que deviennent nos données ?', 'Nous travaillons sur vos documents avec des offres professionnelles d’IA dont les fournisseurs s’engagent à ne pas entraîner leurs modèles sur vos données. Un accord de confidentialité peut être signé avant toute transmission de document.'],
+  ['Que deviennent nos données ?', 'Nos outils d’IA intègrent un accord de traitement des données (DPA), le chiffrement des données, la gestion des accès et l’authentification des utilisateurs, une procédure de gestion des incidents, et l’engagement que vos données ne servent pas à entraîner les modèles. Un accord de confidentialité peut aussi être signé avant toute transmission de document.'],
   ['Où sont hébergés les outils construits ?', 'De préférence dans vos propres environnements (Microsoft 365, Google Workspace, vos logiciels métier). Les modèles d’IA peuvent traiter les données hors de l’Union européenne : nous vous indiquons, pour chaque projet, où passent vos données et comment ces transferts sont encadrés.'],
   ['À qui appartient ce qui est construit ?', 'À vous. Consignes, workflows, documents et paramétrages vous sont remis et restent modifiables par votre équipe.'],
   ['Et après la mission, qui maintient l’outil ?', 'Vos équipes : elles ont construit le processus avec nous et savent le faire évoluer. Un accompagnement ponctuel peut être prévu, sur devis.'],
