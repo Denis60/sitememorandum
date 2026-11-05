@@ -44,7 +44,7 @@ export function ArticleCard({ a }) {
   return (
     <article className="card" style={{ borderTop: '3px solid var(--gold)', borderRadius: 0, borderLeft: 0, borderRight: 0, borderBottom: 0, padding: '20px 0 0' }}>
       <p className="small muted">{a.theme} · {a.statut === 'publie' ? a.date : 'à paraître'}</p>
-      <h3 style={{ fontSize: 20, fontWeight: 600 }}>{a.titre}</h3>
+      <h3 style={{ fontSize: 20, fontWeight: 600 }}>{a.statut === 'publie' && a.slug ? <Link href={`/blog/${a.slug}/`}>{a.titre}</Link> : a.titre}</h3>
       {a.accroche ? <p className="muted">{a.accroche}</p> : null}
     </article>
   );

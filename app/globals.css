@@ -173,3 +173,10 @@ form.panel .link { color: var(--gold-text); }
 .band.compact .stack { gap: 10px; }
 .band.compact .h1 { font-size: clamp(28px, 3.6vw, 40px); }
 .band.compact .lead { font-size: 17px; }
+
+.prose { display: flex; flex-direction: column; gap: 16px; line-height: 1.7; }
+.prose h2, .prose h3 { margin-top: 16px; font-weight: 600; }
+.prose h2 { font-size: 24px; } .prose h3 { font-size: 20px; }
+.prose ul, .prose ol { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
+.prose blockquote { border-left: 3px solid var(--gold); padding-left: 16px; color: var(--ink); font-style: italic; }
+.prose a { color: var(--gold-text); text-decoration: underline; }

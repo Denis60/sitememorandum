@@ -1,34 +1,40 @@
 {
   "articles": [
     {
-      "theme": "L’IA dans votre métier",
-      "titre": "Automatiser ses devis avec l’IA : par où commencer ?",
-      "statut": "a-paraitre"
-    },
-    {
       "theme": "Décider et piloter l’IA",
       "titre": "Par où commencer l’IA dans une PME ?",
-      "statut": "a-paraitre"
+      "statut": "a-paraitre",
+      "slug": "par-ou-commencer-ia-pme"
+    },
+    {
+      "theme": "L’IA dans votre métier",
+      "titre": "Automatiser ses devis avec l’IA : par où commencer ?",
+      "statut": "a-paraitre",
+      "slug": "automatiser-devis-ia"
     },
     {
       "theme": "Retours de terrain",
       "titre": "Analyser un cahier des charges avec l’IA",
-      "statut": "a-paraitre"
+      "statut": "a-paraitre",
+      "slug": "analyser-cahier-des-charges-ia"
     },
     {
       "theme": "Décider et piloter l’IA",
       "titre": "Combien coûte vraiment un agent IA ?",
-      "statut": "a-paraitre"
+      "statut": "a-paraitre",
+      "slug": "cout-agent-ia"
     },
     {
       "theme": "L’IA dans votre métier",
       "titre": "Préparer un compte rendu de chantier avec l’IA",
-      "statut": "a-paraitre"
+      "statut": "a-paraitre",
+      "slug": "compte-rendu-chantier-ia"
     },
     {
       "theme": "Décider et piloter l’IA",
       "titre": "Rédiger la charte IA de son entreprise",
-      "statut": "a-paraitre"
+      "statut": "a-paraitre",
+      "slug": "charte-ia-entreprise"
     }
   ]
 }
