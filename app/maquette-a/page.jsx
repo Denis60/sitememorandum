@@ -8,6 +8,7 @@ export default function MaquetteA() {
   return (
     <div className="mq mq-a">
       <section className="mq-hero-photo">
+        <div className="mq-hero-fond" aria-hidden="true" />
         <div className="mq-halo" aria-hidden="true" />
         <div className="wrap"><div className="stack hero-text">
           <Label>Conseil et intégration IA · Charente, Bordeaux, Toulouse, Paris</Label>
@@ -31,14 +32,14 @@ export default function MaquetteA() {
 
       <section className="band night">
         <div className="wrap stack lg">
-          <div className="stack" style={{ maxWidth: 760 }}><Label>Réalisations</Label><h2 className="h2">Des outils qui <em>tournent</em> chez nos clients.</h2><p className="muted">Construits avec les équipes, sur leurs vrais dossiers. Tout reste modifiable par le client.</p></div>
+          <div className="stack"><Label>Réalisations</Label><h2 className="h2">Des outils qui <em>tournent</em> chez nos clients.</h2><p className="muted">Construits avec les équipes, sur leurs vrais dossiers. Tout reste modifiable par le client.</p></div>
           <Realisations />
         </div>
       </section>
 
       <section className="band">
         <div className="wrap stack lg">
-          <div className="stack" style={{ maxWidth: 760 }}><Label>Ce que nous faisons</Label><h2 className="h2">De l’idée au processus qui tourne, <em>sans boîte noire</em>.</h2></div>
+          <div className="stack"><Label>Ce que nous faisons</Label><h2 className="h2">De l’idée au processus qui tourne, <em>sans boîte noire</em>.</h2></div>
           <div className="grid">
             <div className="card"><h3 className="h3">Conseil et cadrage</h3><p className="muted">Identifier où l’IA crée de la valeur dans votre métier, choisir le premier cas d’usage, décider en connaissant les coûts et les limites.</p></div>
             <div className="card"><h3 className="h3">Automatisation et intégration</h3><p className="muted">Construire avec vos équipes des assistants et des workflows qui s’appuient sur vos outils, vos documents et vos règles métier.</p></div>
@@ -58,14 +59,14 @@ export default function MaquetteA() {
 
       <section className="band">
         <div className="wrap stack lg">
-          <div className="stack" style={{ maxWidth: 760 }}><Label>Interventions et conférences</Label><h2 className="h2">Partager ce que <em>nous voyons</em> sur le terrain.</h2></div>
+          <div className="stack"><Label>Interventions et conférences</Label><h2 className="h2">Partager ce que <em>nous voyons</em> sur le terrain.</h2></div>
           <Interventions />
         </div>
       </section>
 
       <section className="band tint">
         <div className="wrap stack lg">
-          <div className="stack" style={{ maxWidth: 760 }}><Label>L’IA en action</Label><h2 className="h2">Notre IA analyse la transformation de secteurs d’activité <em>en continu</em>.</h2><p className="muted">Trois exemples variés de suivis sectoriels (dont le nôtre), alimentés automatiquement chaque mois.</p></div>
+          <div className="stack"><Label>L’IA en action</Label><h2 className="h2">Notre IA analyse la transformation de secteurs d’activité <em>en continu</em>.</h2><p className="muted">Trois exemples variés de suivis sectoriels (dont le nôtre), alimentés automatiquement chaque mois.</p></div>
           <Secteurs />
         </div>
       </section>

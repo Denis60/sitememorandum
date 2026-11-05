@@ -290,3 +290,22 @@ form.panel .link { color: var(--gold-text); }
 @keyframes mq-defile { to { transform: translateX(-100%); } }
 @media (prefers-reduced-motion: reduce) { .mq-halo, .mq-fil-ligne, .mq-fil-titre i { animation: none; } }
 @media (max-width: 720px) { .mq-fil { border-radius: 12px; flex-direction: column; align-items: flex-start; gap: 8px; } }
+/* Maquette A : pleine largeur, zoom lent du fond */
+.mq .wrap { max-width: 1440px; padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
+@media (max-width: 720px) { .mq .wrap { padding-left: 16px; padding-right: 16px; } }
+.mq .muted { max-width: 75ch; }
+.mq-a .mq-hero-photo .hero-text { max-width: 980px; }
+.mq-a .mq-hero-photo .h1 { font-size: clamp(36px, 5.2vw, 72px); line-height: 1.08; }
+.mq-a .mq-hero-photo .lead { font-size: clamp(18px, 1.5vw, 22px); }
+.mq-a .mq-chiffres { max-width: 1100px; }
+.mq-a .mq-hero-photo { background: none; min-height: calc(100vh - 74px); display: flex; flex-direction: column; justify-content: center; }
+.mq-hero-fond { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,20,40,.96) 0%, rgba(10,20,40,.88) 42%, rgba(10,20,40,.5) 72%, rgba(10,20,40,.3) 100%), url('/interventions/masterclass-upc-2026-11.jpg') center 30% / cover no-repeat; transform-origin: 70% 40%; animation: mq-zoom 28s ease-in-out infinite alternate; }
+@keyframes mq-zoom { from { transform: scale(1); } to { transform: scale(1.12); } }
+@media (max-width: 720px) { .mq-hero-fond { background: linear-gradient(rgba(10,20,40,.9), rgba(10,20,40,.9)), url('/interventions/masterclass-upc-2026-11.jpg') 70% 30% / cover no-repeat; } .mq-a .mq-hero-photo { min-height: 0; } }
+@media (prefers-reduced-motion: reduce) { .mq-hero-fond { animation: none; } }
+.mq-real { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); }
+.mq-frame img { height: 280px; }
+.mq-a .mq-hero-photo .hero-text { margin-left: 0; margin-right: auto; }
+.top .wrap, .foot .wrap { max-width: 1440px; padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
+@media (max-width: 720px) { .top .wrap, .foot .wrap { padding-left: 16px; padding-right: 16px; } }
+.mq-hero-photo > .wrap { width: 100%; }

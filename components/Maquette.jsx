@@ -14,6 +14,7 @@ export const CHIFFRES = [
 
 export const REALISATIONS = [
   { img: '/realisations/eklalight-cctp.jpg', qui: 'Eklalight · grossiste en luminaires', titre: 'Analyse de cahier des charges et devis', chip: 'En production', alt: 'Outil d’analyse de CCTP : besoins, références fournisseurs proposées, création du devis' },
+  { img: '/realisations/camaelle-prix-litre.jpg', qui: 'Camaëlle · peintures et finitions', titre: 'Positionnement prix face aux concurrents', chip: 'Analyse livrée', alt: 'Comparaison des prix au litre de 5 produits face à 21 produits concurrents', pos: 'top left' },
   { img: '/realisations/peinture-chiffrage.jpg', qui: 'Entreprise de peinture', titre: 'Chiffrage d’un lot sur plan', chip: 'Prototype', alt: 'Outil de chiffrage : repérage des surfaces sur plan, comparaison avec le DPGF' },
 ];
 
@@ -53,7 +54,7 @@ export function Realisations() {
     <div className="mq-real">
       {REALISATIONS.map((r) => (
         <figure key={r.img} className="mq-shot">
-          <div className="mq-frame"><span className="mq-dots" aria-hidden="true"><i /><i /><i /></span><img src={r.img} alt={r.alt} loading="lazy" /></div>
+          <div className="mq-frame"><span className="mq-dots" aria-hidden="true"><i /><i /><i /></span><img src={r.img} alt={r.alt} loading="lazy" style={r.pos ? { objectPosition: r.pos } : undefined} /></div>
           <figcaption><span className="mq-chip">{r.chip}</span><strong>{r.titre}</strong><span className="small muted">{r.qui}</span></figcaption>
         </figure>
       ))}
