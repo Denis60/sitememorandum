@@ -56,8 +56,8 @@ export default function Home() {
         <div className="wrap stack lg">
           <div className="stack">
             <p className="eyebrow">L’IA en action</p>
-            <h2 className="h2 one-line">Ce que l’IA détecte ce mois-ci dans les secteurs suivis.</h2>
-            <p className="muted" style={{ maxWidth: 760 }}>Nous réalisons des veilles sectorielles continues : repérer les signaux faibles au fil de l’eau et en déduire des tendances. Voici trois exemples variés de suivis sectoriels (dont le mien). Ces signaux faibles sont accumulés automatiquement chaque mois et alimentent une analyse plus profonde sur les tendances de transformation (exploitation des signaux des 6 ou 12 derniers mois).</p>
+            <h2 className="h2">Notre IA analyse la transformation de secteurs d’activité en continu. Voici des exemples.</h2>
+            <p className="muted" style={{ maxWidth: 760 }}>Nous réalisons des veilles sectorielles continues : repérer les signaux faibles au fil de l’eau et en déduire des tendances. Voici trois exemples variés de suivis sectoriels (dont le nôtre). Ces signaux faibles sont accumulés automatiquement chaque mois et alimentent une analyse plus profonde sur les tendances de transformation (exploitation des signaux des 6 ou 12 derniers mois).</p>
             <p className="muted" style={{ maxWidth: 760 }}>Vous voulez ce type de suivi pour votre secteur ? <Link className="link" href="/contact/">Dites-le nous !</Link></p>
           </div>
           <div className="grid">
@@ -76,7 +76,7 @@ export default function Home() {
       <section className="band">
         <div className="wrap stack lg">
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'end', gap: 16 }}>
-            <div className="stack" style={{ maxWidth: 720 }}><p className="eyebrow">Références</p><h2 className="h2">Des PME aux grands groupes industriels.</h2></div>
+            <div className="stack"><p className="eyebrow">Références</p><h2 className="h2 one-line">Des PME aux grands groupes industriels.</h2></div>
             <Link className="link" href="/references/">Toutes les références →</Link>
           </div>
           <ul className="clients" aria-label="Clients">
