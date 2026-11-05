@@ -190,3 +190,7 @@ form.panel .link { color: var(--gold-text); }
 .agenda-jour { scroll-margin-top: 16px; }
 
 .band:not(.night) form.panel { border: 1px solid var(--line); border-radius: 12px; }
+
+.head-photo { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.head-photo img { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--line); }
+@media (max-width: 720px) { .head-photo img { width: 96px; height: 96px; } }

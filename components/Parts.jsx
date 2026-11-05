@@ -11,13 +11,15 @@ export function Source({ s }) {
   );
 }
 
-export function PageHead({ eyebrow, title, lead, crumb, night, compact, children }) {
+export function PageHead({ eyebrow, title, lead, crumb, night, compact, photo, children }) {
   return (
     <section className={`band ${night ? 'night' : 'tint'}${compact ? ' compact' : ''}`}>
       <div className="wrap stack">
         {crumb ? <p className="small muted"><Link href="/ia-en-action/">L’IA en action</Link> › {crumb}</p> : null}
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h1 className="h1">{title}</h1>
+        {photo ? (
+          <div className="head-photo"><h1 className="h1">{title}</h1><img src={photo.src} alt={photo.alt} width="132" height="132" /></div>
+        ) : <h1 className="h1">{title}</h1>}
         {lead ? <p className="lead">{lead}</p> : null}
         {children}
       </div>

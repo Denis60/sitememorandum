@@ -7,7 +7,7 @@ export const metadata = { title: 'À propos', description: 'Denis Oblin, consult
 export default function APropos() {
   return (
     <>
-      <PageHead eyebrow="À propos" title="Denis Oblin" lead="Consultant indépendant en data et intelligence artificielle, fondateur de Memorandum AI." />
+      <PageHead eyebrow="À propos" title="Denis Oblin" photo={{ src: '/denis-oblin.jpg', alt: 'Portrait de Denis Oblin' }} lead="Consultant indépendant en data et intelligence artificielle, fondateur de Memorandum AI." />
       <section className="band">
         <div className="wrap hero" style={{ alignItems: 'start' }}>
           <div className="stack">
