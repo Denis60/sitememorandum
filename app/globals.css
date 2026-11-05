@@ -330,3 +330,11 @@ form.panel .link { color: var(--gold-text); }
 .mq-a .mq-hero-photo .mq-fil { margin-top: 0; margin-bottom: 4px; max-width: 760px; padding: 8px 14px; }
 .mq-a .mq-hero-photo .mq-chiffres { width: min(1200px, calc(100vw - 64px)); }
 @media (max-width: 720px) { .mq-a .mq-hero-photo .mq-chiffres { width: auto; } }
+
+/* Bandeau de veille : pleine largeur, collé en bas de l'écran tant que le premier écran est visible */
+.mq-a .mq-hero-photo { padding-bottom: 0; }
+.mq-hero-contenu { padding-bottom: 40px; }
+.mq-fil-bande { position: sticky; bottom: 0; z-index: 2; margin-top: auto; width: 100%; background: rgba(8,16,32,.82); backdrop-filter: blur(8px); border-top: 1px solid rgba(255,255,255,.12); }
+.mq-fil-bande .mq-fil { margin: 0; max-width: none; border: 0; border-radius: 0; background: none; backdrop-filter: none; padding: 14px 0; font-size: 15px; }
+@media (max-width: 720px) { .mq-fil-bande .mq-fil { flex-direction: row; align-items: center; } }
+.mq-hero-photo { overflow: clip; }
