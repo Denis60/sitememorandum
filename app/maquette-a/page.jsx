@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import DiagSection from '../../components/DiagSection';
-import { Label, Chiffres, Realisations, Interventions, VeilleSemaine, Secteurs, Cas, Articles, Clients, SEMAINE, SITE } from '../../components/Maquette';
+import { Label, Chiffres, FilVeille, Realisations, Interventions, VeilleSemaine, Secteurs, Cas, Articles, Clients, SEMAINE, SITE } from '../../components/Maquette';
 
 export const metadata = { title: 'Maquette A — cabinet sobre', robots: { index: false, follow: false } };
 
@@ -8,6 +8,7 @@ export default function MaquetteA() {
   return (
     <div className="mq mq-a">
       <section className="mq-hero-photo">
+        <div className="mq-halo" aria-hidden="true" />
         <div className="wrap"><div className="stack hero-text">
           <Label>Conseil et intégration IA · Charente, Bordeaux, Toulouse, Paris</Label>
           <h1 className="h1">Intégrez l’IA <em>maintenant</em>, en profondeur, durablement.</h1>
@@ -18,6 +19,7 @@ export default function MaquetteA() {
           </div>
           <Chiffres dark />
         </div></div>
+        <div className="wrap"><FilVeille /></div>
       </section>
 
       <section className="band">

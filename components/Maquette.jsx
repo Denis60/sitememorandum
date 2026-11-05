@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { SEMAINE, SECTORS, REFERENCES, PUBLISHED, UPCOMING, SITE } from '../lib/site';
 import { Bullets, CaseCard, ArticleCard } from './Parts';
+import CompteurChiffres from './CompteurChiffres';
 
 // Blocs partagés par les deux maquettes de la page d'accueil (refonte de l'interface, novembre 2026).
 
@@ -28,10 +29,22 @@ export function Label({ children }) {
 }
 
 export function Chiffres({ dark }) {
+  return <CompteurChiffres items={CHIFFRES} dark={dark} />;
+}
+
+// Bandeau discret de la veille de la semaine, en bas du premier écran.
+export function FilVeille() {
+  const sujets = SEMAINE.topics.slice(0, 3);
+  const ligne = (cle) => (
+    <span className="mq-fil-ligne" key={cle} aria-hidden={cle === 'b' ? 'true' : undefined}>
+      {sujets.map((s) => (<a key={cle + s.t} href="/veille-ia/" tabIndex={cle === 'b' ? -1 : undefined}>{s.t}</a>))}
+    </span>
+  );
   return (
-    <dl className={`mq-chiffres${dark ? ' dark' : ''}`}>
-      {CHIFFRES.map((c) => (<div key={c.l}><dt>{c.v}</dt><dd>{c.l}</dd></div>))}
-    </dl>
+    <div className="mq-fil">
+      <span className="mq-fil-titre"><i aria-hidden="true" /> Veille IA de la semaine</span>
+      <div className="mq-fil-defile">{ligne('a')}{ligne('b')}</div>
+    </div>
   );
 }
 

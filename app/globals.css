@@ -273,3 +273,20 @@ form.panel .link { color: var(--gold-text); }
 .mq-night2 { border-top: 1px solid rgba(255,255,255,.08); }
 .mq-hero-shot .mq-frame img { height: 360px; }
 @media (max-width: 720px) { .mq-hero-photo { padding-block: 64px 56px; background: linear-gradient(rgba(10,20,40,.9), rgba(10,20,40,.9)), url('/interventions/masterclass-upc-2026-11.jpg') 70% 30% / cover no-repeat; } }
+/* Animations légères de la maquette A */
+.mq-hero-photo { overflow: hidden; }
+.mq-hero-photo > .wrap { position: relative; z-index: 1; }
+.mq-halo { position: absolute; inset: -20%; pointer-events: none; background: radial-gradient(600px 380px at 30% 40%, rgba(226,188,94,.16), transparent 70%); animation: mq-halo 14s ease-in-out infinite alternate; }
+@keyframes mq-halo { from { transform: translate(-6%, -4%); } to { transform: translate(14%, 8%); } }
+.mq-fil { margin-top: 56px; display: flex; align-items: center; gap: 16px; padding: 12px 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; background: rgba(10,20,40,.55); backdrop-filter: blur(6px); font-size: 14px; overflow: hidden; }
+.mq-fil-titre { display: inline-flex; align-items: center; gap: 8px; flex: none; font-weight: 600; color: var(--gold-on-night); }
+.mq-fil-titre i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold-on-night); box-shadow: 0 0 0 0 rgba(226,188,94,.6); animation: mq-pouls 2s infinite; }
+@keyframes mq-pouls { 70% { box-shadow: 0 0 0 8px rgba(226,188,94,0); } 100% { box-shadow: 0 0 0 0 rgba(226,188,94,0); } }
+.mq-fil-defile { display: flex; overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.mq-fil-ligne { display: flex; flex: none; gap: 40px; padding-right: 40px; animation: mq-defile 40s linear infinite; }
+.mq-fil:hover .mq-fil-ligne { animation-play-state: paused; }
+.mq-fil-ligne a { color: var(--on-night); text-decoration: none; white-space: nowrap; }
+.mq-fil-ligne a:hover { text-decoration: underline; }
+@keyframes mq-defile { to { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) { .mq-halo, .mq-fil-ligne, .mq-fil-titre i { animation: none; } }
+@media (max-width: 720px) { .mq-fil { border-radius: 12px; flex-direction: column; align-items: flex-start; gap: 8px; } }
