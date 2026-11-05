@@ -205,7 +205,7 @@ export default function DiagForm({ onDark }) {
 
   return (
     <form className="panel" onSubmit={onSubmit} noValidate aria-labelledby="diag-form-title">
-      <h2 className="h3" id="diag-form-title">Demander mon diagnostic IA</h2>
+      <h2 className="h3" id="diag-form-title">Lancer le diagnostic personnalisé</h2>
 
       <div className="field">
         <label htmlFor="diag-email">E-mail professionnel</label>
@@ -254,7 +254,7 @@ export default function DiagForm({ onDark }) {
 
       {phase !== 'done' ? (
         <button className="btn primary" type="submit" disabled={phase === 'sending'}>
-          {phase === 'sending' ? 'Envoi en cours…' : 'Demander mon diagnostic IA'}
+          {phase === 'sending' ? 'Envoi en cours…' : 'Lancer le diagnostic personnalisé'}
         </button>
       ) : null}
 
