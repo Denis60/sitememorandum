@@ -13,9 +13,8 @@ export default function Contact() {
         <div className="wrap stack lg">
           <div className="card">
             <h2 className="h3">Choisir un créneau</h2>
-            <p className="muted">Mes disponibilités, à jour en temps réel : la réservation crée directement l’invitation Teams.</p>
-            <iframe className="agenda" src={SITE.bookings} title="Prendre rendez-vous avec Denis Oblin" loading="lazy" />
-            <a className="link small" href={SITE.bookings} target="_blank" rel="noopener noreferrer">L’agenda ne s’affiche pas ? Ouvrir la page de réservation →</a>
+            <p className="muted">Mes disponibilités sont à jour en temps réel, du lundi au vendredi entre 8 h et 19 h. La réservation vous envoie directement l’invitation Teams.</p>
+            <a className="btn primary" href={SITE.bookings} target="_blank" rel="noopener noreferrer" style={{ alignSelf: 'flex-start' }}>Voir mes disponibilités</a>
           </div>
         </div>
       </section>

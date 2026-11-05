@@ -164,5 +164,3 @@ form.panel .link { color: var(--gold-text); }
 .hint:empty { display: none; }
 .turnstile { min-height: 65px; }
 
-.agenda { width: 100%; height: 760px; border: 1px solid var(--field); border-radius: 8px; background: var(--bg); }
-@media (max-width: 640px) { .agenda { height: 900px; } }
