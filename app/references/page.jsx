@@ -14,6 +14,7 @@ export default function References() {
               <div className="stack">
                 <p className="small muted">{r.who}</p>
                 {r.statut ? <span className={`statut ${STATUT_CLASSE[r.statut] || ''}`}>{r.statut}</span> : null}
+                {r.calendrier ? <p className="small muted"><strong>Calendrier :</strong> {r.calendrier}</p> : null}
                 <h2 className="h3" style={{ fontSize: 24 }}>{r.titre}</h2>
                 {r.big ? (<><p className="big">{r.big}</p><p className="muted">{r.bigTxt}</p></>) : null}
                 {r.cite ? <blockquote>« {r.cite} »</blockquote> : null}

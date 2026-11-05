@@ -17,7 +17,8 @@
       "resultat": "Claude Cowork est installé et utilisé par l’équipe. Le savoir-faire de l’entreprise est désormais capitalisé.",
       "cite": "Maintenant, la compétence de mon entreprise est un asset, valorisable.",
       "msg": 2,
-      "statut": "Résultat obtenu"
+      "statut": "Résultat obtenu",
+      "calendrier": "Démarrage en janvier 2026 : 2 mois pour valider la pertinence (d’abord une piste d’automatisation complète avec n8n, puis une réponse assistée par l’IA, retenue), puis 2 mois de déploiement et de formation. Accompagnement poursuivi à la demande."
     },
     {
       "enLigne": true,
