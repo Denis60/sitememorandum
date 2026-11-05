@@ -65,7 +65,7 @@ export function Realisations() {
 export function Interventions() {
   return (
     <div className="mq-interv">
-      <img src="/interventions/masterclass-upc-2026-11.jpg" alt="Denis Oblin lors de la masterclass IA de l’Union Patronale de la Charente, novembre 2026" loading="lazy" />
+      <img src="/interventions/table-ronde-prefecture-2026-11.jpg" alt="Denis Oblin, micro en main, lors de la table ronde « Sécurité économique et IA » organisée par la préfecture de la Charente, novembre 2026" loading="lazy" />
       <ol>
         {INTERVENTIONS.map((i) => (<li key={i.titre}><span className="small muted">{i.date}</span><strong>{i.titre}</strong><span className="muted">{i.lieu}</span></li>))}
       </ol>

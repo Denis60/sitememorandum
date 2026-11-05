@@ -59,7 +59,7 @@ export default function MaquetteA() {
 
       <section className="band">
         <div className="wrap stack lg">
-          <div className="stack"><Label>Interventions et conférences</Label><h2 className="h2">Partager ce que <em>nous voyons</em> sur le terrain.</h2></div>
+          <div className="stack"><Label>Interventions et conférences</Label><h2 className="h2">Partager ce que nous faisons et observons <em>sur le terrain</em>.</h2><p className="muted">Chaque mois, nous présentons en public des retours d’expérience de terrain lors des Rendez-vous en terrain numérique (RTN), à Angoulême. <a className="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdoK-db3MX8OSTDcKy6phXWfcXxs46Ox_xmTnMmXpevObmzaQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">Inscrivez-vous au prochain RTN →</a></p></div>
           <Interventions />
         </div>
       </section>
