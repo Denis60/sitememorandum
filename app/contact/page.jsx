@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { PageHead } from '../../components/Parts';
 import CopyMail from '../../components/CopyMail';
-import { SITE } from '../../lib/site';
+import Agenda from '../../components/Agenda';
 
 export const metadata = { title: 'Prendre rendez-vous', description: 'Un premier échange gratuit pour voir où l’IA peut aider votre entreprise.', alternates: { canonical: '/contact/' } };
 
@@ -15,8 +15,8 @@ export default function Contact() {
         <div className="wrap grid">
           <div className="card">
             <h2 className="h3">Rencontrons-nous</h2>
-            <p className="muted">Mes disponibilités sont à jour en temps réel. La réservation vous envoie directement l’invitation Teams.</p>
-            <a className="btn primary" href={SITE.bookings} target="_blank" rel="noopener noreferrer" style={{ alignSelf: 'flex-start' }}>Voir mes disponibilités</a>
+            <p className="muted">Choisissez un créneau de 30 minutes : l’invitation Teams vous est envoyée aussitôt.</p>
+            <Agenda />
           </div>
           <div className="card soft">
             <h2 className="h3">Ou laissez l’IA commencer</h2>

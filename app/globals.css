@@ -164,3 +164,7 @@ form.panel .link { color: var(--gold-text); }
 .hint:empty { display: none; }
 .turnstile { min-height: 65px; }
 
+
+.agenda-jours { display: flex; flex-direction: column; gap: 16px; }
+.agenda-jour { display: flex; flex-direction: column; gap: 8px; }
+.agenda-creneaux { display: flex; flex-wrap: wrap; gap: 8px; }
