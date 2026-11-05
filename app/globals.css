@@ -313,3 +313,9 @@ form.panel .link { color: var(--gold-text); }
 /* Largeur générale alignée sur la nouvelle page d’accueil */
 .wrap { max-width: 1440px; padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
 @media (max-width: 720px) { .wrap { padding-left: 16px; padding-right: 16px; } }
+
+/* Premier écran : texte limité à la moitié gauche pour dégager le visage */
+.mq-a .mq-hero-photo .hero-text { max-width: min(760px, 55%); }
+.mq-a .mq-hero-photo .lead { max-width: 560px; }
+.mq-a .mq-hero-photo .mq-chiffres { max-width: none; width: min(1100px, 100%); }
+@media (max-width: 900px) { .mq-a .mq-hero-photo .hero-text { max-width: none; } }
