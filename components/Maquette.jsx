@@ -6,10 +6,10 @@ import CompteurChiffres from './CompteurChiffres';
 // Blocs partagés par les deux maquettes de la page d'accueil (refonte de l'interface, novembre 2026).
 
 export const CHIFFRES = [
-  { v: '8', l: 'missions en 2026' },
-  { v: '÷ 2 à 5', l: 'sur l’analyse d’un cahier des charges' },
-  { v: '12 ans', l: 'dans l’IA, depuis 2014' },
-  { v: '4', l: 'veilles IA actives' },
+  { v: '12 ans', l: 'd’IA, ML et IA générative' },
+  { v: '8', l: 'missions en 2026, de l’idée à l’autonomie' },
+  { v: 'Des missions elles-mêmes augmentées par l’IA', long: true },
+  { v: 'Expérience de terrain et recul académique', long: true },
 ];
 
 export const REALISATIONS = [

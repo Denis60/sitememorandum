@@ -27,7 +27,7 @@ export default function CompteurChiffres({ items, dark }) {
   const decoupe = (v) => v.split(/(\d+)/).map((p, i) => (/^\d+$/.test(p) ? <span key={i} data-n={p}>{p}</span> : p));
   return (
     <dl ref={ref} className={`mq-chiffres${dark ? ' dark' : ''}`}>
-      {items.map((c) => (<div key={c.l}><dt>{decoupe(c.v)}</dt><dd>{c.l}</dd></div>))}
+      {items.map((c) => (<div key={c.v} className={c.long ? 'long' : undefined}><dt>{c.long ? c.v : decoupe(c.v)}</dt>{c.l ? <dd>{c.l}</dd> : null}</div>))}
     </dl>
   );
 }

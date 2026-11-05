@@ -9,6 +9,7 @@ export default function Home() {
         <div className="mq-hero-fond" aria-hidden="true" />
         <div className="mq-halo" aria-hidden="true" />
         <div className="wrap"><div className="stack hero-text">
+          <FilVeille />
           <Label>Conseil et intégration IA · Charente, Bordeaux, Toulouse, Paris</Label>
           <h1 className="h1">Intégrez l’IA<br /><em>maintenant</em>,<br />en profondeur,<br />durablement.</h1>
           <p className="lead">3 semaines peuvent suffire pour faire évoluer un processus, en en gardant la maîtrise complète.</p>
@@ -18,7 +19,6 @@ export default function Home() {
           </div>
           <Chiffres dark />
         </div></div>
-        <div className="wrap"><FilVeille /></div>
       </section>
 
       <section className="band">
