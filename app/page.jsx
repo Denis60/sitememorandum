@@ -13,7 +13,7 @@ export default function Home() {
         <div className="wrap hero">
           <div className="stack" style={{ gap: 24 }}>
             <p className="fresh"><i aria-hidden="true"></i><span>Veille IA du {lowerFirst(today.label)} · Signaux faibles : {lowerFirst(lastSector.edition.split(' · ')[1])}</span></p>
-            <h1 className="h1">L’IA au service des dirigeants de PME. Concrète, utile, déjà à l’œuvre.</h1>
+            <h1 className="h1">Intégrez l’IA maintenant, en profondeur, durablement.</h1>
             <p className="lead">Memorandum accompagne votre entreprise de l’idée au nouveau processus qui tourne.</p>
             <div className="btns">
               <Link className="btn gold" href="#diagnostic">Demander mon diagnostic IA</Link>

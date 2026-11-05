@@ -6,7 +6,7 @@ export const metadata = { title: 'Références', description: 'Missions IA mené
 export default function References() {
   return (
     <>
-      <PageHead eyebrow="Références" title="Des missions menées jusqu’au bout." lead="Chaque cas suit la même trame : le problème, ce qui a été mis en place, le résultat. Les clients nommés ont donné leur accord ; les autres sont présentés de façon anonyme." />
+      <PageHead eyebrow="Références" title="Notre livrable, au forfait, est votre transformation effective." lead="Chaque cas suit la même trame : le problème, ce qui a été mis en place, le résultat. Les clients nommés ont donné leur accord ; les autres sont présentés de façon anonyme." />
       <section className="band">
         <div className="wrap">
           {REFERENCES.map((r) => (
