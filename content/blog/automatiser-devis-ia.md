@@ -28,7 +28,7 @@ Une fois la méthode stable, l’IA peut lire les demandes là où elles arriven
 
 ## Combien de temps peut-on gagner ?
 
-Tout dépend de la complexité de vos devis. Sur des dossiers techniques, nous avons vu le temps de préparation divisé par deux à cinq. Le gain le plus visible n’est pourtant pas toujours le temps : c’est le nombre de demandes auxquelles l’entreprise peut enfin répondre, et la régularité des propositions d’un commercial à l’autre.
+Tout dépend de la complexité de vos devis. Sur des dossiers techniques, nous avons vu le temps de préparation divisé par deux à cinq (voir [notre retour de terrain chez Eklalight](/blog/analyser-cahier-des-charges-ia/)). Le gain le plus visible n’est pourtant pas toujours le temps : c’est le nombre de demandes auxquelles l’entreprise peut enfin répondre, et la régularité des propositions d’un commercial à l’autre.
 
 ## Les pièges à éviter
 

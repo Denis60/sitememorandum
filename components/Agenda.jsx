@@ -104,16 +104,16 @@ export default function Agenda() {
     else if (code === 'nom_requis') setNotice('Merci d’indiquer votre nom.');
     else if (code === 'creneau_indisponible') { setNotice('Ce créneau vient d’être pris. Choisissez-en un autre.'); setChoix(''); charger(); }
     else if (code === 'captcha_invalide') setNotice('Vérification anti-robot échouée, merci de réessayer.');
-    else if (code === 'trop_de_demandes') setNotice(`Trop de demandes. Écrivez-moi à ${SITE.email}.`);
-    else setNotice(`La réservation n’a pas abouti. Réessayez ou écrivez-moi à ${SITE.email}.`);
+    else if (code === 'trop_de_demandes') setNotice(`Trop de demandes. Écrivez-nous à ${SITE.email}.`);
+    else setNotice(`La réservation n’a pas abouti. Réessayez ou écrivez-nous à ${SITE.email}.`);
   }
 
-  if (etat === 'chargement') return <p className="muted">Chargement de mes disponibilités…</p>;
+  if (etat === 'chargement') return <p className="muted">Chargement des disponibilités…</p>;
   if (etat === 'indisponible' || etat === 'vide') {
     return (
       <div className="stack">
         <p className="muted">{etat === 'vide' ? 'Aucun créneau libre dans les trois prochaines semaines.' : 'L’agenda est momentanément indisponible.'}</p>
-        <a className="btn primary" href={SITE.bookings} target="_blank" rel="noopener noreferrer" style={{ alignSelf: 'flex-start' }}>Voir mes disponibilités</a>
+        <a className="btn primary" href={SITE.bookings} target="_blank" rel="noopener noreferrer" style={{ alignSelf: 'flex-start' }}>Voir les disponibilités</a>
       </div>
     );
   }

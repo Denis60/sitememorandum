@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import { DAYS, SECTORS, REFERENCES, PUBLISHED, UPCOMING, SITE } from '../lib/site';
+import { SEMAINE, SECTORS, REFERENCES, PUBLISHED, UPCOMING, SITE } from '../lib/site';
 import { Bullets, CaseCard, ArticleCard, MESSAGES_LIST } from '../components/Parts';
 import DiagSection from '../components/DiagSection';
 
 export default function Home() {
-  const today = DAYS[0];
+  const today = SEMAINE;
   const sectors = SECTORS;
   return (
     <>
@@ -21,7 +21,7 @@ export default function Home() {
           </div>
           <div className="night-card">
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12, flexWrap: 'wrap' }}>
-              <h2 style={{ fontSize: 18, fontWeight: 600 }}>Veille IA du jour</h2>
+              <h2 style={{ fontSize: 18, fontWeight: 600 }}>Veille IA de la semaine</h2>
               <span className="small muted">{today.label}</span>
             </div>
             <div className="stack">
@@ -104,12 +104,12 @@ export default function Home() {
       <section className="band tint">
         <div className="wrap hero">
           <div className="stack">
-            <p className="eyebrow">Qui je suis</p>
+            <p className="eyebrow">Le fondateur</p>
             <h2 className="h2"><a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">Denis Oblin</a></h2>
             <ul className="bullets muted">
               <li>Mastère spécialisé en IA à Télécom Paris et certificat « AI for Business » de l’École polytechnique</li>
-              <li>Enseignant en « AI Business Transformation » à l’Institut Polytechnique de Paris</li>
-              <li>Ambassadeur du programme <a className="link" href="https://www.economie.gouv.fr/actualites/osez-lia-un-plan-pour-diffuser-lia-dans-toutes-les-entreprises" target="_blank" rel="noopener noreferrer">Osez l’IA</a> du ministère de l’Économie</li>
+              <li>Enseignant en « AI Business Transformation » à l’<a className="link" href="https://e4h.ip-paris.fr/sites/default/files/pages/documents/2022-08/Master_Data_Science_syllabus.pdf" target="_blank" rel="noopener noreferrer">Institut Polytechnique de Paris</a></li>
+              <li>Ambassadeur du programme <a className="link" href="https://www.economie.gouv.fr/actualites/osez-lia-un-plan-pour-diffuser-lia-dans-toutes-les-entreprises" target="_blank" rel="noopener noreferrer">Osez l’IA</a> du ministère de l’Économie (<a className="link" href="https://nouvelle-aquitaine.dreets.gouv.fr/sites/nouvelle-aquitaine.dreets.gouv.fr/IMG/pdf/amabassadeursia2-5.pdf" target="_blank" rel="noopener noreferrer">liste des ambassadeurs IA en Nouvelle-Aquitaine</a>)</li>
               <li>Cofondateur de Rendez-vous en terrain numérique (RTN), l’événement digital mensuel d’Angoulême : <a className="link" href="https://docs.google.com/forms/d/e/1FAIpQLSdoK-db3MX8OSTDcKy6phXWfcXxs46Ox_xmTnMmXpevObmzaQ/viewform?usp=header" target="_blank" rel="noopener noreferrer">inscrivez-vous</a></li>
             </ul>
             <Link className="link" href="/a-propos/">En savoir plus →</Link>

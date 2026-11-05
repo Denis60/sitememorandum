@@ -8,7 +8,7 @@ export const metadata = { title: 'Prendre rendez-vous', description: 'Un premier
 export default function Contact() {
   return (
     <>
-      <PageHead compact eyebrow="Rendez-vous" title="Parlons de votre entreprise." lead="Un premier échange gratuit de 30 minutes, en visio Teams, pour voir où l’IA peut vous aider. Choisissez un créneau ou écrivez-moi.">
+      <PageHead compact eyebrow="Rendez-vous" title="Parlons de votre entreprise." lead="Un premier échange gratuit de 30 minutes, en visio Teams, pour voir où l’IA peut vous aider. Choisissez un créneau ou écrivez-nous.">
         <CopyMail />
       </PageHead>
       <section className="band" style={{ paddingTop: 32 }}>

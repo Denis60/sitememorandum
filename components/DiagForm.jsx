@@ -246,7 +246,7 @@ export default function DiagForm({ onDark, sansLienRdv }) {
 
       <label className="check" htmlFor="diag-consentement">
         <input id="diag-consentement" name="consentement" type="checkbox" required aria-describedby={errors.consentement ? 'diag-consent-err' : undefined} disabled={phase === 'done'} />
-        <span>J’accepte que Memorandum AI traite mon adresse e-mail et les informations publiques de mon entreprise pour réaliser le diagnostic demandé. Données conservées 6 mois au plus. <Link href="/mentions-legales/">Politique de confidentialité</Link></span>
+        <span>J’accepte que Memorandum AI traite mon adresse e-mail et les informations publiques de mon entreprise pour réaliser le diagnostic demandé. Données conservées 6 mois au plus. <Link href="/mentions-legales/#donnees">Politique de confidentialité</Link></span>
       </label>
       {errors.consentement ? <span className="error" id="diag-consent-err">{errors.consentement}</span> : null}
 

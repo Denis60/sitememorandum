@@ -31,10 +31,13 @@ export function MessageTag({ m }) {
   return m ? <span className="tag">{MESSAGES[m]}</span> : null;
 }
 
+export const STATUT_CLASSE = { 'Résultat obtenu': 'ok', 'Prototype validé': 'proto', 'Mission en cours': 'encours' };
+
 export function CaseCard({ r }) {
   return (
     <article className="card">
       <p className="small muted">{r.who}</p>
+      {r.statut ? <span className={`statut ${STATUT_CLASSE[r.statut] || ''}`}>{r.statut}</span> : null}
       <h3 className="h3">{r.titre}</h3>
       {r.big ? (<><p className="big">{r.big}</p><p className="muted">{r.bigTxt}</p></>) : <p className="muted">{r.resultat}</p>}
       {r.cite ? <blockquote>« {r.cite} »</blockquote> : null}

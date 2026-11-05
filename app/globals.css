@@ -210,3 +210,14 @@ form.panel .link { color: var(--gold-text); }
   .nav a { padding: 12px 4px; border-bottom: 1px solid var(--line); border-radius: 0; }
   .nav a.btn { margin: 12px 0 0; justify-content: center; border-radius: 8px; border-bottom: 0; }
 }
+
+.statut { align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.statut.ok { background: #E8F3EC; border-color: #B9DCC5; color: #1F6B3A; }
+.statut.proto { background: #FBF3DF; border-color: #EBD49A; color: #7A5A0A; }
+.statut.encours { background: #EEF1F6; border-color: #D3DAE6; color: #3A4A66; }
+
+.niveau-prix { font-weight: 600; color: var(--gold-text); }
+.faq { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 860px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 17px; }
+.faq details p { margin-top: 10px; }

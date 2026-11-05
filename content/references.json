@@ -16,7 +16,8 @@
       ],
       "resultat": "Claude Cowork est installé et utilisé par l’équipe. Le savoir-faire de l’entreprise est désormais capitalisé.",
       "cite": "Maintenant, la compétence de mon entreprise est un asset, valorisable.",
-      "msg": 2
+      "msg": 2,
+      "statut": "Résultat obtenu"
     },
     {
       "enLigne": true,
@@ -32,7 +33,8 @@
       ],
       "resultat": "Le concept et sa pertinence ont été validés en comité de pilotage.",
       "cite": "En fait, ça marche.",
-      "msg": 3
+      "msg": 3,
+      "statut": "Prototype validé"
     },
     {
       "enLigne": true,
@@ -46,7 +48,8 @@
         "Une cible validée en atelier : une base de prix unique alimentée via Claude, des contrôles avant chaque diffusion."
       ],
       "resultat": "Mission en cours.",
-      "msg": 4
+      "msg": 4,
+      "statut": "Mission en cours"
     },
     {
       "enLigne": true,
@@ -60,7 +63,8 @@
         "Un bot de formation à la méthode de vente, en jeu de rôle, pour les équipes officinales."
       ],
       "resultat": "Le bot de formation a été utilisé avec beaucoup de succès à la convention annuelle des adhérents.",
-      "msg": 3
+      "msg": 3,
+      "statut": "Résultat obtenu"
     },
     {
       "enLigne": true,
@@ -74,7 +78,8 @@
         "Une compétence partagée par l’équipe, améliorée chaque semaine."
       ],
       "resultat": "Mission en cours, bilan prévu en décembre 2026.",
-      "msg": 4
+      "msg": 4,
+      "statut": "Mission en cours"
     },
     {
       "enLigne": true,
@@ -89,7 +94,8 @@
       ],
       "resultat": "Assortiments revus, références retirées, chiffre d’affaires et rendement au m² en hausse.",
       "cite": "On apprend chaque jour quelque chose.",
-      "msg": 2
+      "msg": 2,
+      "statut": "Résultat obtenu"
     },
     {
       "enLigne": false,

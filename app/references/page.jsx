@@ -1,5 +1,5 @@
 import { REFERENCES } from '../../lib/site';
-import { PageHead, Bullets, MessageTag } from '../../components/Parts';
+import { PageHead, Bullets, MessageTag, STATUT_CLASSE } from '../../components/Parts';
 
 export const metadata = { title: 'Références', description: 'Missions IA menées pour Safran, Eklalight, Camaëlle, Hygie31 et d’autres entreprises : le problème, la solution, le résultat.', alternates: { canonical: '/references/' } };
 
@@ -13,6 +13,7 @@ export default function References() {
             <article className="ref" key={r.titre}>
               <div className="stack">
                 <p className="small muted">{r.who}</p>
+                {r.statut ? <span className={`statut ${STATUT_CLASSE[r.statut] || ''}`}>{r.statut}</span> : null}
                 <h2 className="h3" style={{ fontSize: 24 }}>{r.titre}</h2>
                 {r.big ? (<><p className="big">{r.big}</p><p className="muted">{r.bigTxt}</p></>) : null}
                 {r.cite ? <blockquote>« {r.cite} »</blockquote> : null}

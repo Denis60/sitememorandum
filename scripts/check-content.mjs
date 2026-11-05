@@ -15,6 +15,15 @@ for (const d of veille.days || []) {
   }
 }
 
+if (veille.semaine) {
+  const sem = veille.semaine;
+  if (!sem.label || !Array.isArray(sem.topics) || sem.topics.length < 1 || sem.topics.length > 3) errors.push('veille-ia.json : « semaine » doit avoir un libellé et 1 à 3 sujets.');
+  for (const t of sem.topics || []) {
+    if (!t.t || !Array.isArray(t.ideas) || !t.ideas.length || !t.src || !t.d) errors.push(`veille-ia.json semaine : sujet incomplet « ${t.t} ».`);
+    if (!isUrl(t.url)) errors.push(`veille-ia.json semaine : source sans lien https pour « ${t.t} ».`);
+  }
+}
+
 const signaux = read('signaux-faibles.json');
 for (const s of signaux.sectors || []) {
   if (!s.id || !s.label || !Array.isArray(s.signals)) errors.push(`signaux-faibles.json : secteur incomplet « ${s.label || s.id} ».`);
