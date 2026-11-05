@@ -180,3 +180,7 @@ form.panel .link { color: var(--gold-text); }
 .prose ul, .prose ol { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
 .prose blockquote { border-left: 3px solid var(--gold); padding-left: 16px; color: var(--ink); font-style: italic; }
 .prose a { color: var(--gold-text); text-decoration: underline; }
+
+.hero-text { gap: 40px; padding-top: 40px; }
+.hero-text .h1 { line-height: 1.15; }
+@media (max-width: 720px) { .hero-text { gap: 28px; padding-top: 8px; } }

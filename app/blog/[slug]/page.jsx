@@ -3,10 +3,10 @@ import path from 'node:path';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
-import { ARTICLES, SITE } from '../../../lib/site';
+import { PUBLISHED, SITE, dateFr, byline } from '../../../lib/site';
 
 // Un article = une entrée « publie » de content/blog.json + son texte content/blog/<slug>.md (Markdown).
-const publies = () => ARTICLES.filter((a) => a.statut === 'publie' && a.slug);
+const publies = () => PUBLISHED;
 const article = (slug) => publies().find((a) => a.slug === slug);
 
 export const dynamicParams = false;
@@ -35,10 +35,9 @@ export default function Article({ params }) {
   const html = marked.parse(md);
   const ld = {
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: a.titre, description: a.accroche,
-    datePublished: a.date, author: { '@type': 'Person', name: 'Denis Oblin', url: SITE.linkedin },
+    datePublished: a.date, author: a.auteur === 'ia' ? { '@type': 'Organization', name: SITE.name, url: SITE.url } : { '@type': 'Person', name: 'Denis Oblin', url: SITE.linkedin },
     publisher: { '@type': 'Organization', name: SITE.name, url: SITE.url }, mainEntityOfPage: `${SITE.url}/blog/${a.slug}/`,
   };
-  const dateFr = new Date(a.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
   return (
     <>
       <section className="band tint compact">
@@ -46,7 +45,7 @@ export default function Article({ params }) {
           <p className="small muted"><Link href="/blog/">Blog</Link> › {a.theme}</p>
           <h1 className="h1">{a.titre}</h1>
           <p className="lead">{a.accroche}</p>
-          <p className="small muted">Denis Oblin · {dateFr}</p>
+          <p className="small muted">{byline(a)} · {dateFr(a.date)}</p>
         </div>
       </section>
       <section className="band" style={{ paddingTop: 32 }}>

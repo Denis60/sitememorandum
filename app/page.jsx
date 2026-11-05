@@ -1,18 +1,16 @@
 import Link from 'next/link';
-import { DAYS, SECTORS, REFERENCES, ARTICLES, SITE, lowerFirst } from '../lib/site';
+import { DAYS, SECTORS, REFERENCES, PUBLISHED, UPCOMING, SITE } from '../lib/site';
 import { Bullets, CaseCard, ArticleCard, MESSAGES_LIST } from '../components/Parts';
 import DiagSection from '../components/DiagSection';
 
 export default function Home() {
   const today = DAYS[0];
   const sectors = SECTORS;
-  const lastSector = [...SECTORS].sort((a, b) => (b.date || '').localeCompare(a.date || ''))[0];
   return (
     <>
       <section className="band night">
         <div className="wrap hero" style={{ alignItems: 'start' }}>
-          <div className="stack" style={{ gap: 24, paddingTop: 8 }}>
-            <p className="fresh"><i aria-hidden="true"></i><span>Veille IA du {lowerFirst(today.label)} · Signaux faibles : {lowerFirst(lastSector.edition.split(' · ')[1])}</span></p>
+          <div className="stack hero-text">
             <h1 className="h1">Intégrez l’IA maintenant, en profondeur, durablement.</h1>
             <p className="lead">Memorandum accompagne votre entreprise de l’idée au nouveau processus qui tourne.</p>
             <div className="btns">
@@ -98,7 +96,7 @@ export default function Home() {
             <div className="stack" style={{ maxWidth: 720 }}><p className="eyebrow">Blog</p><h2 className="h2">Une question de dirigeant par semaine.</h2></div>
             <Link className="link" href="/blog/">Le blog →</Link>
           </div>
-          <div className="grid">{ARTICLES.slice(0, 3).map((a) => <ArticleCard key={a.titre} a={a} />)}</div>
+          <div className="grid">{[...PUBLISHED, ...UPCOMING].slice(0, 3).map((a) => <ArticleCard key={a.titre} a={a} />)}</div>
         </div>
       </section>
 
