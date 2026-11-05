@@ -46,7 +46,7 @@ Le script `scripts/check-content.mjs` tourne avant chaque build. Il bloque la mi
 1. Créer le dépôt GitHub et y pousser ce dossier.
 2. Netlify › Add new site › Import from Git › choisir le dépôt. Les réglages sont lus dans `netlify.toml`.
 3. Netlify › Domain management › ajouter `memorandum-ai.com` et `www.memorandum-ai.com`, puis chez le registraire du domaine : enregistrement CNAME `www` vers l'adresse Netlify du site, et enregistrement A de la racine vers l'adresse indiquée par Netlify. Le certificat HTTPS est automatique.
-4. Archiver l'ancien site du concours à une adresse d'archive avant la bascule DNS.
+4. ~~Archiver l'ancien site du concours~~ : abandonné, le lien concours est supprimé (5/11/2026).
 
 ## Reste à compléter avant l'ouverture
 
