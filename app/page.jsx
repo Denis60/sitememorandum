@@ -77,7 +77,7 @@ export default function Home() {
         <div className="wrap stack lg">
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'end', gap: 16 }}>
             <div className="stack"><p className="eyebrow">Références</p><h2 className="h2 one-line">Des PME aux grands groupes industriels.</h2></div>
-            <Link className="link" href="/references/">Toutes les références →</Link>
+            <Link className="link" href="/references/">Autres références des 12 derniers mois →</Link>
           </div>
           <ul className="clients" aria-label="Clients">
             {REFERENCES.filter((r) => r.nom).map((r) => <li key={r.nom}>{r.nom}</li>)}
