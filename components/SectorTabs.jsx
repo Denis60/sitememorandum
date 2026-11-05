@@ -45,7 +45,7 @@ export default function SectorTabs({ sectors }) {
             </section>
           </div>
           <aside>
-            <div className="card"><h2 style={{ fontSize: 17 }}>Cette édition</h2><p className="small muted">{s.meta}</p><p className="small muted">Mise à jour automatique le 4 de chaque mois</p></div>
+            <div className="card"><h2 style={{ fontSize: 17 }}>Cette édition</h2><p className="small muted">{s.meta}</p><p className="small muted">Nouvelle édition chaque mois</p></div>
             <div className="card"><h2 style={{ fontSize: 17 }}>Comment ce rapport est produit</h2><p className="small muted">Une IA parcourt chaque mois la presse, les régulateurs et les acteurs du secteur. Chaque signal est daté, sourcé et noté, puis comparé aux éditions précédentes pour repérer ce qui devient une tendance.</p></div>
             <div className="night-card" style={{ background: 'var(--night)' }}>
               <h2 style={{ fontSize: 18, color: 'var(--on-night)' }}>Le même rapport pour votre secteur ?</h2>

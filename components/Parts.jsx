@@ -11,7 +11,7 @@ export function Source({ s }) {
   );
 }
 
-export function PageHead({ eyebrow, title, lead, crumb, night }) {
+export function PageHead({ eyebrow, title, lead, crumb, night, children }) {
   return (
     <section className={`band ${night ? 'night' : 'tint'}`}>
       <div className="wrap stack">
@@ -19,6 +19,7 @@ export function PageHead({ eyebrow, title, lead, crumb, night }) {
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
         <h1 className="h1">{title}</h1>
         {lead ? <p className="lead">{lead}</p> : null}
+        {children}
       </div>
     </section>
   );

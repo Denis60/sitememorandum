@@ -5,9 +5,8 @@ import DiagSection from '../components/DiagSection';
 
 export default function Home() {
   const today = DAYS[0];
-  const ORDRE = ['titres', 'coiffure'];
-  const sectors = [...SECTORS].sort((a, b) => ORDRE.indexOf(a.id) - ORDRE.indexOf(b.id));
-  const lastSector = SECTORS[0];
+  const sectors = SECTORS;
+  const lastSector = [...SECTORS].sort((a, b) => (b.date || '').localeCompare(a.date || ''))[0];
   return (
     <>
       <section className="band night">
@@ -87,11 +86,6 @@ export default function Home() {
                 <Link className="link" href={`/signaux-faibles/#${s.id}`}>Lire le rapport du mois →</Link>
               </article>
             ))}
-            <article className="card soft">
-              <p className="small muted">Accompagnement IA · premier rapport à venir</p>
-              <h3 className="h3">Accompagnement IA</h3>
-              <p className="muted">Ce suivi démarre : ses premiers signaux faibles seront publiés ici prochainement.</p>
-            </article>
           </div>
         </div>
       </section>

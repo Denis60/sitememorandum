@@ -1,130 +1,196 @@
 {
-  "sectors": [
-    {
-      "id": "coiffure",
-      "label": "Salons de coiffure",
-      "edition": "Rapport mensuel n° 4 · 4 octobre 2026",
-      "headline": "La recherche locale par IA devient réelle en France",
-      "scope": "Coiffure, beauté, services de proximité : salon indépendant ou petit réseau local. Des solutions applicables sous 3 à 12 mois, à budget raisonnable.",
-      "meta": "Période analysée : 20 août – 4 octobre 2026 · 10 signaux retenus",
-      "resume": [
-        "ChatGPT Maps est ouvert en France depuis fin septembre (fiches, avis, bouton d’appel) ; Google prépare Ask Maps, qui répondra à partir de la fiche du salon.",
-        "L’Observatoire FIDUCIAL 2026 fixe les repères : 6,6 visites par client et par an, ticket moyen de 42,70 €, une croissance absorbée par le temps du dirigeant.",
-        "La facturation électronique bute sur les données (rejets, annuaire, inscriptions inachevées) : pas de sanction en 2026, mais 2027 se prépare maintenant.",
-        "Prix unique à 21,90 € chez Coiff&Co, produits professionnels en grande distribution : la valeur se déplace vers la transparence tarifaire et la prescription."
-      ],
-      "recoLabel": "Recommandation",
-      "reco": "quatre actions à coût nul ce mois-ci : tester sa visibilité dans les IA, ouvrir les cartes cadeaux en ligne avant mi-novembre, contrôler sa facturation électronique, passer sa fiche Google en mode FAQ.",
-      "home": [
-        "ChatGPT Maps est ouvert ; Google prépare Ask Maps, qui répondra à partir de la fiche du salon.",
-        "La facturation électronique bute sur les données, pas sur les logiciels.",
-        "La valeur se déplace vers la transparence tarifaire et la prescription."
-      ],
-      "signals": [
-        [
-          "ChatGPT Maps disponible en France : la recherche de commerces de proximité devient conversationnelle",
-          "Acquisition"
-        ],
-        [
-          "Fiche Google : de l’outil de classement à la base de connaissances lue par Gemini",
-          "Acquisition"
-        ],
-        [
-          "Observatoire FIDUCIAL 2026 : la fréquence de visite remonte, le dirigeant absorbe la charge",
-          "Pilotage"
-        ],
-        [
-          "Facturation électronique, un mois après : les blocages viennent des données",
-          "Administratif"
-        ],
-        [
-          "Prix unique à 21,90 €, options à la carte, bornes en libre-service",
-          "Prix"
-        ],
-        [
-          "Produits professionnels en grande distribution : vers la vente de prescription",
-          "Vente additionnelle"
-        ],
-        [
-          "Cartes cadeaux et cures intégrées à la fiche client des outils de réservation",
-          "Fidélisation"
-        ],
-        [
-          "Agents vocaux : le prix d’entrée baisse, la réservation directe reste payante",
-          "Accueil"
-        ],
-        [
-          "Santé physique du dirigeant : la profession multiplie les dispositifs de prévention",
-          "Ressources humaines"
-        ],
-        [
-          "Essayage virtuel dans ChatGPT : les clientes arrivent avec une simulation de leur coupe",
-          "Conseil"
-        ]
-      ]
-    },
-    {
-      "id": "titres",
-      "label": "Services aux émetteurs / titres",
-      "edition": "Édition mensuelle n° 4 · 4 octobre 2026",
-      "headline": "Le registre de l’émetteur reste la source de vérité",
-      "scope": "Tenue de registre, services aux émetteurs et aux actionnaires, infrastructures de marché : IA et transformation du secteur.",
-      "meta": "Période analysée : 20 août – 4 octobre 2026 · 15 signaux retenus, dont 9 suivis depuis les éditions précédentes",
-      "resume": [
-        "Euronext Securities a mis en service le 24 septembre son modèle de dépositaire central européen, avec une émission gratuite pour les émetteurs.",
-        "Aux États-Unis, la SEC autorise la négociation d’actions tokenisées à condition qu’elles confèrent les mêmes droits, vote compris, avec droit d’opposition de l’émetteur.",
-        "Le modèle où le registre du teneur reste la source de vérité réunit plusieurs acteurs indépendants : il passe en tendance émergente.",
-        "En Europe, Pontes règle en monnaie de banque centrale depuis le 21 septembre ; l’ESMA demande un cadre pour les titres tokenisés."
-      ],
-      "recoLabel": "À suivre",
-      "reco": "la réunion de la coalition des titres tokenisés au NYSE le 27 octobre, le passage au règlement T+1 et la proposition de révision de la directive droits des actionnaires attendue au quatrième trimestre.",
-      "home": [
-        "Les régulateurs encadrent les titres tokenisés en préservant les droits de l’actionnaire.",
-        "Plusieurs acteurs indépendants convergent : tendance émergente.",
-        "Échéance proche : le passage au règlement T+1."
-      ],
-      "signals": [
-        [
-          "Mise en service du modèle de dépositaire central européen d’Euronext Securities",
-          "Cœur de métier · tendance confirmée"
-        ],
-        [
-          "SEC : exemption pour la négociation d’actions tokenisées, droits préservés",
-          "Régulation"
-        ],
-        [
-          "SEC : la blockchain comme fichier maître, sous contrôle exclusif du teneur de registre",
-          "Régulation · tendance émergente"
-        ],
-        [
-          "Une coalition pour des titres tokenisés reliés au registre de l’émetteur",
-          "Concurrence · tendance émergente"
-        ],
-        [
-          "Brésil : le registre officiel mis en miroir sur une blockchain publique",
-          "Infrastructure"
-        ],
-        [
-          "Corée : numérisation de bout en bout du vote des investisseurs internationaux",
-          "Assemblées générales"
-        ],
-        [
-          "Revue de MiCA : l’ESMA demande un cadre pour les titres tokenisés",
-          "Régulation"
-        ],
-        [
-          "Pontes : règlement en monnaie de banque centrale des transactions sur registre distribué",
-          "Infrastructure"
-        ],
-        [
-          "Règlement T+1 : l’échéance du 7 décembre 2026 maintenue",
-          "Échéance"
-        ],
-        [
-          "Directive droits des actionnaires : proposition attendue au quatrième trimestre",
-          "Régulation"
-        ]
-      ]
-    }
-  ]
+ "sectors": [
+  {
+   "id": "titres",
+   "label": "Services aux émetteurs / titres",
+   "date": "2026-11-04",
+   "edition": "Édition mensuelle n° 5 · 4 novembre 2026",
+   "headline": "La tokenisation des actions cotées passe en production",
+   "scope": "Tenue de registre, services aux émetteurs et aux actionnaires, infrastructures de marché : IA et transformation du secteur.",
+   "meta": "Période analysée : 20 septembre – 4 novembre 2026 · 14 signaux retenus, dont 11 suivis depuis les éditions précédentes",
+   "resume": [
+    "Aux États-Unis, le dépositaire central DTCC a mis en production son service de tokenisation le 28 octobre avec 20 participants ; Broadridge apportera gouvernance on-chain et tenue de registre numérique à la plateforme tokenisée du NYSE.",
+    "Deux modèles coexistent : le « jumeau numérique » créé au niveau du dépositaire central, et le token adossé au registre de l’émetteur, porté par une coalition qui s’élargit.",
+    "La consultation de la SEC sur les agents de transfert est close : des acteurs crypto demandent que les tokens tiers n’exigent aucun accord avec l’émetteur ni avec son teneur de registre.",
+    "En Europe, l’ESMA fait de l’IA et de la tokenisation une priorité de supervision dès 2027 ; le cadre du règlement T+1 est complet, première échéance le 7 décembre."
+   ],
+   "recoLabel": "À suivre",
+   "reco": "l’approbation par la SEC de la plateforme tokenisée du NYSE, la feuille de route de Swift en décembre, l’échéance T+1 du 7 décembre et la proposition de révision de la directive droits des actionnaires, toujours attendue.",
+   "home": [
+    "La tokenisation des actions cotées passe en production aux États-Unis.",
+    "Registre de l’émetteur ou dépositaire central : deux modèles s’affrontent.",
+    "L’ESMA fait de l’IA une priorité de supervision dès 2027."
+   ],
+   "signals": [
+    [
+     "Broadridge apportera gouvernance on-chain et tenue de registre numérique à la plateforme tokenisée du NYSE",
+     "Cœur de métier · tendance confirmée"
+    ],
+    [
+     "DTCC met en production son service de tokenisation : des « jumeaux numériques » des titres conservés",
+     "Infrastructure · tendance confirmée"
+    ],
+    [
+     "Consultation SEC sur les agents de transfert close : le rôle exclusif du teneur de registre contesté",
+     "Régulation · tendance émergente"
+    ],
+    [
+     "L’ESMA fait de l’IA et de la tokenisation une priorité de supervision à partir de 2027",
+     "Régulation · tendance émergente"
+    ],
+    [
+     "La coalition pour des tokens émis à l’initiative de l’émetteur s’élargit",
+     "Concurrence · tendance émergente"
+    ],
+    [
+     "Le cadre européen du règlement T+1 est complet ; première échéance le 7 décembre",
+     "Échéance · tendance confirmée"
+    ],
+    [
+     "Rapport de risques de l’ESMA : actions tokenisées en forte hausse, liquidité fragmentée",
+     "Régulation"
+    ],
+    [
+     "Communication actionnaire dématérialisée par défaut : la SEC suit la logique du décret français",
+     "Assemblées générales"
+    ],
+    [
+     "Chatbots et voicebots dans les services aux émetteurs : un grand teneur de registre présente ses usages",
+     "IA · relation actionnaire"
+    ],
+    [
+     "Sibos 2026 : des agents IA en production dans les banques, avec validation humaine",
+     "IA · opérations sur titres"
+    ]
+   ]
+  },
+  {
+   "id": "coiffure",
+   "label": "Salons de coiffure",
+   "date": "2026-11-04",
+   "edition": "Rapport mensuel n° 5 · 4 novembre 2026",
+   "headline": "La réservation entre dans les assistants IA",
+   "scope": "Coiffure, beauté, services de proximité : salon indépendant ou petit réseau local. Des solutions applicables sous 3 à 12 mois, à budget raisonnable.",
+   "meta": "Période analysée : 20 septembre – 4 novembre 2026 · 10 signaux retenus",
+   "resume": [
+    "Booksy et Fresha ouvrent la prise de rendez-vous beauté dans ChatGPT : pas encore en France, mais l’enjeu passe de « être cité » à « être réservable ».",
+    "Google resserre les règles des fiches (4 jours pour refuser une modification) ; Ask Maps reste sans date pour l’Europe.",
+    "Les défaillances de salons baissent au troisième trimestre (-8,1 %), mais 44 % des dirigeants de TPE sont en difficulté : l’investissement reste prudent.",
+    "La révision des prix s’outille (niveaux par ancienneté, préavis d’un mois) ; la réception par IA s’étend à WhatsApp ; la sécurité des fichiers clients devient un sujet."
+   ],
+   "recoLabel": "Recommandation",
+   "reco": "préparer la hausse de prix de janvier, vendre cartes cadeaux et cures prépayées avant les fêtes, sécuriser les accès au fichier client et trancher la question d’un apprenti avant le 31 décembre.",
+   "home": [
+    "La réservation beauté entre dans ChatGPT : il faut devenir « réservable ».",
+    "Les plateformes outillent la révision des prix de janvier.",
+    "Le fichier client devient une cible : accès à sécuriser."
+   ],
+   "signals": [
+    [
+     "La réservation entre dans les assistants IA : prise de rendez-vous beauté dans ChatGPT",
+     "Acquisition, réservation · signal faible"
+    ],
+    [
+     "Fiche Google : contrôle resserré pendant que la recherche devient conversationnelle",
+     "Acquisition, accueil · tendance confirmée"
+    ],
+    [
+     "Défaillances : la coiffure respire au troisième trimestre, les TPE restent prudentes",
+     "Pilotage · tendance confirmée"
+    ],
+    [
+     "Révision des prix : les plateformes outillent la hausse (niveaux, préavis, forfaits)",
+     "Pilotage, réservation · à tester"
+    ],
+    [
+     "Réception par IA : de l’agent vocal à l’assistant WhatsApp qui remplit les annulations",
+     "Réservation, accueil · tendance émergente"
+    ],
+    [
+     "Facturation électronique : 75 % des entreprises engagées, guide de démarrage révisé",
+     "Pilotage · tendance confirmée"
+    ],
+    [
+     "Du produit au résultat : le bien-être se vend en « systèmes »",
+     "Prestation, fidélisation · tendance émergente"
+    ],
+    [
+     "Apprentissage 2027 : aides annoncées comme reconduites, décret attendu",
+     "RH, planning · signal faible"
+    ],
+    [
+     "Fichiers clients des plateformes de réservation : deux incidents en 2026",
+     "Accueil, fidélisation · signal faible"
+    ],
+    [
+     "Diagnostic capillaire par caméra IA intégré aux rituels en salon",
+     "Diagnostic, vente produit · signal faible"
+    ]
+   ]
+  },
+  {
+   "id": "conseil-ia",
+   "label": "Accompagnement IA",
+   "date": "2026-11-05",
+   "edition": "Édition mensuelle n° 1 · 5 novembre 2026",
+   "headline": "Les éditeurs d’IA deviennent prestataires",
+   "scope": "Toute prestation qui aide les entreprises à s’approprier l’IA : stratégie, acculturation, formation, conduite du changement, intégration et agents, gouvernance. France prioritaire, signaux internationaux.",
+   "meta": "Période analysée : 21 septembre – 5 novembre 2026 · 19 signaux retenus · première édition",
+   "resume": [
+    "Les éditeurs de modèles entrent sur le marché du service : après OpenAI et Anthropic cette année, un cabinet Anthropic–Hg est annoncé pour l’Europe.",
+    "La pression sur les prix se matérialise : forfaits et engagements de résultat progressent, et les clients exigent le partage des gains de productivité.",
+    "En France, l’État structure la formation à l’IA : plan Impulsion IA 2027 (80 M€, plateforme gratuite, certification d’État, IA prioritaire au CPF), pendant que le projet de loi de finances renchérit le CPF.",
+    "La demande des PME s’élargit (40 % des TPE-PME utilisent l’IA) mais se convertit encore peu en projets ; les études convergent : la valeur dépend de l’organisation et des données, pas de l’outil."
+   ],
+   "recoLabel": "À suivre",
+   "reco": "l’annonce officielle du cabinet Anthropic–Hg, le référentiel de la certification d’État, le vote du CPF dans la loi de finances, les lauréats de l’appel EDEC IA le 14 décembre et l’apparition de clauses de partage de productivité dans les appels d’offres.",
+   "home": [
+    "Les éditeurs d’IA descendent vers le conseil et le déploiement.",
+    "Prix sous pression : le forfait et le résultat remplacent la régie.",
+    "L’État normalise la formation à l’IA (certification, CPF)."
+   ],
+   "signals": [
+    [
+     "Impulsion IA 2027 : 80 M€, plateforme gratuite, certification d’État, IA prioritaire au CPF",
+     "Pouvoirs publics · signal stratégique"
+    ],
+    [
+     "Un cabinet Anthropic–Hg d’ingénieurs embarqués annoncé pour l’Europe",
+     "Éditeurs IA · signal à surveiller"
+    ],
+    [
+     "Accenture : plus de 65 % de forfait ou de résultat, baisse des prix au quatrième trimestre",
+     "Grands cabinets · signal à surveiller"
+    ],
+    [
+     "Wavestone : TJM en baisse, l’IA monte à 24 % du chiffre d’affaires",
+     "Grands cabinets · signal à surveiller"
+    ],
+    [
+     "Projet de loi de finances 2027 : reste à charge du CPF jusqu’à +200 €",
+     "Financement de la formation · signal à surveiller"
+    ],
+    [
+     "Baromètre France Num : 40 % des TPE-PME utilisent l’IA (+14 points)",
+     "Demande des entreprises · signal à surveiller"
+    ],
+    [
+     "Infosys : les clients exigent le partage des gains de productivité",
+     "Modèles économiques · signal à surveiller"
+    ],
+    [
+     "Dix cours d’IA gratuits, dont un parcours pour les petites entreprises et la formation de formateurs",
+     "Formation · signal à surveiller"
+    ],
+    [
+     "Osez l’IA à un an : 35 000 entreprises sensibilisées, 70 diagnostics Data IA engagés",
+     "Pouvoirs publics · signal à surveiller"
+    ],
+    [
+     "Le retour sur investissement suit le rôle de Chief AI Officer et une plateforme standardisée",
+     "Organisation · signal à surveiller"
+    ]
+   ]
+  }
+ ]
 }
