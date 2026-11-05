@@ -12,7 +12,7 @@ export default function Home() {
         <div className="wrap hero" style={{ alignItems: 'start' }}>
           <div className="stack hero-text">
             <h1 className="h1">Intégrez l’IA maintenant, en profondeur, durablement.</h1>
-            <p className="lead">Memorandum accompagne votre entreprise de l’idée au nouveau processus qui tourne.</p>
+            <p className="lead">3 semaines peuvent suffire pour faire évoluer un processus, en en gardant la maîtrise complète.</p>
             <div className="btns">
               <Link className="btn gold" href="#diagnostic">Lancer le diagnostic personnalisé</Link>
               <Link className="btn ghost" href="/ia-en-action/">Voir l’IA en action</Link>
