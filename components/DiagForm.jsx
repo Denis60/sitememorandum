@@ -28,6 +28,25 @@ function sirenValid(s) {
   return /^\d{9}$/.test(s) && luhnOk(s);
 }
 
+const SECTEURS = [
+  'Industrie', 'BTP et construction', 'Commerce de gros', 'Commerce de détail', 'Transport et logistique',
+  'Hôtellerie et restauration', 'Santé et médico-social', 'Services aux entreprises', 'Conseil et ingénierie',
+  'Expertise comptable et juridique', 'Banque, finance et assurance', 'Immobilier', 'Agriculture et viticulture',
+  'Agroalimentaire', 'Informatique et numérique', 'Formation et enseignement', 'Services à la personne', 'Collectivité et association',
+];
+
+function cleanSite(v) {
+  const t = v.trim();
+  if (!t) return '';
+  const u = /^https?:\/\//i.test(t) ? t : `https://${t}`;
+  try {
+    const x = new URL(u);
+    return /\.[a-z]{2,}$/i.test(x.hostname) ? `${x.protocol}//${x.hostname}${x.pathname === '/' ? '' : x.pathname}` : null;
+  } catch {
+    return null;
+  }
+}
+
 function readUtm() {
   try {
     const p = new URLSearchParams(window.location.search);
@@ -114,9 +133,13 @@ export default function DiagForm({ onDark }) {
     const f = e.currentTarget;
     const email = f.email.value.trim().toLowerCase();
     const siren = cleanSiren(f.siren.value);
+    const secteur = f.secteur.value.trim().replace(/\s+/g, ' ');
+    const site = cleanSite(f.site_web.value);
     const err = {};
     if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(email)) err.email = 'Adresse e-mail invalide.';
-    if (!sirenValid(siren)) err.siren = 'SIREN invalide : 9 chiffres attendus.';
+    if (secteur.length < 2) err.secteur = 'Merci d’indiquer votre secteur d’activité.';
+    if (site === null) err.site_web = 'Adresse de site invalide (exemple : www.entreprise.fr).';
+    if (siren && !sirenValid(siren)) err.siren = 'SIREN invalide : 9 chiffres attendus.';
     if (!f.consentement.checked) err.consentement = 'Merci de cocher la case de consentement.';
     setErrors(err);
     setNotice('');
@@ -134,9 +157,11 @@ export default function DiagForm({ onDark }) {
     const slowTimer = setTimeout(() => setSlow(true), 8000);
     const ctrl = new AbortController();
     const killTimer = setTimeout(() => ctrl.abort(), 60000);
-    const body = { email, siren, consentement: true, turnstile_token: tsToken.current, page: window.location.origin + window.location.pathname };
+    const body = { email, secteur, consentement: true, turnstile_token: tsToken.current, page: window.location.origin + window.location.pathname };
     const utm = readUtm();
     if (utm) body.utm = utm;
+    if (siren) body.siren = siren;
+    if (site) body.site_web = site;
 
     let status = 0;
     let code = '';
@@ -168,6 +193,8 @@ export default function DiagForm({ onDark }) {
     setSlow(false);
     if (status === 400 && code === 'email_invalide') setErrors({ email: 'Adresse e-mail invalide.' });
     else if (status === 400 && code === 'siren_invalide') setErrors({ siren: 'SIREN invalide : 9 chiffres attendus.' });
+    else if (status === 400 && code === 'secteur_requis') setErrors({ secteur: 'Merci d’indiquer votre secteur d’activité.' });
+    else if (status === 400 && code === 'site_web_invalide') setErrors({ site_web: 'Adresse de site invalide (exemple : www.entreprise.fr).' });
     else if (status === 400 && code === 'consentement_requis') setErrors({ consentement: 'Merci de cocher la case de consentement.' });
     else if (status === 403 && code === 'captcha_invalide') { setNotice('Vérification anti-robot échouée, merci de réessayer.'); resetTurnstile(); }
     else if (status === 404 && code === 'siren_inconnu') setErrors({ siren: 'Nous ne trouvons pas d’entreprise active avec ce SIREN.' });
@@ -188,8 +215,23 @@ export default function DiagForm({ onDark }) {
       </div>
 
       <div className="field">
-        <label htmlFor="diag-siren">SIREN de l’entreprise</label>
-        <input id="diag-siren" name="siren" type="text" required inputMode="numeric" autoComplete="off" placeholder="9 chiffres"
+        <label htmlFor="diag-secteur">Secteur d’activité</label>
+        <input id="diag-secteur" name="secteur" type="text" required list="diag-secteurs" autoComplete="off" maxLength={120} placeholder="Exemple : négoce de matériaux"
+          aria-invalid={!!errors.secteur} aria-describedby={errors.secteur ? 'diag-secteur-err' : undefined} disabled={phase === 'done'} />
+        <datalist id="diag-secteurs">{SECTEURS.map((x) => <option key={x} value={x} />)}</datalist>
+        {errors.secteur ? <span className="error" id="diag-secteur-err">{errors.secteur}</span> : null}
+      </div>
+
+      <div className="field">
+        <label htmlFor="diag-site">Site web <span className="muted">(facultatif)</span></label>
+        <input id="diag-site" name="site_web" type="text" inputMode="url" autoComplete="url" maxLength={200} placeholder="www.entreprise.fr"
+          aria-invalid={!!errors.site_web} aria-describedby={errors.site_web ? 'diag-site-err' : undefined} disabled={phase === 'done'} />
+        {errors.site_web ? <span className="error" id="diag-site-err">{errors.site_web}</span> : null}
+      </div>
+
+      <div className="field">
+        <label htmlFor="diag-siren">SIREN <span className="muted">(facultatif, pour personnaliser l’approche)</span></label>
+        <input id="diag-siren" name="siren" type="text" inputMode="numeric" autoComplete="off" placeholder="9 chiffres"
           onChange={(e) => lookup(e.target.value)}
           aria-invalid={!!errors.siren} aria-describedby={`diag-siren-hint diag-siren-co${errors.siren ? ' diag-siren-err' : ''}`} disabled={phase === 'done'} />
         <span className="hint" id="diag-siren-hint">9 chiffres, sur votre Kbis ou sur annuaire-entreprises.data.gouv.fr</span>
