@@ -138,7 +138,7 @@ export default function Agenda() {
         ))}
       </div>
       {choix ? (
-        <form className="stack" onSubmit={reserver} noValidate>
+        <form className="stack" method="post" onSubmit={reserver} noValidate>
           <p className="small muted">Créneau choisi : {fmtJour.format(new Date(choix))} à {fmtHeure.format(new Date(choix))} (30 min, Teams)</p>
           <div className="field"><label htmlFor="rdv-nom">Nom</label><input id="rdv-nom" name="nom" required autoComplete="name" /></div>
           <div className="field"><label htmlFor="rdv-email">E-mail</label><input id="rdv-email" name="email" type="email" required autoComplete="email" /></div>

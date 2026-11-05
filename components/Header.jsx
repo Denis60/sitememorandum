@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { NAV } from '../lib/site';
 
@@ -9,6 +10,8 @@ export default function Header() {
   const path = usePathname() || '/';
   const first = path.split('/').filter(Boolean)[0] || '';
   const current = SECTION_OF[first] || first;
+  const [ouvert, setOuvert] = useState(false);
+  useEffect(() => { setOuvert(false); }, [path]);
   return (
     <header className="top">
       <div className="wrap">
@@ -16,7 +19,10 @@ export default function Header() {
           <img alt="" src="/logo-m.png" width="44" height="38" />
           <span>MEMORANDUM AI</span>
         </Link>
-        <nav className="nav" aria-label="Navigation principale">
+        <button type="button" className="menu-btn" aria-expanded={ouvert} aria-controls="nav-principale" onClick={() => setOuvert((o) => !o)}>
+          <span aria-hidden="true">{ouvert ? '✕' : '☰'}</span> Menu
+        </button>
+        <nav id="nav-principale" className={`nav${ouvert ? ' open' : ''}`} aria-label="Navigation principale" onClick={(e) => { if (e.target.closest('a')) setOuvert(false); }}>
           {NAV.map((n) => (
             <Link key={n.key} href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</Link>
           ))}

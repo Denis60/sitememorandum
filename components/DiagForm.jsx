@@ -204,7 +204,7 @@ export default function DiagForm({ onDark, sansLienRdv }) {
   }
 
   return (
-    <form className="panel" onSubmit={onSubmit} noValidate aria-labelledby="diag-form-title">
+    <form className="panel" method="post" onSubmit={onSubmit} noValidate aria-labelledby="diag-form-title">
       <h2 className="h3" id="diag-form-title">Lancer le diagnostic personnalisé</h2>
 
       <div className="field">

@@ -198,3 +198,15 @@ form.panel .link { color: var(--gold-text); }
 .hero-proof { display: flex; gap: 16px; align-items: center; max-width: 560px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.15); color: var(--on-night-muted); font-size: 15px; }
 .hero-proof strong { font-family: var(--font-head, inherit); font-size: 28px; color: var(--gold-on-night); white-space: nowrap; }
 .hero-proof .link { color: var(--gold-on-night); }
+
+/* Menu compact sur mobile */
+.menu-btn { display: none; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); font: inherit; font-weight: 600; cursor: pointer; }
+@media (max-width: 900px) {
+  .top .wrap { flex-wrap: nowrap; }
+  .menu-btn { display: inline-flex; }
+  .top { position: relative; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 30; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 16px 16px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(15, 27, 51, .08); }
+  .nav.open { display: flex; }
+  .nav a { padding: 12px 4px; border-bottom: 1px solid var(--line); border-radius: 0; }
+  .nav a.btn { margin: 12px 0 0; justify-content: center; border-radius: 8px; border-bottom: 0; }
+}
