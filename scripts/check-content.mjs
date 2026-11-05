@@ -53,7 +53,7 @@ for (const a of blog.articles || []) {
 // Garde-fous de confidentialité : aucune adresse privée ni nom de client confidentiel ne doit être publié.
 const mds = readdirSync(new URL('../content/blog/', import.meta.url)).filter((f) => f.endsWith('.md')).map((f) => `blog/${f}`);
 const all = ['veille-ia.json', 'signaux-faibles.json', 'references.json', 'blog.json', ...mds].map((f) => readFileSync(new URL(`../content/${f}`, import.meta.url), 'utf8')).join('\n');
-const forbidden = [/boards\.trello\.com/i, /Mode d'emploi vocal/i, /\bUptevia\b/i, /\bMorelet\b/i, /\bTeract\b/i, /Jardiland|Gamm vert/i];
+const forbidden = [/boards\.trello\.com/i, /Mode d'emploi vocal/i, /\bUptevia\b/i, /\bMorelet\b/i, /\bTeract\b/i, /\bChapuzet\b/i, /Jardiland|Gamm vert/i];
 for (const re of forbidden) if (re.test(all)) errors.push(`Contenu interdit détecté : ${re}.`);
 
 if (errors.length) {
