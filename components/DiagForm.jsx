@@ -61,7 +61,7 @@ function readUtm() {
   }
 }
 
-export default function DiagForm({ onDark }) {
+export default function DiagForm({ onDark, sansLienRdv }) {
   const [errors, setErrors] = useState({});
   const [phase, setPhase] = useState('idle'); // idle | sending | done
   const [slow, setSlow] = useState(false);
@@ -264,7 +264,7 @@ export default function DiagForm({ onDark }) {
         {notice ? <p className="notice">{notice}</p> : null}
       </div>
 
-      <p className="small muted">Vous préférez parler directement ? <Link className="link" href="/contact/">Prendre rendez-vous</Link></p>
+      {sansLienRdv ? null : <p className="small muted">Vous préférez parler directement ? <Link className="link" href="/contact/">Prendre rendez-vous</Link></p>}
     </form>
   );
 }
