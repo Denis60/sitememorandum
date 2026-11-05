@@ -14,7 +14,7 @@ export const CHIFFRES = [
 
 export const REALISATIONS = [
   { img: '/realisations/eklalight-cctp.jpg', qui: 'Eklalight · grossiste en luminaires', titre: 'Analyse de cahier des charges et devis', chip: 'En production', alt: 'Outil d’analyse de CCTP : besoins, références fournisseurs proposées, création du devis' },
-  { img: '/realisations/camaelle-prix-litre.jpg', qui: 'Fabricant de peintures et finitions', titre: 'Positionnement prix face aux concurrents', chip: 'Analyse livrée', alt: 'Comparaison des prix au litre de 5 produits face à 21 produits concurrents', pos: 'top left' },
+  { img: '/realisations/positionnement-prix-litre.jpg', qui: 'Fabricant de peintures et finitions', titre: 'Positionnement prix face aux concurrents', chip: 'Analyse livrée', alt: 'Comparaison des prix au litre de 5 produits face à 21 produits concurrents', pos: 'top left' },
   { img: '/realisations/peinture-chiffrage.jpg', qui: 'Entreprise de peinture', titre: 'Chiffrage d’un lot sur plan', chip: 'Prototype', alt: 'Outil de chiffrage : repérage des surfaces sur plan, comparaison avec le DPGF' },
 ];
 
