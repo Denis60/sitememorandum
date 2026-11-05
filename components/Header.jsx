@@ -21,7 +21,7 @@ export default function Header() {
             <Link key={n.key} href={n.href} aria-current={current === n.key ? 'page' : undefined}>{n.label}</Link>
           ))}
           <Link href="/contact/" aria-current={current === 'contact' ? 'page' : undefined}>Contact</Link>
-          <Link className="btn primary" href={path === '/' ? '#diagnostic' : '/diagnostic-ia/'}>Demander mon diagnostic IA</Link>
+          <Link className="btn primary" href={path === '/' ? '#diagnostic' : '/diagnostic-ia/'}>Lancer le diagnostic personnalisé</Link>
         </nav>
       </div>
     </header>
