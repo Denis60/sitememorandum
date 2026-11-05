@@ -11,9 +11,9 @@ export function Source({ s }) {
   );
 }
 
-export function PageHead({ eyebrow, title, lead, crumb, night, children }) {
+export function PageHead({ eyebrow, title, lead, crumb, night, compact, children }) {
   return (
-    <section className={`band ${night ? 'night' : 'tint'}`}>
+    <section className={`band ${night ? 'night' : 'tint'}${compact ? ' compact' : ''}`}>
       <div className="wrap stack">
         {crumb ? <p className="small muted"><Link href="/ia-en-action/">L’IA en action</Link> › {crumb}</p> : null}
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
