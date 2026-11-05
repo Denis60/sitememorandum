@@ -204,7 +204,7 @@ export default function DiagForm({ onDark, sansLienRdv }) {
   }
 
   return (
-    <form className="panel" onSubmit={onSubmit} noValidate aria-labelledby="diag-form-title">
+    <form className="panel" method="post" onSubmit={onSubmit} noValidate aria-labelledby="diag-form-title">
       <h2 className="h3" id="diag-form-title">Lancer le diagnostic personnalisé</h2>
 
       <div className="field">
@@ -246,7 +246,7 @@ export default function DiagForm({ onDark, sansLienRdv }) {
 
       <label className="check" htmlFor="diag-consentement">
         <input id="diag-consentement" name="consentement" type="checkbox" required aria-describedby={errors.consentement ? 'diag-consent-err' : undefined} disabled={phase === 'done'} />
-        <span>J’accepte que Memorandum AI traite mon adresse e-mail et les informations publiques de mon entreprise pour réaliser le diagnostic demandé. Données conservées 6 mois au plus. <Link href="/mentions-legales/">Politique de confidentialité</Link></span>
+        <span>J’accepte que Memorandum AI traite mon adresse e-mail et les informations publiques de mon entreprise pour réaliser le diagnostic demandé. Données conservées 6 mois au plus. <Link href="/mentions-legales/#donnees">Politique de confidentialité</Link></span>
       </label>
       {errors.consentement ? <span className="error" id="diag-consent-err">{errors.consentement}</span> : null}
 

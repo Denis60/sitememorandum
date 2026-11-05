@@ -11,13 +11,15 @@ export function Source({ s }) {
   );
 }
 
-export function PageHead({ eyebrow, title, lead, crumb, night, compact, children }) {
+export function PageHead({ eyebrow, title, lead, crumb, night, compact, photo, children }) {
   return (
     <section className={`band ${night ? 'night' : 'tint'}${compact ? ' compact' : ''}`}>
       <div className="wrap stack">
         {crumb ? <p className="small muted"><Link href="/ia-en-action/">L’IA en action</Link> › {crumb}</p> : null}
         {eyebrow ? <p className="eyebrow">{eyebrow}</p> : null}
-        <h1 className="h1">{title}</h1>
+        {photo ? (
+          <div className="head-photo"><h1 className="h1">{title}</h1><img src={photo.src} alt={photo.alt} width="132" height="132" /></div>
+        ) : <h1 className="h1">{title}</h1>}
         {lead ? <p className="lead">{lead}</p> : null}
         {children}
       </div>
@@ -29,10 +31,13 @@ export function MessageTag({ m }) {
   return m ? <span className="tag">{MESSAGES[m]}</span> : null;
 }
 
+export const STATUT_CLASSE = { 'Résultat obtenu': 'ok', 'Prototype validé': 'proto', 'Mission en cours': 'encours' };
+
 export function CaseCard({ r }) {
   return (
     <article className="card">
       <p className="small muted">{r.who}</p>
+      {r.statut ? <span className={`statut ${STATUT_CLASSE[r.statut] || ''}`}>{r.statut}</span> : null}
       <h3 className="h3">{r.titre}</h3>
       {r.big ? (<><p className="big">{r.big}</p><p className="muted">{r.bigTxt}</p></>) : <p className="muted">{r.resultat}</p>}
       {r.cite ? <blockquote>« {r.cite} »</blockquote> : null}

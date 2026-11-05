@@ -1,4 +1,4 @@
-Vous avez lu des dizaines d’articles sur l’IA, testé ChatGPT ou Copilot, peut-être assisté à une conférence. Et pourtant, dans l’entreprise, rien n’a vraiment changé. C’est le cas de la plupart des PME : selon le baromètre France Num 2026, 40 % des TPE-PME utilisent déjà l’IA, mais très peu l’ont fait entrer dans un processus qui tourne.
+Vous avez lu des dizaines d’articles sur l’IA, testé ChatGPT ou Copilot, peut-être assisté à une conférence. Et pourtant, dans l’entreprise, rien n’a vraiment changé. C’est le cas de la plupart des PME. Selon le [baromètre France Num 2026](https://www.entreprises.gouv.fr/espace-presse/barometre-france-num-2026-quatre-tpe-pme-sur-dix-utilisent-desormais-lintelligence) de la Direction générale des entreprises (plus de 9 000 entreprises interrogées, publié en septembre 2026), 40 % des TPE-PME utilisent l’IA, mais 11 % seulement s’en servent pour automatiser des tâches. Ce sont des réponses déclaratives : elles mesurent l’usage, pas les gains.
 
 La bonne nouvelle : commencer ne demande ni budget important ni compétence technique. Cela demande de prendre le problème par le bon bout.
 
@@ -42,11 +42,11 @@ Après un mois, comparez le temps passé avant et après. Si le gain est là, l�
 
 ## Et l’organisation dans tout ça ?
 
-Les études convergent : la valeur de l’IA dépend moins de l’outil que de l’organisation. Qui décide des usages autorisés ? Où sont les données ? Qui forme les nouveaux arrivants ? Ces questions n’ont pas besoin d’être réglées avant de commencer, mais elles doivent l’être avant de généraliser. Une charte IA d’une page, rédigée avec l’équipe, suffit souvent pour démarrer.
+La valeur de l’IA dépend moins de l’outil que de l’organisation. Dans une [enquête du Boston Consulting Group](https://bcg.com/ja-jp/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value) auprès de 1 000 dirigeants de 59 pays (octobre 2024), environ 70 % des difficultés rencontrées tiennent aux personnes et aux processus, 20 % à la technologie et 10 % seulement aux algorithmes. L’échantillon est celui de grandes entreprises, mais le constat vaut aussi pour une PME. Qui décide des usages autorisés ? Où sont les données ? Qui forme les nouveaux arrivants ? Ces questions n’ont pas besoin d’être réglées avant de commencer, mais elles doivent l’être avant de généraliser. Une charte IA d’une page, rédigée avec l’équipe, suffit souvent pour démarrer.
 
 ## Faites-vous aider pour la première étape
 
-Le plan national Osez l’IA accompagne les PME dans cette démarche, avec des actions de sensibilisation et des diagnostics. Chez Memorandum AI, nous proposons un diagnostic de potentiel IA offert : notre agent dialogue avec vous et vos équipes, repère les irritants, chiffre les gains et vous restitue de vive voix une feuille de route priorisée.
+Le plan national [Osez l’IA](https://www.economie.gouv.fr/actualites/osez-lia-un-plan-pour-diffuser-lia-dans-toutes-les-entreprises) accompagne les PME dans cette démarche, avec des actions de sensibilisation et des diagnostics. Chez Memorandum AI, nous proposons un diagnostic de potentiel IA offert : notre agent dialogue avec vous et vos équipes, repère les irritants, chiffre les gains et vous restitue de vive voix une feuille de route priorisée.
 
 **[Lancer mon diagnostic IA](/diagnostic-ia/)**
 
@@ -56,3 +56,9 @@ Le plan national Osez l’IA accompagne les PME dans cette démarche, avec des a
 - Chiffrez fréquence, durée et personnes concernées.
 - Premier projet : répétitif, à partir de vos documents, jugé par un expert, gain visible en un mois.
 - Mesurez, puis élargissez.
+
+### Sources
+
+- [Baromètre France Num 2026 : quatre TPE-PME sur dix utilisent désormais l’intelligence artificielle — Direction générale des entreprises, 28 septembre 2026](https://www.entreprises.gouv.fr/espace-presse/barometre-france-num-2026-quatre-tpe-pme-sur-dix-utilisent-desormais-lintelligence)
+- [AI Adoption in 2024: 74% of Companies Struggle to Achieve and Scale Value — Boston Consulting Group, 24 octobre 2024](https://bcg.com/ja-jp/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value)
+- [Osez l’IA, un plan pour diffuser l’IA dans toutes les entreprises — ministère de l’Économie](https://www.economie.gouv.fr/actualites/osez-lia-un-plan-pour-diffuser-lia-dans-toutes-les-entreprises)

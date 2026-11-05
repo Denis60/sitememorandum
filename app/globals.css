@@ -190,3 +190,34 @@ form.panel .link { color: var(--gold-text); }
 .agenda-jour { scroll-margin-top: 16px; }
 
 .band:not(.night) form.panel { border: 1px solid var(--line); border-radius: 12px; }
+
+.head-photo { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+.head-photo img { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--line); }
+@media (max-width: 720px) { .head-photo img { width: 96px; height: 96px; } }
+
+.hero-proof { display: flex; gap: 16px; align-items: center; max-width: 560px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.15); color: var(--on-night-muted); font-size: 15px; }
+.hero-proof strong { font-family: var(--font-head, inherit); font-size: 28px; color: var(--gold-on-night); white-space: nowrap; }
+.hero-proof .link { color: var(--gold-on-night); }
+
+/* Menu compact sur mobile */
+.menu-btn { display: none; align-items: center; gap: 8px; min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); font: inherit; font-weight: 600; cursor: pointer; }
+@media (max-width: 900px) {
+  .top .wrap { flex-wrap: nowrap; }
+  .menu-btn { display: inline-flex; }
+  .top { position: relative; }
+  .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; z-index: 30; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 16px 16px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(15, 27, 51, .08); }
+  .nav.open { display: flex; }
+  .nav a { padding: 12px 4px; border-bottom: 1px solid var(--line); border-radius: 0; }
+  .nav a.btn { margin: 12px 0 0; justify-content: center; border-radius: 8px; border-bottom: 0; }
+}
+
+.statut { align-self: flex-start; font-size: 12px; font-weight: 600; letter-spacing: .02em; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+.statut.ok { background: #E8F3EC; border-color: #B9DCC5; color: #1F6B3A; }
+.statut.proto { background: #FBF3DF; border-color: #EBD49A; color: #7A5A0A; }
+.statut.encours { background: #EEF1F6; border-color: #D3DAE6; color: #3A4A66; }
+
+.niveau-prix { font-weight: 600; color: var(--gold-text); }
+.faq { display: flex; flex-direction: column; border-top: 1px solid var(--line); max-width: 860px; }
+.faq details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+.faq summary { cursor: pointer; font-weight: 600; font-size: 17px; }
+.faq details p { margin-top: 10px; }
