@@ -8,11 +8,11 @@ export const metadata = { title: 'Prendre rendez-vous', description: 'Un premier
 export default function Contact() {
   return (
     <>
-      <PageHead eyebrow="Rendez-vous" title="Parlons de votre entreprise." lead="Un premier échange gratuit de 30 minutes, en visio Teams, pour voir où l’IA peut vous aider. Choisissez un créneau ou écrivez-moi.">
+      <PageHead compact eyebrow="Rendez-vous" title="Parlons de votre entreprise." lead="Un premier échange gratuit de 30 minutes, en visio Teams, pour voir où l’IA peut vous aider. Choisissez un créneau ou écrivez-moi.">
         <CopyMail />
       </PageHead>
-      <section className="band">
-        <div className="wrap grid">
+      <section className="band" style={{ paddingTop: 32 }}>
+        <div className="wrap grid" style={{ alignItems: "start" }}>
           <div className="card">
             <h2 className="h3">Rencontrons-nous</h2>
             <p className="muted">Choisissez un créneau de 30 minutes : l’invitation Teams vous est envoyée aussitôt.</p>
