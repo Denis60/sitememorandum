@@ -309,3 +309,7 @@ form.panel .link { color: var(--gold-text); }
 .top .wrap, .foot .wrap { max-width: 1440px; padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
 @media (max-width: 720px) { .top .wrap, .foot .wrap { padding-left: 16px; padding-right: 16px; } }
 .mq-hero-photo > .wrap { width: 100%; }
+
+/* Largeur générale alignée sur la nouvelle page d’accueil */
+.wrap { max-width: 1440px; padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); }
+@media (max-width: 720px) { .wrap { padding-left: 16px; padding-right: 16px; } }
