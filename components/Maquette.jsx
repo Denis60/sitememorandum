@@ -111,7 +111,7 @@ export function Articles() {
 }
 
 // Clients cités sans fiche de référence détaillée.
-export const AUTRES_CLIENTS = ['Solutions 30', 'Axa France', 'Matmut'];
+export const AUTRES_CLIENTS = ['Teract', 'Solutions 30', 'Axa France', 'Matmut'];
 
 export function Clients() {
   const noms = [...REFERENCES.filter((r) => r.nom).map((r) => r.nom), ...AUTRES_CLIENTS];
