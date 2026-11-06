@@ -81,7 +81,7 @@ export default function Home() {
       <section className="band tint">
         <div className="wrap mq-founder">
           <img src="/denis-oblin.jpg" alt="Portrait de Denis Oblin" width="160" height="160" />
-          <div className="stack"><Label>Le fondateur</Label><h2 className="h2"><a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">Denis Oblin</a></h2><p className="muted">Mastère spécialisé en IA (Télécom Paris), enseignant à l’Institut Polytechnique de Paris, ambassadeur Osez l’IA, cofondateur de Rendez-vous en terrain numérique.</p><Link className="link" href="/a-propos/">En savoir plus →</Link></div>
+          <div className="stack"><Label>Le fondateur</Label><h2 className="h2"><a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">Denis Oblin</a></h2><p className="muted">Mastère spécialisé en IA (Télécom Paris), enseignant la transformation IA à l’Institut Polytechnique de Paris, ambassadeur du programme Osez l’IA (ministère de l’Économie), cofondateur des Rendez-vous en terrain numérique.</p><Link className="link" href="/a-propos/">En savoir plus →</Link></div>
         </div>
       </section>
     </div>
