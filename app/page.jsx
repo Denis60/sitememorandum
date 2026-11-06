@@ -30,7 +30,7 @@ export default function Home() {
 
       <section className="band night">
         <div className="wrap stack lg">
-          <div className="stack"><Label>Réalisations</Label><h2 className="h2">Des outils qui <em>tournent</em> chez nos clients.</h2><p className="muted">Construits avec les équipes, sur leurs vrais dossiers. Tout reste modifiable par le client.</p></div>
+          <div className="stack"><Label>Réalisations</Label><h2 className="h2">Des transformations qui <em>tournent</em> chez nos clients.</h2><p className="muted">Construits avec les équipes, sur leurs vrais dossiers. Modifiables au quotidien par le client. Ce ne sont pas des logiciels, mais des assistants qui s’améliorent chaque jour au fil de vos instructions.</p></div>
           <Realisations />
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function Home() {
 
       <section className="band tint">
         <div className="wrap stack lg">
-          <div className="stack"><Label>L’IA en action</Label><h2 className="h2">Notre IA analyse la transformation de secteurs d’activité <em>en continu</em>.</h2><p className="muted">Trois exemples variés de suivis sectoriels (dont le nôtre), alimentés automatiquement chaque mois.</p></div>
+          <div className="stack"><Label>L’IA en action</Label><h2 className="h2">Notre IA analyse la transformation de secteurs d’activité <em>en continu</em>.</h2><p className="muted">Trois exemples variés de suivis sectoriels (dont le nôtre), alimentés automatiquement chaque mois. Ces signaux faibles collectés chaque mois sont analysés en masse sur 6 mois à 1 an pour détecter des tendances de fond. Dites-nous si vous voulez aussi ausculter votre secteur.</p></div>
           <Secteurs />
         </div>
       </section>

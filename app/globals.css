@@ -338,3 +338,7 @@ form.panel .link { color: var(--gold-text); }
 .mq-fil-bande .mq-fil { margin: 0; max-width: none; border: 0; border-radius: 0; background: none; backdrop-filter: none; padding: 14px 0; font-size: 15px; }
 @media (max-width: 720px) { .mq-fil-bande .mq-fil { flex-direction: row; align-items: center; } }
 .mq-hero-photo { overflow: clip; }
+
+/* Bandeau de veille : le texte défilant occupe toute la largeur */
+.mq-a .mq-hero-photo .mq-fil-bande .mq-fil { max-width: none; }
+.mq-fil-bande .mq-fil-defile { flex: 1; min-width: 0; }

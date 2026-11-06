@@ -6,9 +6,9 @@ import CompteurChiffres from './CompteurChiffres';
 // Blocs partagés par les deux maquettes de la page d'accueil (refonte de l'interface, novembre 2026).
 
 export const CHIFFRES = [
-  { v: '12 ans', l: 'd’IA, ML et IA générative' },
+  { v: '12 ans', l: 'de pratique, ML et IA générative' },
   { v: '8', l: 'missions en 2026, de l’idée à l’autonomie' },
-  { v: 'Missions augmentées par l’IA', long: true },
+  { v: 'Missions augmentées par l’IA', l: 'des démos grandeur nature dès le démarrage', long: true },
   { v: 'Expérience de terrain et recul académique', long: true },
 ];
 
@@ -110,8 +110,12 @@ export function Articles() {
   return <div className="grid">{[...PUBLISHED, ...UPCOMING].slice(0, 3).map((a) => <ArticleCard key={a.titre} a={a} />)}</div>;
 }
 
+// Clients cités sans fiche de référence détaillée.
+export const AUTRES_CLIENTS = ['Solutions 30', 'Axa France', 'Matmut'];
+
 export function Clients() {
-  return <ul className="clients" aria-label="Clients">{REFERENCES.filter((r) => r.nom).map((r) => <li key={r.nom}>{r.nom}</li>)}</ul>;
+  const noms = [...REFERENCES.filter((r) => r.nom).map((r) => r.nom), ...AUTRES_CLIENTS];
+  return <ul className="clients" aria-label="Clients">{noms.map((n) => <li key={n}>{n}</li>)}</ul>;
 }
 
 export { SEMAINE, SITE };
