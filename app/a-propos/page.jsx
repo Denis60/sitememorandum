@@ -2,12 +2,12 @@ import Link from 'next/link';
 import { PageHead } from '../../components/Parts';
 import { SITE } from '../../lib/site';
 
-export const metadata = { title: 'À propos', description: 'Denis Oblin, consultant en data et intelligence artificielle, enseignant à l’Institut Polytechnique de Paris, basé à Cognac.', alternates: { canonical: '/a-propos/' } };
+export const metadata = { title: 'À propos', description: 'Denis Oblin, intégrateur d’IA prédictive et générative depuis 2014, enseignant de la transformation IA à l’Institut Polytechnique de Paris, basé à Cognac.', alternates: { canonical: '/a-propos/' } };
 
 export default function APropos() {
   return (
     <>
-      <PageHead eyebrow="À propos" title="Denis Oblin" photo={{ src: '/denis-oblin.jpg', alt: 'Portrait de Denis Oblin' }} lead="Consultant indépendant en data et intelligence artificielle, fondateur de Memorandum AI." />
+      <PageHead eyebrow="À propos" title="Denis Oblin" photo={{ src: '/denis-oblin.jpg', alt: 'Portrait de Denis Oblin' }} lead="Intégrateur d’IA prédictive et générative depuis 2014, enseignant de la transformation IA à l’Institut Polytechnique de Paris." />
       <section className="band">
         <div className="wrap hero" style={{ alignItems: 'start' }}>
           <div className="stack">
@@ -19,10 +19,10 @@ export default function APropos() {
           <div className="stack">
             <h2 className="h3">Quatre convictions</h2>
             <ol className="messages">
-              <li>S’adapter vite : l’IA impose une adaptation rapide.</li>
-              <li>L’IA est une opportunité, pas une contrainte subie.</li>
-              <li>La question n’est plus l’outil, mais l’organisation et les décisions du dirigeant.</li>
-              <li>L’exécution devient simple ; la valeur est dans les idées et les usages.</li>
+              <li>Le carburant de l’IA vient pour l’essentiel d’hors d’Europe (centres de données, modèles) ; l’intelligence économique qui va avec est à développer ici, et maintenant.</li>
+              <li>La sécurité des données et le risque de dépendance sont de vrais sujets : des réponses graduées permettent de se transformer vite et d’internaliser ce qui doit l’être.</li>
+              <li>Les PME et TPE sont les premières bénéficiaires de cette transformation : l’investissement est minime et la transformation rapide, quand elle est bien plus difficile à conduire dans une ETI. On peut rester petit et acquérir les attributs des grands.</li>
+              <li>L’IA ne nivelle pas les marchés, comme si la même IA servait partout la même réponse : elle permet au contraire de se différencier chaque jour un peu plus, en ajoutant, par simple demande, de nouvelles optimisations à ses traitements.</li>
             </ol>
           </div>
         </div>

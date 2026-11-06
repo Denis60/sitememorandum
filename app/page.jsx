@@ -11,7 +11,7 @@ export default function Home() {
         <div className="wrap mq-hero-contenu"><div className="stack hero-text">
           <Label>Conseil et intégration IA · Charente, Bordeaux, Toulouse, Paris</Label>
           <h1 className="h1">Intégrez l’IA<br /><em>maintenant</em>,<br />en profondeur,<br />durablement.</h1>
-          <p className="lead">3 semaines peuvent suffire pour faire évoluer un processus, en en gardant la maîtrise complète.</p>
+          <p className="lead">3 semaines peuvent suffire pour faire évoluer un processus, en en gardant la maîtrise complète.<br />Des réponses graduées pour allier transformation agile, maîtrise des données et maîtrise de la dépendance.</p>
           <div className="btns">
             <Link className="btn gold" href="#diagnostic">Lancer le diagnostic personnalisé</Link>
             <Link className="btn ghost" href="/references/">Voir nos réalisations</Link>
