@@ -2,12 +2,21 @@
 import { useEffect, useRef, useState } from 'react';
 import { SITE } from '../lib/site';
 
-// Créneaux calculés par le service Diag IA à partir de l'agenda Outlook (2 jours × 2 h par semaine).
+// Créneaux calculés par le service Diag IA à partir de l'agenda Outlook (2 jours × 2 h par semaine) ; le site n'en montre que 3 par jour.
 const API = (process.env.NEXT_PUBLIC_DIAG_API_URL || 'https://diag-ia-backend.onrender.com').replace(/\/$/, '');
 const TURNSTILE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '';
 const fmtJour = new Intl.DateTimeFormat('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'Europe/Paris' });
 const fmtHeure = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Paris' });
 const cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+
+// Au plus 3 créneaux affichés par jour, tirés au hasard parmi les créneaux libres,
+// mais de façon stable : le même créneau garde le même rang à chaque visite.
+const PAR_JOUR = 3;
+const rang = (c) => { let h = 2166136261; for (const ch of `memorandum:${c}`) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+const limiter = (jours) => jours.map((j) => ({
+  ...j,
+  creneaux: [...j.creneaux].sort((a, b) => rang(a) - rang(b)).slice(0, PAR_JOUR).sort(),
+})).filter((j) => j.creneaux.length);
 
 function useTurnstile(ref) {
   const widget = useRef(null);
@@ -70,8 +79,9 @@ export default function Agenda() {
       clearTimeout(t);
       if (!r.ok) throw new Error(String(r.status));
       const j = await r.json();
-      setJours(j.jours || []);
-      setEtat((j.jours || []).length ? 'pret' : 'vide');
+      const js = limiter(j.jours || []);
+      setJours(js);
+      setEtat(js.length ? 'pret' : 'vide');
     } catch {
       setEtat('indisponible');
     }
