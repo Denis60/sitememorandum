@@ -9,9 +9,9 @@
    "scope": "Tenue de registre, services aux émetteurs et aux actionnaires, infrastructures de marché : IA et transformation du secteur.",
    "meta": "Période analysée : 20 septembre – 4 novembre 2026 · 14 signaux retenus, dont 11 suivis depuis les éditions précédentes",
    "resume": [
-    "Aux États-Unis, le dépositaire central DTCC a mis en production son service de tokenisation le 28 octobre avec 20 participants ; Broadridge apportera gouvernance on-chain et tenue de registre numérique à la plateforme tokenisée du NYSE.",
-    "Deux modèles coexistent : le « jumeau numérique » créé au niveau du dépositaire central, et le token adossé au registre de l’émetteur, porté par une coalition qui s’élargit.",
-    "La consultation de la SEC sur les agents de transfert est close : des acteurs crypto demandent que les tokens tiers n’exigent aucun accord avec l’émetteur ni avec son teneur de registre.",
+    "Aux États-Unis, le dépositaire central DTCC a mis en production son service de tokenisation (titres financiers représentés par des jetons numériques) le 28 octobre avec 20 participants ; Broadridge apportera gouvernance sur blockchain et tenue de registre numérique à la plateforme tokenisée du NYSE.",
+    "Deux modèles coexistent : le « jumeau numérique » créé au niveau du dépositaire central, et le jeton numérique (token) adossé au registre de l’émetteur, porté par une coalition qui s’élargit.",
+    "La consultation de la SEC sur les agents de transfert est close : des acteurs crypto demandent que les jetons émis par des tiers n’exigent aucun accord avec l’émetteur ni avec son teneur de registre.",
     "En Europe, l’ESMA fait de l’IA et de la tokenisation une priorité de supervision dès 2027 ; le cadre du règlement T+1 est complet, première échéance le 7 décembre."
    ],
    "recoLabel": "À suivre",
@@ -23,7 +23,7 @@
    ],
    "signals": [
     [
-     "Broadridge apportera gouvernance on-chain et tenue de registre numérique à la plateforme tokenisée du NYSE",
+     "Broadridge apportera gouvernance sur blockchain et tenue de registre numérique à la plateforme tokenisée du NYSE",
      "Cœur de métier · tendance confirmée"
     ],
     [
@@ -39,7 +39,7 @@
      "Régulation · tendance émergente"
     ],
     [
-     "La coalition pour des tokens émis à l’initiative de l’émetteur s’élargit",
+     "La coalition pour des jetons numériques émis à l’initiative de l’émetteur s’élargit",
      "Concurrence · tendance émergente"
     ],
     [
