@@ -2,6 +2,18 @@ Début novembre, en Charente, les acteurs économiques du département étaient 
 
 Tout est dit. Rester à l’écart n’est pas une option. Y aller sans précaution non plus.
 
+## Un exemple : un grossiste en luminaires
+
+Un grossiste en luminaires voulait répondre plus vite aux cahiers des charges techniques de ses clients. Il fallait bien interpréter chaque cahier des charges, choisir chez ses fournisseurs les luminaires les plus adaptés, puis préparer le devis.
+
+Nous avons d’abord tenté la voie la plus « industrielle » : un mois à construire des automatisations complètes avec n8n, un outil d’automatisation. C’était une erreur. Nous avons basculé sur une plateforme d’IA du marché, Claude, connectée à certains dossiers de l’entreprise. n8n n’est resté que pour orchestrer quelques accès : retrouver les tarifs négociés chez les fournisseurs, créer le devis dans le logiciel de gestion commerciale. La bascule a apporté de la fluidité, de la maîtrise et une meilleure coordination entre l’expert et la machine.
+
+La conception a pris quelques semaines. Elle a permis de tester plusieurs approches et de garder ce qui marche, de comprendre quelle taille de modèle il fallait pour une analyse pertinente, et de trouver la bonne répartition des rôles entre l’humain et l’IA. Cette phase agile a fait gagner des mois. Le dispositif fonctionne, et il continue de se régler au quotidien.
+
+Revers de la réussite : l’entreprise dépend désormais fortement de cette plateforme en ligne. Une interruption de service d’une semaine la mettrait en danger. L’étape suivante est donc de sécuriser. Tout ou partie du processus peut revenir sur ses propres serveurs, avec n8n ou peut-être Mistral Studio (pas encore testé), tout en continuant d’appeler des modèles étrangers pour certaines tâches d’analyse. Si l’un d’eux devenait inaccessible, le remplacer serait rapide. Tout internaliser, modèle compris, n’est pas d’actualité.
+
+La leçon : commencer par l’étape la plus sécurisée aurait coûté des mois, sans savoir encore ce qu’il fallait sécuriser. On explore d’abord. On protège ensuite ce qui le mérite.
+
 ## Beaucoup d’entreprises attendent, par prudence
 
 Sur le terrain, nous voyons beaucoup d’entreprises à l’arrêt. La raison invoquée est presque toujours la même : la sécurité des données.
@@ -15,6 +27,8 @@ Pour tout le reste, données personnelles comprises (le RGPD s’applique déjà
 Cet article propose une démarche agile pour se transformer maintenant. Elle a un second avantage : donner tout de suite un cadre d’utilisation réduit le risque le plus répandu, le shadow IA (l’usage par les salariés d’outils d’IA personnels, hors de tout contrôle). Quand l’entreprise ne propose rien, ses équipes utilisent quand même l’IA, avec leurs comptes gratuits. Et leurs documents partent là où personne ne regarde.
 
 ## Une échelle de sécurité à trois niveaux
+
+![L’échelle de sécurité en trois marches : une question de tri (« Le mettriez-vous sur SharePoint ou Google Drive ? »), puis plateforme pro, processus chez soi avec l’IA chez un fournisseur, et tout chez soi, avec leurs ordres de grandeur de coût. Un processus démarre à gauche et monte autant que nécessaire en gardant ce qu’il a appris.](/blog/echelle-securite-ia-3-marches.png)
 
 ### Niveau 1 : une plateforme d’IA professionnelle, comme vos outils bureautiques
 
@@ -52,6 +66,8 @@ L’échelle ne se choisit pas une fois pour toutes, pour toute l’entreprise. 
 - **Ce qui est déjà stratégique va directement au niveau 3.** Inutile de l’exposer pour apprendre.
 - **L’essentiel des processus peut démarrer au niveau 1.** Dans les entreprises que nous accompagnons, c’est de l’ordre de neuf sur dix. On y découvre très vite un processus repensé, dopé à l’IA. Beaucoup y resteront, en s’améliorant chaque jour avec les idées de ceux qui les pilotent.
 - **Les plus sensibles, ou ceux qui le deviennent, remontent la pente.** Au niveau 2, avec un modèle étranger puis hébergé en France, ou jusqu’au niveau 3 si besoin. Deux signaux doivent alerter : une dépendance qui s’installe envers un fournisseur, ou des données qui deviennent stratégiques.
+
+C’est exactement le parcours du grossiste en luminaires : une exploration rapide au niveau 1, puis une sécurisation au niveau 2, sans viser le niveau 3.
 
 En montant, vous ne perdez rien de ce que vous avez appris. Le processus repensé, les consignes, les exemples, les contrôles : tout cela se transporte d’un niveau à l’autre. Et c’est cet apprentissage rapide, pas le modèle, qui vous différencie de vos concurrents.
 

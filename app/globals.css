@@ -180,6 +180,7 @@ form.panel .link { color: var(--gold-text); }
 .prose ul, .prose ol { padding-left: 22px; display: flex; flex-direction: column; gap: 6px; }
 .prose blockquote { border-left: 3px solid var(--gold); padding-left: 16px; color: var(--ink); font-style: italic; }
 .prose a { color: var(--gold-text); text-decoration: underline; }
+.prose img { display: block; width: 100%; max-width: 540px; margin: 8px auto; border-radius: 8px; }
 .prose table { display: block; overflow-x: auto; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
 .prose th, .prose td { border: 1px solid var(--line, #d9dee7); padding: 10px 12px; vertical-align: top; text-align: left; min-width: 150px; }
 .prose th { background: var(--tint, #f4f6fa); font-weight: 600; }
