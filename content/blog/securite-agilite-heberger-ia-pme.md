@@ -14,7 +14,7 @@ Pour tout le reste, données personnelles comprises (le RGPD s’applique déjà
 
 Cet article propose une démarche agile pour se transformer maintenant. Elle a un second avantage : donner tout de suite un cadre d’utilisation réduit le risque le plus répandu, le shadow IA (l’usage par les salariés d’outils d’IA personnels, hors de tout contrôle). Quand l’entreprise ne propose rien, ses équipes utilisent quand même l’IA, avec leurs comptes gratuits. Et leurs documents partent là où personne ne regarde.
 
-## Une échelle de sécurité à quatre niveaux
+## Une échelle de sécurité à trois niveaux
 
 ### Niveau 1 : une plateforme d’IA professionnelle, comme vos outils bureautiques
 
@@ -28,15 +28,16 @@ Claude, ChatGPT, Copilot, Gemini ou Mistral, dans leurs offres pour les entrepri
 
 Le démarrage prend quelques jours, pour un abonnement de quelques dizaines d’euros par utilisateur et par mois. Ces éditeurs sont souvent américains, donc soumis au Cloud Act (une loi de 2018 qui permet aux autorités des États-Unis d’exiger des données détenues par un fournisseur américain, [quel que soit leur lieu de stockage](https://www.insideprivacy.com/cloud-computing/cloud-act-creates-new-framework-for-cross-border-data-access/)). C’est exactement la situation de SharePoint et de Google. Si vous acceptez ce risque pour vos documents de travail, il est cohérent de l’accepter ici.
 
-### Niveau 2 : vos processus chez vous, le modèle appelé à distance
+### Niveau 2 : vos processus chez vous, le modèle chez un fournisseur
 
-Votre outil d’automatisation (n8n, par exemple) tourne sur votre propre serveur, pour quelques dizaines d’euros par mois. Il appelle le modèle d’IA à distance, par une API (une porte d’accès entre logiciels), payée à l’usage. Il n’envoie que les données utiles, anonymisées si besoin. Vos processus automatisés vous appartiennent, et vous pouvez changer de modèle sans tout refaire.
+Votre outil d’automatisation (n8n, par exemple) tourne sur votre propre serveur, pour quelques dizaines d’euros par mois. Vos processus automatisés, vos règles et vos données stockées restent chez vous. Pour la partie IA, l’outil appelle un modèle à distance, par une API (une porte d’accès entre logiciels), payée à l’usage. Il n’envoie que les données utiles, anonymisées si besoin.
 
-### Niveau 3 : un modèle hébergé en France par un acteur européen
+Deux options pour ce modèle, et l’on passe de l’une à l’autre en changeant un simple réglage :
 
-Même principe, mais le modèle est hébergé en France. [OVHcloud AI Endpoints](https://corporate.ovhcloud.com/en/newsroom/news/ai-endpoints/) propose des modèles open source (dont les paramètres sont publics et réutilisables), parmi lesquels des modèles de Mistral, depuis son centre de données de Gravelines, dans le Nord. Le prix reste modeste : moins d’un euro par million de tokens (unités de texte, un mot ou un morceau de mot) pour un modèle comme [Mistral Small 3.2](https://www.ovhcloud.com/fr/public-cloud/ai-endpoints/catalog/mistral-small-3-2-24b-instruct-2506/). En contrepartie, ces modèles ont souvent un temps de retard sur les meilleurs.
+- **Un grand éditeur** (Claude, OpenAI, Gemini, Mistral) : les meilleurs modèles du marché, avec la même réserve sur le Cloud Act qu’au niveau 1 pour les éditeurs américains.
+- **Un modèle hébergé en France par un acteur européen** : [OVHcloud AI Endpoints](https://corporate.ovhcloud.com/en/newsroom/news/ai-endpoints/) propose des modèles open source (dont les paramètres sont publics et réutilisables), parmi lesquels des modèles de Mistral, depuis son centre de données de Gravelines, dans le Nord. Le prix reste modeste : moins d’un euro par million de tokens (unités de texte, un mot ou un morceau de mot) pour un modèle comme [Mistral Small 3.2](https://www.ovhcloud.com/fr/public-cloud/ai-endpoints/catalog/mistral-small-3-2-24b-instruct-2506/). En contrepartie, ces modèles ont souvent un temps de retard sur les meilleurs.
 
-### Niveau 4 : tout chez vous
+### Niveau 3 : tout chez vous
 
 Le processus et le modèle tournent sur vos propres machines. Aucune donnée ne sort. Un modèle modeste tient sur un PC équipé d’une carte graphique de 24 Go, pour environ 2 000 à 4 000 €. Il suffit pour résumer, classer ou extraire des informations. Un gros modèle demande un serveur à huit cartes graphiques spécialisées, de l’ordre de [250 000 à 400 000 dollars](https://intuitionlabs.ai/articles/data-center-gpu-prices), plus une équipe pour l’exploiter. Toute la sécurité repose alors sur vous : mises à jour, accès, sauvegardes.
 
@@ -48,9 +49,9 @@ Bon à savoir : certaines plateformes couvrent plusieurs marches. [Mistral Studi
 
 L’échelle ne se choisit pas une fois pour toutes, pour toute l’entreprise. Elle se choisit processus par processus, et elle évolue.
 
-- **Ce qui est déjà stratégique va directement au niveau 4.** Inutile de l’exposer pour apprendre.
+- **Ce qui est déjà stratégique va directement au niveau 3.** Inutile de l’exposer pour apprendre.
 - **L’essentiel des processus peut démarrer au niveau 1.** Dans les entreprises que nous accompagnons, c’est de l’ordre de neuf sur dix. On y découvre très vite un processus repensé, dopé à l’IA. Beaucoup y resteront, en s’améliorant chaque jour avec les idées de ceux qui les pilotent.
-- **Les plus sensibles, ou ceux qui le deviennent, remontent la pente.** Plus ou moins haut, du niveau 1 jusqu’au niveau 4 si besoin. Deux signaux doivent alerter : une dépendance qui s’installe envers un fournisseur, ou des données qui deviennent stratégiques.
+- **Les plus sensibles, ou ceux qui le deviennent, remontent la pente.** Au niveau 2, avec un modèle étranger puis hébergé en France, ou jusqu’au niveau 3 si besoin. Deux signaux doivent alerter : une dépendance qui s’installe envers un fournisseur, ou des données qui deviennent stratégiques.
 
 En montant, vous ne perdez rien de ce que vous avez appris. Le processus repensé, les consignes, les exemples, les contrôles : tout cela se transporte d’un niveau à l’autre. Et c’est cet apprentissage rapide, pas le modèle, qui vous différencie de vos concurrents.
 
@@ -65,7 +66,7 @@ Notre diagnostic IA offert vous aide à repérer les processus à explorer en pr
 ### À retenir
 
 - Ne pas y aller n’est pas une option. Y aller sans cadre non plus.
-- Vos actifs stratégiques, vous les connaissez : ils vont au niveau 4, ou restent à l’écart.
+- Vos actifs stratégiques, vous les connaissez : ils vont au niveau 3, ou restent à l’écart.
 - Pour le reste, le vrai risque est de ne pas inventer assez vite sa place dans la nouvelle économie.
 - Le niveau 1 protège autant que vos outils bureautiques, et il coupe court au shadow IA.
 - Explorez en bas de l’échelle, montez quand un processus le mérite, et gardez ce que vous avez appris.
