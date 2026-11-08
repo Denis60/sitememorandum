@@ -29,6 +29,15 @@
     },
     {
       "theme": "Décider et piloter l’IA",
+      "titre": "Sécurité ou agilité : où faire tourner l’IA de votre PME ?",
+      "statut": "publie",
+      "slug": "securite-agilite-heberger-ia-pme",
+      "date": "2026-11-08",
+      "accroche": "Toutes les grandes plateformes savent automatiser un processus. Reste une question qui engage le dirigeant : où tournent vos données et le modèle ? Quatre scénarios, de l’éditeur à vos propres serveurs.",
+      "auteur": "denis"
+    },
+    {
+      "theme": "Décider et piloter l’IA",
       "titre": "Combien coûte vraiment un agent IA ?",
       "statut": "a-paraitre",
       "slug": "cout-agent-ia"
