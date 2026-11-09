@@ -1,4 +1,4 @@
-Début novembre, en Charente, les acteurs économiques du département étaient réunis pour une demi-journée consacrée à l’IA et à la sécurité économique. Le préfet l’a résumé en une phrase : « L’IA est là, qu’on le veuille ou pas. Maintenant, il faut savoir s’en servir, savoir se protéger, savoir en faire une ressource stratégique. » Il a ajouté que cette appropriation devait se faire « dans un cadre maîtrisé ».
+Début novembre, les acteurs économiques du département étaient réunis par la préfecture de Charente pour une demi-journée consacrée à l’IA et à la sécurité économique. Le préfet l’a résumé en une phrase : « L’IA est là, qu’on le veuille ou pas. Maintenant, il faut savoir s’en servir, savoir se protéger, savoir en faire une ressource stratégique. » Il a ajouté que cette appropriation devait se faire « dans un cadre maîtrisé ».
 
 Tout est dit. Rester à l’écart n’est pas une option. Y aller sans précaution non plus.
 
@@ -14,11 +14,9 @@ Nous avons basculé sur une plateforme d’IA du marché, Claude, dans son offre
 
 La conception a pris quelques semaines. Elle a permis de tester plusieurs approches et de garder ce qui marche, de comprendre quelle taille de modèle il fallait pour une analyse pertinente, et de trouver la bonne répartition des rôles entre l’humain et l’IA. Cette phase agile a fait gagner des mois. Le dispositif fonctionne, et il continue de s’améliorer au quotidien en mémorisant de nouvelles consignes.
 
-Revers de la réussite : l’entreprise dépend désormais fortement de cette plateforme en ligne. Une interruption de service d’une semaine la mettrait en danger. L’étape suivante est donc de renforcer. D’abord, garder un mode de travail manuel, même plus lent, si l’IA devient indisponible. Ensuite, rapatrier tout ou partie du processus sur ses propres serveurs, avec n8n ou peut-être Mistral Studio (pas encore testé), tout en continuant d’appeler des modèles étrangers pour certaines tâches d’analyse. Un modèle de secours, choisi et testé à l’avance, prendrait le relais si l’un d’eux devenait inaccessible. Tout internaliser, modèle compris, n’est pas d’actualité.
+Revers de la réussite : l’entreprise dépend désormais fortement de cette plateforme en ligne. Une interruption de service d’une semaine la mettrait en danger. L’étape suivante est donc de réinternaliser, moins pour des raisons de sécurité des données que de dépendance. Il s’agit de rapatrier tout ou partie du processus sur ses propres serveurs, avec n8n ou peut-être Mistral Studio (pas encore testé), tout en continuant d’appeler des modèles étrangers pour certaines tâches d’analyse. Un modèle de secours, choisi et testé à l’avance, prend le relais si l’un d’eux devient inaccessible. Tout internaliser, modèle compris, n’est pas d’actualité.
 
 La leçon : commencer par l’étape la plus internalisée aurait coûté des mois, sans savoir encore ce qu’il fallait protéger. On explore d’abord, sur un socle de sécurité déjà solide. On renforce ensuite, à la mesure de ce qu’on a appris.
-
-![L’échelle de sécurité en trois marches : une question de tri (« Le mettriez-vous sur SharePoint ou Google Drive ? »), puis plateforme pro, processus chez soi avec l’IA chez un fournisseur, et tout chez soi, avec leurs ordres de grandeur de coût. Un processus démarre à gauche et monte autant que nécessaire en gardant ce qu’il a appris.](/blog/echelle-securite-ia-3-marches.png)
 
 ## Beaucoup d’entreprises attendent, par prudence
 
@@ -26,7 +24,7 @@ Sur le terrain, nous voyons beaucoup d’entreprises à l’arrêt. La raison in
 
 Cette prudence mérite d’être regardée de près. Une entreprise qui détient un actif stratégique (un procédé, un savoir-faire rare, un fichier sensible) le sait, en général. Elle ne le dépose pas sur SharePoint ni sur Google Drive. Elle ne le confiera donc pas non plus à une plateforme d’IA étrangère. Ce réflexe est sain. Attention toutefois : la valeur peut aussi naître de l’assemblage. Des données anodines, une à une, peuvent devenir stratégiques une fois réunies.
 
-Pour tout le reste, le risque stratégique est ailleurs. Les offres professionnelles des grandes plateformes, bien configurées, apportent un socle de garanties adapté au RGPD pour les usages autorisés. Les données de santé, réglementées ou couvertes par un secret demandent, elles, un examen à part. Le vrai risque est de ne pas inventer assez vite l’intelligence économique qui va avec ce nouveau carburant, importé comme le pétrole. Le danger n’est pas tant de mal protéger vos données d’aujourd’hui. Il est de ne pas trouver votre place dans la nouvelle économie.
+Pour tout le reste, le risque stratégique est ailleurs. Les offres professionnelles des grandes plateformes, bien configurées, apportent un socle de garanties adapté au RGPD pour les usages autorisés. **Le vrai risque est de ne pas inventer assez vite l’intelligence économique qui va avec ce nouveau carburant** que sont les data centers. Le danger n’est pas tant de mal protéger vos données d’aujourd’hui. Il est de ne pas trouver votre place dans la nouvelle économie.
 
 Nous allons tous tâtonner. Ceux qui commencent tôt inventeront ce qui méritera, demain, d’être protégé.
 
@@ -45,7 +43,7 @@ La CNIL propose des [fiches pratiques pour les TPE et PME](https://cnil.fr/fr/ut
 
 ## Une échelle à trois niveaux
 
-L’échelle ne mesure pas un niveau de sécurité qui monterait tout seul. Elle mesure la maîtrise : de vos flux de données, de vos dépendances, de votre autonomie. Chaque niveau repose sur le même socle de garanties.
+**L’échelle ne mesure pas un niveau de sécurité** qui monterait tout seul. Elle mesure la maîtrise : de vos flux de données, de vos dépendances, de votre autonomie. Chaque niveau repose sur le même socle de garanties.
 
 ### Niveau 1 : une plateforme d’IA professionnelle, comme vos outils bureautiques
 
@@ -57,9 +55,11 @@ Claude, ChatGPT, Copilot, Gemini ou Mistral, dans leurs offres pour les entrepri
 - une connexion avec les comptes de l’entreprise et une gestion des droits d’accès ;
 - selon les offres, des journaux d’activité et des règles de conservation.
 
-Deux précisions. La comparaison porte sur les garanties de la plateforme, pas sur le risque de chaque usage. Et ces garanties dépendent de l’offre choisie et de sa configuration : la localisation des données, leur durée de conservation ou les journaux ne sont pas toujours disponibles ni réglables.
+![L’échelle de maîtrise de l’IA en trois niveaux : explorer sur une plateforme pro (quelques dizaines d’euros par utilisateur et par mois), internaliser le processus qui décrit votre façon de travailler (petit serveur, modèles étrangers ou hébergés en France), maîtriser en gardant tout chez soi (2 000 € à 400 000 $). Une question de tri : « Le mettriez-vous sur SharePoint ou Google Drive ? ». L’essentiel des usages reste en bas ; on ne monte que si nécessaire.](/blog/echelle-securite-ia-3-niveaux.png)
 
-Le démarrage et la première utilisation se font dans l’heure, pour un abonnement de quelques dizaines d’euros par utilisateur et par mois, résiliable rapidement.
+Deux précisions. La comparaison porte sur les garanties de la plateforme, pas sur le risque de chaque usage. Et ces garanties dépendent de l’offre choisie et de sa configuration.
+
+Le démarrage et la première utilisation se font dans l’heure, pour un abonnement de quelques dizaines d’euros par utilisateur et par mois, résiliable simplement.
 
 Ces éditeurs sont souvent américains, donc soumis au Cloud Act. Cette loi de 2018 permet aux autorités des États-Unis d’exiger, dans le cadre d’une procédure judiciaire, des données détenues par un fournisseur américain, [quel que soit leur lieu de stockage](https://www.insideprivacy.com/cloud-computing/cloud-act-creates-new-framework-for-cross-border-data-access/). Ce n’est pas un accès automatique. C’est exactement la situation de SharePoint et de Google. Si vous acceptez ce risque pour vos documents de travail, il est cohérent de l’accepter ici.
 
@@ -77,7 +77,7 @@ Les modèles d’IA externes deviennent des consommables. Le processus les appel
 
 - **Les modèles américains** (Claude, GPT, Gemini), pour les tâches potentiellement complexes mais peu sensibles. Ce sont souvent les plus performants, avec la même réserve sur le Cloud Act qu’au niveau 1.
 - **Les modèles européens**, pour les données sensibles. Mistral les propose directement. [OVHcloud AI Endpoints](https://corporate.ovhcloud.com/en/newsroom/news/ai-endpoints/) propose des modèles open source (dont les paramètres sont publics et réutilisables), parmi lesquels des modèles de Mistral, depuis son centre de données de Gravelines, dans le Nord. Le prix reste modeste : moins d’un euro par million de tokens (unités de texte, un mot ou un morceau de mot) pour un modèle comme [Mistral Small 3.2](https://www.ovhcloud.com/fr/public-cloud/ai-endpoints/catalog/mistral-small-3-2-24b-instruct-2506/). En contrepartie, ces modèles ont souvent un temps de retard sur les meilleurs.
-- **Un petit modèle sur un PC de l’entreprise**, pour les tâches sensibles, ponctuelles et simples. Il est aujourd’hui assez simple d’installer un modèle sur la carte graphique d’un PC. Dans mon activité, je m’en sers pour pseudonymiser à la source (remplacer les noms et identifiants par des codes) les documents que me remettent mes clients, avant tout autre traitement. Cela fonctionne même pour des vidéos. Attention : des données pseudonymisées [restent des données personnelles](https://www.edpb.europa.eu/news/edpb-adopts-pseudonymisation-guidelines-and-paves-the-way-to-improve-cooperation-with_fr) au sens du RGPD.
+- **Un petit modèle sur un PC de l’entreprise**, pour les tâches sensibles, ponctuelles et simples. Il est aujourd’hui assez simple d’installer un modèle sur la carte graphique d’un PC. Dans mon activité, je m’en sers pour pseudonymiser à la source (remplacer les noms et identifiants par des codes) les documents que me remettent mes clients, avant tout autre traitement. Cela fonctionne même pour des vidéos.
 
 ### Niveau 3 : tout chez vous
 
@@ -85,7 +85,7 @@ Le processus et le modèle tournent sur vos propres machines. Un modèle modeste
 
 Les données ne partent plus chez un fournisseur d’IA. Mais d’autres portes restent à surveiller : les mises à jour, les sauvegardes, les journaux, le support à distance, les connecteurs.
 
-Plus on internalise, plus on maîtrise les flux, la conservation, les accès, les dépendances et les solutions de repli, et moins on est exposé à un fournisseur. En contrepartie, une part croissante de la sécurité repose sur l’entreprise elle-même. Et plus on internalise, plus c’est cher, plus il faut de compétences, et moins on va vite. L’ANSSI recommande d’ailleurs une « posture de prudence » quand on intègre une IA générative à son système d’information ([recommandations de sécurité](https://messervices.cyber.gouv.fr/guides/recommandations-de-securite-pour-un-systeme-dia-generative)).
+Plus on internalise, plus on maîtrise les flux, la conservation, les accès, les dépendances et les solutions de repli, et moins on est exposé à un fournisseur. En contrepartie, une part croissante de la sécurité repose sur l’entreprise elle-même. Et plus on internalise, plus c’est cher, plus il faut de compétences, et moins on va vite. L’ANSSI recommande d’ailleurs une « posture de prudence » quand on intègre une IA générative à son système d’information.
 
 ## Une approche dynamique : chaque processus trouve sa marche
 
@@ -93,7 +93,7 @@ La marche de l’échelle ne se choisit pas une fois pour toutes, pour toute l�
 
 - **Ce qui est déjà stratégique va directement au niveau 3.** Inutile de l’exposer pour apprendre.
 - **L’essentiel des processus peut démarrer au niveau 1**, avec des données autorisées, non stratégiques et réduites au nécessaire. Dans les entreprises que nous accompagnons, c’est de l’ordre de neuf sur dix ; c’est un retour d’expérience, pas une règle. On y découvre très vite un processus repensé, dopé à l’IA. Beaucoup y resteront, en s’améliorant chaque jour avec les idées de ceux qui les pilotent.
-- **Les plus sensibles, ou ceux qui le deviennent, sont renforcés.** Deux signaux doivent alerter : une dépendance qui s’installe envers un fournisseur, ou des données qui deviennent stratégiques. Réévaluez donc la sensibilité à mesure que le processus accumule consignes, exemples, données et connexions.
+- **Les plus sensibles, ou ceux qui le deviennent, sont internalisés (niveau 2).** Deux signaux doivent alerter : une dépendance qui s’installe envers un fournisseur, ou des données qui deviennent stratégiques. Réévaluez donc la sensibilité à mesure que le processus accumule consignes, exemples, données et connexions.
 
 Renforcer ne veut pas toujours dire monter. On peut d’abord réduire la durée de conservation des données, choisir une API qui ne garde rien, cloisonner les données, passer à un fournisseur européen ou répartir les tâches entre plusieurs fournisseurs. On monte au niveau 2, voire au niveau 3, quand ces réglages ne suffisent plus.
 

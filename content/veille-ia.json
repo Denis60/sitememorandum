@@ -7,6 +7,180 @@
   },
   "days": [
     {
+      "date": "2026-11-09",
+      "label": "Lundi 9 novembre 2026",
+      "topics": [
+        {
+          "t": "L’IA perd sa première élection, et la Bourse panique",
+          "m": 1,
+          "ideas": [
+            "Le 5 novembre, le Nasdaq a perdu 5,52 % ; Nvidia a cédé plus de 9 %, AMD et Micron plus de 17 %.",
+            "Aux mêmes élections américaines, 40 des 41 mesures locales sur les data centers ont été votées contre leur développement.",
+            "La correction touche les fournisseurs d’infrastructures, pas l’utilité des outils : gardez plusieurs fournisseurs."
+          ],
+          "src": "Le Grand Continent",
+          "d": "6 novembre 2026",
+          "url": "https://legrandcontinent.eu/fr/2026/11/06/la-bulle-de-lia-est-elle-vraiment-en-train-declater/"
+        },
+        {
+          "t": "Un marchand de homards confie son marketing quotidien à l’IA",
+          "m": 3,
+          "ideas": [
+            "Chaque matin, un assistant IA analyse les ventes, propose les publicités du jour, et le patron valide.",
+            "Les retours du fondateur deviennent des règles : son taux d’approbation passe de 20 % à 90 % en sept jours.",
+            "Chiffres annoncés par l’éditeur, non vérifiés : +63 % de rentabilité publicitaire. Le travail du dirigeant devient de dire ce qu’est une bonne publicité."
+          ],
+          "src": "Perplexity, relayé par AI Breakfast",
+          "d": "6 novembre 2026",
+          "url": "https://www.perplexity.ai/hub/customers/get-maine-lobster"
+        },
+        {
+          "t": "Karpathy construit un site complet en un week-end avec Claude",
+          "m": 4,
+          "ideas": [
+            "Andrej Karpathy a bâti avec Claude un site de vidéos nourri par vingt ans de commentaires de Hacker News ; le deuxième lui a pris trois minutes.",
+            "Contrepoint : sur de vraies modifications d’applications, le meilleur assistant de code ne réussit entièrement que 26,4 % des tâches.",
+            "Construire un outil ne prend plus des semaines : ce qui devient rare, c’est l’idée juste et la donnée originale."
+          ],
+          "src": "The Decoder",
+          "d": "8 novembre 2026",
+          "url": "https://the-decoder.com/andrej-karpathy-built-a-curated-video-platform-in-a-weekend-using-claude-and-20-years-of-hacker-news/"
+        },
+        {
+          "t": "Ce qu’un assistant IA doit retenir de votre entreprise",
+          "m": 3,
+          "ideas": [
+            "Selon Anthropic, un assistant qui se construit un wiki de l’entreprise passe de 13 % à 48 % de bonnes réponses.",
+            "Mais tout retenir le rend moins bon : il faut choisir ce qui mérite d’être noté, le relire et corriger.",
+            "La mémoire d’un assistant se gère comme celle d’un nouveau collaborateur : c’est un choix d’organisation."
+          ],
+          "src": "Anthropic",
+          "d": "6 novembre 2026",
+          "url": "https://www.anthropic.com/research/components-of-agent-memory"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "label": "Vendredi 6 novembre 2026",
+      "topics": [
+        {
+          "t": "Apple rationne l’IA de ses salariés",
+          "m": 3,
+          "ideas": [
+            "Selon Bloomberg, Apple a abaissé le budget IA quotidien de certains ingénieurs de 300 à 200 dollars, et prévoit d’aller plus loin.",
+            "Microsoft, Tesla, Uber et Meta ont aussi plafonné leurs dépenses d’IA internes.",
+            "L’IA devient une dépense par salarié à piloter : quel outil, pour quelle tâche, avec quel budget."
+          ],
+          "src": "The Decoder",
+          "d": "5 novembre 2026",
+          "url": "https://the-decoder.com/apple-slashes-internal-ai-budgets-with-deeper-cuts-still-planned/"
+        },
+        {
+          "t": "Chez les chercheurs, l’IA pourrait prendre 38 % du temps",
+          "m": 4,
+          "ideas": [
+            "Selon Anthropic, l’IA pourrait déjà assurer de 27 à 52 % du temps de recherche (médiane 38 %).",
+            "Le temps libéré se reporte sur ce que l’IA fait mal : le terrain et le choix des bonnes questions.",
+            "Le gain réel dépend de ce que vos équipes font du temps gagné."
+          ],
+          "src": "Anthropic",
+          "d": "5 novembre 2026",
+          "url": "https://www.anthropic.com/research/how-researchers-use-claude"
+        },
+        {
+          "t": "Sur du vrai travail, les agents IA plafonnent à 12 %",
+          "m": 3,
+          "ideas": [
+            "Sur 206 tâches de plusieurs heures dans de vrais logiciels métiers, aucun agent IA (assistant qui agit seul) ne dépasse 12 % de réussite.",
+            "En cybersécurité, 98 % des essais enfreignent au moins une règle.",
+            "Confiez-leur des étapes bien découpées, avec des règles claires et une validation humaine, pas un métier entier."
+          ],
+          "src": "The Decoder",
+          "d": "5 novembre 2026",
+          "url": "https://the-decoder.com/no-ai-agent-scores-above-12-percent-on-semianalysis-new-real-world-work-benchmark/"
+        },
+        {
+          "t": "Votre site est ouvert à l’IA… mais il ne lui dit rien",
+          "m": 1,
+          "ideas": [
+            "Sur 481 sites de PME, 98,6 % laissent entrer ChatGPT et ses concurrents.",
+            "Mais 84,5 % n’ont pas de page dédiée par service, et près de la moitié ne décrivent pas clairement l’entreprise.",
+            "Décrivez qui vous êtes et chaque service vendu : c’est ce que les assistants IA liront pour vous recommander. Étude d’un éditeur, à lire comme un signal."
+          ],
+          "src": "InSpace via GlobeNewswire",
+          "d": "5 novembre 2026",
+          "url": "https://www.globenewswire.com/news-release/2026/11/05/3396321/0/fr/les-pme-ouvrent-la-porte-%C3%A0-l-ia-mais-expliquent-tr%C3%A8s-peu-leur-expertise.html"
+        },
+        {
+          "t": "Mistral veut faire passer l’IA des pilotes à la production",
+          "m": 2,
+          "ideas": [
+            "Mistral lance Studio, pour construire des assistants et des enchaînements automatisés d’entreprise, avec des points de validation humaine.",
+            "Déploiement au choix : chez Mistral, dans son propre cloud ou sur site ; BNP Paribas l’exécute sur sa propre infrastructure.",
+            "L’offre européenne mûrit : la question n’est plus l’outil, c’est le choix des processus à transformer."
+          ],
+          "src": "Mistral AI",
+          "d": "5 novembre 2026",
+          "url": "https://mistral.ai/news/build-with-studio/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "label": "Jeudi 5 novembre 2026",
+      "topics": [
+        {
+          "t": "Dans les PME, l’IA entre par les petites tâches",
+          "m": 2,
+          "ideas": [
+            "Selon la Banque de France, environ deux entreprises de 20 salariés ou plus sur trois utilisent l’IA générative, souvent de façon limitée.",
+            "L’écart se creuse sur l’IA prédictive : 31 % des PME contre 60 % des grandes entreprises.",
+            "L’enjeu n’est pas un grand plan : c’est relier les usages isolés et fixer qui valide quoi."
+          ],
+          "src": "Maddyness",
+          "d": "4 novembre 2026",
+          "url": "https://www.maddyness.com/2026/11/04/ia-en-pme-usages-quotidiens-assistants/"
+        },
+        {
+          "t": "Vos clients vont envoyer leurs assistants IA sur votre site",
+          "m": 1,
+          "ideas": [
+            "Cloudflare permet de voir quels assistants IA visitent un site, et de les autoriser ou de les bloquer un par un.",
+            "Selon une enquête commandée par Adobe, 59 % des consommateurs américains essaieraient une marque inconnue recommandée par une IA.",
+            "Un site qui bloque tous les robots risque de refuser des clients : vérifiez que vos informations produits sont lisibles et exactes."
+          ],
+          "src": "Unite.AI",
+          "d": "4 novembre 2026",
+          "url": "https://www.unite.ai/cloudflare-adds-personal-agent-analytics-and-per-agent-access-controls"
+        },
+        {
+          "t": "Les agents IA ratent encore 40 % des tâches d’exploitation",
+          "m": 3,
+          "ideas": [
+            "Sur 45 tâches réelles d’administration informatique, le meilleur agent IA (assistant qui agit seul) n’en réussit que 60 %.",
+            "80 % des échecs viennent du jugement : mauvais périmètre, vérifications oubliées, arrêt trop tôt.",
+            "Avant de confier des actions irréversibles, prévoyez des droits limités et une validation humaine."
+          ],
+          "src": "The Decoder",
+          "d": "4 novembre 2026",
+          "url": "https://the-decoder.com/new-open-source-benchmark-reveals-reasoning-as-the-biggest-bottleneck-for-ai-in-cloud-operations/"
+        },
+        {
+          "t": "Google : sans IA, plus de recherche pour les écoles",
+          "m": 1,
+          "ideas": [
+            "Dès 2027, les écoles américaines qui coupent l’IA de Google perdront aussi son moteur de recherche.",
+            "Pour Google, recherche et IA sont désormais « trop étroitement fusionnées pour être séparées ».",
+            "Les éditeurs intègrent l’IA partout : mieux vaut fixer vos règles que subir leurs choix par défaut."
+          ],
+          "src": "The Decoder",
+          "d": "4 novembre 2026",
+          "url": "https://the-decoder.com/schools-that-turn-off-googles-ai-will-lose-search-too-starting-in-2027/"
+        }
+      ]
+    },
+    {
       "date": "2026-11-04",
       "label": "Mercredi 4 novembre 2026",
       "topics": [
@@ -215,5 +389,46 @@
         }
       ]
     }
-  ]
+  ],
+  "semaine": {
+    "label": "du 5 au 9 novembre 2026",
+    "topics": [
+      {
+        "t": "Sur du vrai travail, les agents IA plafonnent à 12 %",
+        "m": 3,
+        "ideas": [
+          "Sur 206 tâches de plusieurs heures dans de vrais logiciels métiers, aucun agent IA (assistant qui agit seul) ne dépasse 12 % de réussite.",
+          "En cybersécurité, 98 % des essais enfreignent au moins une règle.",
+          "Confiez-leur des étapes bien découpées, avec des règles claires et une validation humaine, pas un métier entier."
+        ],
+        "src": "The Decoder",
+        "d": "5 novembre 2026",
+        "url": "https://the-decoder.com/no-ai-agent-scores-above-12-percent-on-semianalysis-new-real-world-work-benchmark/"
+      },
+      {
+        "t": "Un marchand de homards confie son marketing quotidien à l’IA",
+        "m": 3,
+        "ideas": [
+          "Chaque matin, un assistant IA analyse les ventes, propose les publicités du jour, et le patron valide.",
+          "Les retours du fondateur deviennent des règles : son taux d’approbation passe de 20 % à 90 % en sept jours.",
+          "Chiffres annoncés par l’éditeur, non vérifiés : +63 % de rentabilité publicitaire. Le travail du dirigeant devient de dire ce qu’est une bonne publicité."
+        ],
+        "src": "Perplexity, relayé par AI Breakfast",
+        "d": "6 novembre 2026",
+        "url": "https://www.perplexity.ai/hub/customers/get-maine-lobster"
+      },
+      {
+        "t": "Dans les PME, l’IA entre par les petites tâches",
+        "m": 2,
+        "ideas": [
+          "Selon la Banque de France, environ deux entreprises de 20 salariés ou plus sur trois utilisent l’IA générative, souvent de façon limitée.",
+          "L’écart se creuse sur l’IA prédictive : 31 % des PME contre 60 % des grandes entreprises.",
+          "L’enjeu n’est pas un grand plan : c’est relier les usages isolés et fixer qui valide quoi."
+        ],
+        "src": "Maddyness",
+        "d": "4 novembre 2026",
+        "url": "https://www.maddyness.com/2026/11/04/ia-en-pme-usages-quotidiens-assistants/"
+      }
+    ]
+  }
 }
