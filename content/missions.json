@@ -10,6 +10,16 @@
       "methode": "Un modèle prédictif calcule un score de vente à partir de toutes les données de contexte. Pour chaque magasin, il identifie les magasins qui lui ressemblent et vendent plus que lui, puis compare leurs assortiments.",
       "finesse_de_prediction": "Pour chaque magasin, chaque produit et chaque semaine de l’année.",
       "resultat": "D’après les simulations, les recommandations permettraient une progression significative du chiffre d’affaires, en cours de confirmation. L’entreprise en a tiré de grandes lignes de personnalisation et s’est interrogée sur sa capacité à exploiter toute la finesse de recommandation désormais accessible."
+    },
+    {
+      "client": null,
+      "description": "Retour d’expérience auprès d’assureurs (missions confidentielles, clients non nommés)",
+      "secteur": "Assurance",
+      "travaux": [
+        "Stratégie IA annuelle : orienter les investissements, piloter les projets et partager les risques entre les directions opérationnelles et les fonctions support centrales.",
+        "Pilotage d’équipes de data scientists : adaptation des méthodes agiles aux projets de data science.",
+        "Constitution et animation d’un backlog de projets IA auprès du comité de direction."
+      ]
     }
   ]
 }
