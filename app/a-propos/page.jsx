@@ -7,7 +7,7 @@ export const metadata = { title: 'À propos', description: 'Denis Oblin, intégr
 export default function APropos() {
   return (
     <>
-      <PageHead eyebrow="À propos" title="Denis Oblin" photo={{ src: '/denis-oblin.jpg', alt: 'Portrait de Denis Oblin' }} lead="Intégrateur d’IA prédictive et générative depuis 2014, enseignant de la transformation IA à l’Institut Polytechnique de Paris." />
+      <PageHead eyebrow="À propos" title="Denis Oblin" photo={{ src: '/denis-oblin.jpg', alt: 'Portrait de Denis Oblin' }} lead="J’intègre l’IA prédictive et générative en entreprise depuis 2014 et j’enseigne la transformation IA à l’Institut Polytechnique de Paris." />
       <section className="band">
         <div className="wrap hero" style={{ alignItems: 'start' }}>
           <div className="stack">

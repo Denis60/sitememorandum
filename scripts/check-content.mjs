@@ -33,6 +33,7 @@ const refs = read('references.json');
 for (const r of refs.references || []) {
   if (typeof r.enLigne !== 'boolean') errors.push(`references.json : « enLigne » manquant pour « ${r.titre} ».`);
   if (r.enLigne && (!r.probleme || !r.resultat || !(r.fait || []).length)) errors.push(`references.json : fiche en ligne incomplète « ${r.titre} ».`);
+  if (r.enLigne && !r.secteur) errors.push(`references.json : secteur manquant pour « ${r.titre} ».`);
 }
 
 const blog = read('blog.json');

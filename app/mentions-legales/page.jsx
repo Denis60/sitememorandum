@@ -1,3 +1,4 @@
+import { Terme } from '../../lib/glossaire';
 export const metadata = { title: 'Mentions légales et confidentialité', alternates: { canonical: '/mentions-legales/' }, robots: { index: true } };
 
 export default function Mentions() {
@@ -14,7 +15,7 @@ export default function Mentions() {
         <p><strong>Prise de rendez-vous :</strong> le nom, l’adresse e-mail, l’entreprise et le message saisis servent uniquement à organiser l’échange (invitation Teams). Base légale : les mesures précontractuelles prises à votre demande.</p>
         <p><strong>Protection contre les robots :</strong> les formulaires sont protégés par Cloudflare Turnstile. Base légale : notre intérêt légitime à sécuriser le site.</p>
         <p><strong>Durée de conservation :</strong> 6 mois au plus, puis suppression.</p>
-        <p><strong>Destinataires et sous-traitants :</strong> les données ne sont ni vendues ni cédées. Elles sont accessibles à Denis Oblin et à nos sous-traitants techniques : Anthropic (IA), Render (serveur), Supabase (base de données, Union européenne), Resend (envoi d’e-mails), Microsoft (Outlook, Teams), Cloudflare (sécurité), Netlify (hébergement du site).</p>
+        <p><strong>Destinataires et sous-traitants :</strong> les données ne sont ni vendues ni cédées. Elles sont accessibles à Denis Oblin et à nos sous-traitants techniques : Anthropic (IA), Render (serveur), <Terme id="supabase">Supabase</Terme> (base de données, Union européenne), Resend (envoi d’e-mails), Microsoft (Outlook, Teams), Cloudflare (sécurité), Netlify (hébergement du site).</p>
         <p><strong>Transferts hors de l’Union européenne :</strong> certains de ces sous-traitants traitent des données aux États-Unis. Ces transferts sont encadrés par le cadre de protection des données UE–États-Unis (Data Privacy Framework) pour les sous-traitants certifiés, ou à défaut par les clauses contractuelles types de la Commission européenne.</p>
         <p><strong>Vos droits :</strong> vous pouvez demander l’accès à vos données, leur rectification, leur effacement, la limitation du traitement ou sa portabilité, vous opposer au traitement et retirer votre consentement à tout moment, en écrivant à denis.oblin@memorandum-ai.com. Nous répondons sous un mois.</p>
         <p><strong>Réclamation :</strong> si vous estimez que vos droits ne sont pas respectés, vous pouvez saisir la CNIL (<a className="link" href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer">cnil.fr</a>).</p>

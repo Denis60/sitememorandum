@@ -1,6 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { g } from '../lib/glossaire';
+
+const gl = g;
 
 export default function SectorTabs({ sectors }) {
   const [i, setI] = useState(0);
@@ -14,6 +17,7 @@ export default function SectorTabs({ sectors }) {
     return () => window.removeEventListener('hashchange', pick);
   }, [sectors]);
   const s = sectors[i];
+  const seen = new Set();
   return (
     <section className="band">
       <div className="wrap stack lg">
@@ -27,19 +31,19 @@ export default function SectorTabs({ sectors }) {
           <div className="stack lg" style={{ flex: '999 1 560px', minWidth: 0 }}>
             <div className="stack" style={{ gap: 8 }}>
               <p className="eyebrow">{s.edition}</p>
-              <h2 className="h2">{s.headline}</h2>
-              <p className="muted">{s.scope}</p>
+              <h2 className="h2">{g(s.headline, seen)}</h2>
+              <p className="muted">{g(s.scope, seen)}</p>
             </div>
             <section className="stack">
               <h3 className="h3">Résumé du mois</h3>
-              <ul className="bullets">{s.resume.map((r) => <li key={r}>{r}</li>)}</ul>
-              <p className="reco"><strong>{s.recoLabel} : </strong>{s.reco}</p>
+              <ul className="bullets">{s.resume.map((r) => <li key={r}>{g(r, seen)}</li>)}</ul>
+              <p className="reco"><strong>{s.recoLabel} : </strong>{g(s.reco, seen)}</p>
             </section>
             <section className="stack">
               <h3 className="h3">Les signaux du mois</h3>
               <ol className="signals">
                 {s.signals.map((g, k) => (
-                  <li key={g[0]}><b>{String(k + 1).padStart(2, '0')}</b><span className="stack" style={{ gap: 2 }}><strong style={{ fontWeight: 600 }}>{g[0]}</strong><span className="small muted">{g[1]}</span></span></li>
+                  <li key={g[0]}><b>{String(k + 1).padStart(2, '0')}</b><span className="stack" style={{ gap: 2 }}><strong style={{ fontWeight: 600 }}>{gl(g[0], seen)}</strong><span className="small muted">{gl(g[1], seen)}</span></span></li>
                 ))}
               </ol>
             </section>

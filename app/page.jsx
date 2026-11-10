@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import DiagSection from '../components/DiagSection';
+import { Terme } from '../lib/glossaire';
 import { Label, Chiffres, FilVeille, Realisations, Interventions, VeilleSemaine, Secteurs, Cas, Articles, Clients, SEMAINE, SITE } from '../components/Maquette';
 
 export default function Home() {
+  // Termes déjà expliqués dans la page : l’infobulle n’apparaît qu’à la première occurrence.
+  const seen = new Set(['ml', 'workflow']);
   return (
     <div className="mq mq-a">
       <section className="mq-hero-photo">
@@ -11,7 +14,7 @@ export default function Home() {
         <div className="wrap mq-hero-contenu"><div className="stack hero-text">
           <Label>Conseil et intégration IA · Charente, Bordeaux, Toulouse, Paris</Label>
           <h1 className="h1">Intégrez l’IA<br /><em>maintenant</em>,<br />en profondeur,<br />durablement.</h1>
-          <p className="lead">3 semaines peuvent suffire pour faire évoluer un processus, en en gardant la maîtrise complète.<br />Des réponses graduées pour allier transformation agile, maîtrise des données et maîtrise de la dépendance.</p>
+          <p className="lead">3 semaines peuvent suffire pour faire évoluer un processus, en en gardant la maîtrise complète.<br />Nos réponses graduées vous permettent d’avancer vite tout en gardant la maîtrise de vos données et de votre dépendance aux fournisseurs.</p>
           <div className="btns">
             <Link className="btn gold" href="#diagnostic">Lancer le diagnostic personnalisé</Link>
             <Link className="btn ghost" href="/references/">Voir nos réalisations</Link>
@@ -24,13 +27,13 @@ export default function Home() {
       <section className="band">
         <div className="wrap stack lg">
           <div className="mq-head"><div className="stack"><Label>Veille IA de la semaine · {SEMAINE.label}</Label><h2 className="h2">Ce qui change, <em>cette semaine</em>, pour une PME.</h2></div><Link className="link" href="/veille-ia/">Toute la veille IA →</Link></div>
-          <VeilleSemaine />
+          <VeilleSemaine seen={seen} />
         </div>
       </section>
 
       <section className="band night">
         <div className="wrap stack lg">
-          <div className="stack"><Label>Réalisations</Label><h2 className="h2">Des transformations qui <em>tournent</em> chez nos clients.</h2><p className="muted">Construits avec les équipes, sur leurs vrais dossiers. Modifiables au quotidien par le client. Ce ne sont pas des logiciels, mais des assistants qui s’améliorent chaque jour au fil de vos instructions.</p></div>
+          <div className="stack"><Label>Réalisations</Label><h2 className="h2">Des transformations qui <em>tournent</em> chez nos clients.</h2><p className="muted">Nous les construisons avec vos équipes, sur leurs vrais dossiers. Vos équipes les modifient au quotidien. Ce ne sont pas des logiciels, mais des assistants qui s’améliorent chaque jour au fil de vos instructions.</p></div>
           <Realisations />
         </div>
       </section>
@@ -40,7 +43,7 @@ export default function Home() {
           <div className="stack"><Label>Ce que nous faisons</Label><h2 className="h2">De l’idée au processus qui tourne, <em>sans boîte noire</em>.</h2></div>
           <div className="grid">
             <div className="card"><h3 className="h3">Conseil et cadrage</h3><p className="muted">Identifier où l’IA crée de la valeur dans votre métier, choisir le premier cas d’usage, décider en connaissant les coûts et les limites.</p></div>
-            <div className="card"><h3 className="h3">Automatisation et intégration</h3><p className="muted">Construire avec vos équipes des assistants et des workflows qui s’appuient sur vos outils, vos documents et vos règles métier.</p></div>
+            <div className="card"><h3 className="h3">Automatisation et intégration</h3><p className="muted">Construire avec vos équipes des assistants et des <Terme id="workflow">workflows</Terme> qui s’appuient sur vos outils, vos documents et vos règles métier.</p></div>
             <div className="card"><h3 className="h3">Former par l’exemple</h3><p className="muted">À la fin de la mission, vous êtes autonome sur votre nouveau processus. Tout ce qui est construit vous appartient.</p></div>
           </div>
           <Link className="link" href="/offres/">Nos trois niveaux d’intervention →</Link>
@@ -51,7 +54,7 @@ export default function Home() {
         <div className="wrap stack lg">
           <div className="mq-head"><div className="stack"><Label>Références</Label><h2 className="h2">Des PME aux <em>grands groupes</em> industriels.</h2></div><Link className="link" href="/references/">Autres références des 12 derniers mois →</Link></div>
           <Clients />
-          <Cas />
+          <Cas seen={seen} />
         </div>
       </section>
 
@@ -64,8 +67,8 @@ export default function Home() {
 
       <section className="band tint">
         <div className="wrap stack lg">
-          <div className="stack"><Label>L’IA en action</Label><h2 className="h2">Notre IA analyse la transformation de secteurs d’activité <em>en continu</em>.</h2><p className="muted">Trois exemples variés de suivis sectoriels (dont le nôtre), alimentés automatiquement chaque mois. Ces signaux faibles collectés chaque mois sont analysés en masse sur 6 mois à 1 an pour détecter des tendances de fond. Dites-nous si vous voulez aussi ausculter votre secteur.</p></div>
-          <Secteurs />
+          <div className="stack"><Label>L’IA en action</Label><h2 className="h2">Notre IA analyse la transformation de secteurs d’activité <em>en continu</em>.</h2><p className="muted">Voici trois exemples de suivis sectoriels, dont le nôtre, alimentés automatiquement chaque mois. Ces signaux faibles collectés chaque mois sont analysés en masse sur 6 mois à 1 an pour détecter des tendances de fond. Dites-nous si vous voulez aussi ausculter votre secteur.</p></div>
+          <Secteurs seen={seen} />
         </div>
       </section>
 
@@ -74,14 +77,14 @@ export default function Home() {
       <section className="band">
         <div className="wrap stack lg">
           <div className="mq-head"><div className="stack"><Label>Blog</Label><h2 className="h2">Une réflexion <em>continue</em>, ouverte.</h2></div><Link className="link" href="/blog/">Le blog →</Link></div>
-          <Articles />
+          <Articles seen={seen} />
         </div>
       </section>
 
       <section className="band tint">
         <div className="wrap mq-founder">
           <img src="/denis-oblin.jpg" alt="Portrait de Denis Oblin" width="160" height="160" />
-          <div className="stack"><Label>Le fondateur</Label><h2 className="h2"><a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">Denis Oblin</a></h2><p className="muted">Mastère spécialisé en IA (Télécom Paris), enseignant la transformation IA à l’Institut Polytechnique de Paris, ambassadeur du programme Osez l’IA (ministère de l’Économie), cofondateur des Rendez-vous en terrain numérique.</p><Link className="link" href="/a-propos/">En savoir plus →</Link></div>
+          <div className="stack"><Label>Le fondateur</Label><h2 className="h2"><a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">Denis Oblin</a></h2><p className="muted">Diplômé d’un mastère spécialisé en IA (Télécom Paris), Denis Oblin enseigne la transformation IA à l’Institut Polytechnique de Paris. Il est ambassadeur du programme Osez l’IA (ministère de l’Économie) et cofondateur des Rendez-vous en terrain numérique.</p><Link className="link" href="/a-propos/">En savoir plus →</Link></div>
         </div>
       </section>
     </div>

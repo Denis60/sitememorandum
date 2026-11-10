@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import { MESSAGES, dateFr } from '../lib/site';
+import { g } from '../lib/glossaire';
 
-export function Bullets({ items, className = 'bullets' }) {
-  return <ul className={className}>{items.map((i) => <li key={i}>{i}</li>)}</ul>;
+export function Bullets({ items, className = 'bullets', seen = new Set() }) {
+  return <ul className={className}>{items.map((i) => <li key={i}>{g(i, seen)}</li>)}</ul>;
 }
 
 export function Source({ s }) {
@@ -32,30 +33,35 @@ export function MessageTag({ m }) {
 }
 
 // Chiffre clé et son libellé sur une même ligne (« ÷ 2 à 5 le temps d’analyse… ») : sans retour à la ligne, la phrase reste lisible.
-export function BigFigure({ r }) {
-  return <p className="big-line"><span className="big">{r.big}</span> <span className="muted">{r.bigTxt}</span></p>;
+export function BigFigure({ r, seen }) {
+  return <p className="big-line"><span className="big">{r.big}</span> <span className="muted">{g(r.bigTxt, seen)}</span></p>;
 }
 
 export const STATUT_CLASSE = { 'Résultat obtenu': 'ok', 'Prototype validé': 'proto', 'Mission en cours': 'encours' };
 
-export function CaseCard({ r }) {
+export function Secteur({ r }) {
+  return r.secteur ? <p className="mq-label">[ {r.secteur} ]</p> : null;
+}
+
+export function CaseCard({ r, seen = new Set() }) {
   return (
     <article className="card">
+      <Secteur r={r} />
       <p className="small muted">{r.who}</p>
       {r.statut ? <span className={`statut ${STATUT_CLASSE[r.statut] || ''}`}>{r.statut}</span> : null}
-      <h3 className="h3">{r.titre}</h3>
-      {r.big ? <BigFigure r={r} /> : <p className="muted">{r.resultat}</p>}
+      <h3 className="h3">{g(r.titre, seen)}</h3>
+      {r.big ? BigFigure({ r, seen }) : <p className="muted">{g(r.resultat, seen)}</p>}
       {r.cite ? <blockquote>« {r.cite} »</blockquote> : null}
     </article>
   );
 }
 
-export function ArticleCard({ a }) {
+export function ArticleCard({ a, seen }) {
   return (
     <article className="card" style={{ borderTop: '3px solid var(--gold)', borderRadius: 0, borderLeft: 0, borderRight: 0, borderBottom: 0, padding: '20px 0 0' }}>
       <p className="small muted">{a.theme} · {a.statut === 'publie' ? dateFr(a.date) : 'à paraître'}</p>
       <h3 style={{ fontSize: 20, fontWeight: 600 }}>{a.statut === 'publie' && a.slug ? <Link href={`/blog/${a.slug}/`}>{a.titre}</Link> : a.titre}</h3>
-      {a.accroche ? <p className="muted">{a.accroche}</p> : null}
+      {a.accroche ? <p className="muted">{g(a.accroche, seen)}</p> : null}
     </article>
   );
 }

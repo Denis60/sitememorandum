@@ -1,0 +1,17 @@
+{
+  "_note": "Termes techniques expliqués par une infobulle à leur première apparition dans chaque page (liste validée par Denis le 10 novembre 2026). motif = expression régulière ; casse = true pour respecter majuscules et minuscules.",
+  "termes": [
+    { "id": "n8n", "motif": "\\bn8n\\b", "def": "Logiciel qui automatise des tâches", "url": "https://n8n.io" },
+    { "id": "claude-cowork", "motif": "\\bClaude Cowork\\b", "def": "Claude agissant sur vos fichiers", "url": "https://claude.com/product/cowork" },
+    { "id": "copilot", "motif": "\\bCopilot\\b", "casse": true, "def": "Assistant IA intégré par Microsoft", "url": "https://copilot.microsoft.com" },
+    { "id": "supabase", "motif": "\\bSupabase\\b", "def": "Base de données en ligne", "url": "https://supabase.com" },
+    { "id": "ml", "motif": "\\bML\\b", "casse": true, "def": "Machine qui apprend des données", "url": "https://fr.wikipedia.org/wiki/Apprentissage_automatique" },
+    { "id": "llm", "motif": "\\bLLMs?\\b", "casse": true, "def": "Moteur qui comprend et rédige", "url": "https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage" },
+    { "id": "agent-ia", "motif": "\\bagents? IA\\b", "def": "IA qui enchaîne des actions", "url": "https://fr.wikipedia.org/wiki/Agent_intelligent" },
+    { "id": "assistant-ia", "motif": "\\bassistants? IA\\b", "def": "IA paramétrée pour votre métier", "url": "https://memorandum-ai.com/offres/" },
+    { "id": "workflow", "motif": "\\bworkflows?\\b", "def": "Enchaînement automatique d’étapes de travail", "url": "https://fr.wikipedia.org/wiki/Workflow" },
+    { "id": "gpu", "motif": "\\bGPUs?\\b", "casse": true, "def": "Puce de calcul pour l’IA", "url": "https://fr.wikipedia.org/wiki/Processeur_graphique" },
+    { "id": "blockchain", "motif": "\\bblockchains?\\b", "def": "Registre numérique partagé et infalsifiable", "url": "https://fr.wikipedia.org/wiki/Blockchain" },
+    { "id": "dpa", "motif": "\\bDPA\\b", "casse": true, "def": "Contrat encadrant vos données traitées", "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees" }
+  ]
+}

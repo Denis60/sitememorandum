@@ -263,6 +263,7 @@ form.panel .link { color: var(--gold-text); }
 .mq-frame img { display: block; width: 100%; height: 300px; object-fit: cover; object-position: top left; }
 .mq-shot figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; }
 .mq-shot figcaption strong { font-family: var(--display); font-weight: 600; }
+.mq-shot figcaption .mq-label, .mq-shot figcaption .small { flex-basis: 100%; }
 .mq-chip { font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: var(--gold-soft); color: var(--gold-text); }
 .night .mq-chip { background: rgba(226,188,94,.16); color: var(--gold-on-night); }
 .mq-interv { display: grid; gap: 40px; align-items: center; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); }
@@ -348,3 +349,16 @@ form.panel .link { color: var(--gold-text); }
 /* Bandeau de veille : le texte défilant occupe toute la largeur */
 .mq-a .mq-hero-photo .mq-fil-bande .mq-fil { max-width: none; }
 .mq-fil-bande .mq-fil-defile { flex: 1; min-width: 0; }
+
+/* Infobulles des termes techniques (lib/glossaire.jsx) */
+.terme { position: relative; border-bottom: 1px dotted currentColor; cursor: help; }
+.terme:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+.terme-bulle { display: none; position: absolute; z-index: 30; left: 0; bottom: 100%; width: max-content; max-width: min(280px, 80vw);
+  padding: 8px 12px; border-bottom: 8px solid transparent; background: var(--navy); background-clip: padding-box; border-radius: 8px;
+  color: var(--on-night); font: 400 14px/1.45 var(--body); font-style: normal; letter-spacing: 0; text-transform: none; text-align: left;
+  box-shadow: 0 6px 18px rgba(14, 28, 54, .22); }
+.terme:hover .terme-bulle, .terme:focus-within .terme-bulle { display: block; }
+.terme-bulle a { color: var(--gold-on-night); text-decoration: underline; font-weight: 600; white-space: nowrap; }
+@media (max-width: 640px) {
+  .terme-bulle { position: fixed; left: 16px; right: 16px; bottom: 16px; width: auto; max-width: none; border-bottom: 0; }
+}

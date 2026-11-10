@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
 import { PUBLISHED, SITE, dateFr, byline } from '../../../lib/site';
+import { g, glossHtml } from '../../../lib/glossaire';
 
 // Un article = une entrée « publie » de content/blog.json + son texte content/blog/<slug>.md (Markdown).
 const publies = () => PUBLISHED;
@@ -32,7 +33,9 @@ export default function Article({ params }) {
   const a = article(params.slug);
   if (!a) notFound();
   const md = readFileSync(path.join(process.cwd(), 'content', 'blog', `${a.slug}.md`), 'utf8');
-  const html = marked.parse(md);
+  const seen = new Set();
+  const accroche = g(a.accroche, seen);
+  const html = glossHtml(marked.parse(md), seen);
   const ld = {
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: a.titre, description: a.accroche,
     datePublished: a.date, author: a.auteur === 'ia' ? { '@type': 'Organization', name: SITE.name, url: SITE.url } : { '@type': 'Person', name: 'Denis Oblin', url: SITE.linkedin },
@@ -44,7 +47,7 @@ export default function Article({ params }) {
         <div className="wrap stack" style={{ maxWidth: 780 }}>
           <p className="small muted"><Link href="/blog/">Blog</Link> › {a.theme}</p>
           <h1 className="h1">{a.titre}</h1>
-          <p className="lead">{a.accroche}</p>
+          <p className="lead">{accroche}</p>
           <p className="small muted">{byline(a)} · {dateFr(a.date)}</p>
         </div>
       </section>

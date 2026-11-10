@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PageHead } from '../../components/Parts';
+import { g } from '../../lib/glossaire';
 
 export const metadata = { title: 'Offres', description: 'Conseil et cadrage, automatisation et intégration de l’IA, transmission par l’exemple : comment se passe une mission Memorandum.', alternates: { canonical: '/offres/' } };
 
@@ -14,28 +15,29 @@ const FAQ = [
 ];
 
 export default function Offres() {
+  const seen = new Set();
   return (
     <>
-      <PageHead eyebrow="Offres" title="Une transformation IA, une étape après l’autre." lead="Partir de votre métier, pas de l’outil. Livrer vite un premier usage réel. Vous laisser autonome." />
+      <PageHead eyebrow="Offres" title="Une transformation IA, une étape après l’autre." lead="Nous partons de votre métier, pas de l’outil. Nous livrons vite un premier usage réel, puis nous vous laissons autonome." />
       <section className="band">
         <div className="wrap stack lg">
           <div className="grid">
-            <div className="card"><span className="tag">Cadrer</span><h2 className="h3">Conseil et cadrage</h2><ul className="bullets muted"><li>Entretiens avec la direction et les équipes, y compris par un intervieweur IA.</li><li>Cartographie des processus et des pistes où l’IA aide vraiment.</li><li>Choix du premier cas d’usage, avec ses coûts complets et ses limites.</li></ul></div>
-            <div className="card"><span className="tag">Construire</span><h2 className="h3">Automatisation et intégration</h2><ul className="bullets muted"><li>Assistants et workflows construits avec vos équipes, sur vos outils.</li><li>L’IA prépare, l’humain valide à chaque étape.</li><li>Tout reste lisible et modifiable : pas de boîte noire.</li></ul></div>
+            <div className="card"><span className="tag">Cadrer</span><h2 className="h3">Conseil et cadrage</h2><ul className="bullets muted"><li>Nous interrogeons la direction et les équipes, y compris grâce à un intervieweur IA.</li><li>Nous cartographions vos processus et repérons où l’IA aide vraiment.</li><li>Nous choisissons avec vous le premier cas d’usage, en connaissant ses coûts complets et ses limites.</li></ul></div>
+            <div className="card"><span className="tag">Construire</span><h2 className="h3">Automatisation et intégration</h2><ul className="bullets muted"><li>Nous construisons assistants et automatisations avec vos équipes, sur vos outils.</li><li>L’IA prépare, l’humain valide à chaque étape.</li><li>Tout reste lisible et modifiable : pas de boîte noire.</li></ul></div>
             <div className="card"><span className="tag">Transmettre</span><h2 className="h3">Former par l’exemple</h2><ul className="bullets muted"><li>Vos équipes apprennent en construisant leur propre processus.</li><li>À la fin de la mission, elles l’améliorent seules.</li><li>Un bilan objective le temps gagné, l’appropriation et les coûts.</li></ul></div>
           </div>
           <div className="stack">
             <h2 className="h2">Trois niveaux d’intervention</h2>
             <div className="grid">
-              <div className="card soft niveau"><span className="tag">1 · Diagnostic</span><h3 className="h3">Diagnostic de potentiel IA</h3><p className="niveau-prix">Offert · environ 1 semaine</p><ul className="bullets muted"><li>Notre agent dialogue avec vous et les personnes que vous désignez.</li><li>Il repère les irritants, les outils et les données, et chiffre les gains possibles.</li><li>Restitution de vive voix ; le rapport détaillé vous est remis.</li></ul></div>
-              <div className="card soft niveau"><span className="tag">2 · Sprint pilote</span><h3 className="h3">Un processus transformé</h3><p className="niveau-prix">À partir de 5 000 € HT · environ 3 semaines</p><ul className="bullets muted"><li>Un processus choisi avec vous, un objectif mesurable.</li><li>Un prototype construit et testé sur vos vrais dossiers, ajusté avec les utilisateurs.</li><li>Vos équipes formées par l’exemple ; bilan du temps gagné et des coûts complets.</li></ul></div>
-              <div className="card soft niveau"><span className="tag">3 · Déploiement</span><h3 className="h3">L’IA dans plusieurs services</h3><p className="niveau-prix">Sur devis · 1 à 3 mois</p><ul className="bullets muted"><li>Généralisation à d’autres processus ou services.</li><li>Branchement sur vos outils existants.</li><li>Accompagnement jusqu’à l’autonomie complète de vos équipes.</li></ul></div>
+              <div className="card soft niveau"><span className="tag">1 · Diagnostic</span><h3 className="h3">Diagnostic de potentiel IA</h3><p className="niveau-prix">Offert · environ 1 semaine</p><ul className="bullets muted"><li>Notre agent dialogue avec vous et les personnes que vous désignez.</li><li>Il repère les irritants, les outils et les données, et chiffre les gains possibles.</li><li>Nous vous restituons l’analyse de vive voix et vous remettons le rapport détaillé.</li></ul></div>
+              <div className="card soft niveau"><span className="tag">2 · Sprint pilote</span><h3 className="h3">Un processus transformé</h3><p className="niveau-prix">À partir de 5 000 € HT · environ 3 semaines</p><ul className="bullets muted"><li>Nous choisissons avec vous un processus et un objectif mesurable.</li><li>Nous construisons un prototype, le testons sur vos vrais dossiers et l’ajustons avec les utilisateurs.</li><li>Vos équipes se forment par l’exemple ; un bilan mesure le temps gagné et les coûts complets.</li></ul></div>
+              <div className="card soft niveau"><span className="tag">3 · Déploiement</span><h3 className="h3">L’IA dans plusieurs services</h3><p className="niveau-prix">Sur devis · 1 à 3 mois</p><ul className="bullets muted"><li>Nous étendons la démarche à d’autres processus ou services.</li><li>Nous connectons les assistants à vos outils existants.</li><li>Nous accompagnons vos équipes jusqu’à leur autonomie complète.</li></ul></div>
             </div>
           </div>
           <div className="stack">
             <h2 className="h2">Questions fréquentes</h2>
             <div className="faq">
-              {FAQ.map(([q, r]) => (<details key={q}><summary>{q}</summary><p className="muted">{r}</p></details>))}
+              {FAQ.map(([q, r]) => (<details key={q}><summary>{q}</summary><p className="muted">{g(r, seen)}</p></details>))}
             </div>
           </div>
           <div className="btns"><Link className="btn primary" href="/diagnostic-ia/">Commencer par le diagnostic</Link><Link className="btn outline" href="/references/">Voir des missions réalisées</Link></div>

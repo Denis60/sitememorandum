@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SEMAINE, SECTORS, REFERENCES, PUBLISHED, UPCOMING, SITE } from '../lib/site';
 import { Bullets, CaseCard, ArticleCard } from './Parts';
 import CompteurChiffres from './CompteurChiffres';
+import { g } from '../lib/glossaire';
 
 // Blocs partagés par les deux maquettes de la page d'accueil (refonte de l'interface, novembre 2026).
 
@@ -13,9 +14,9 @@ export const CHIFFRES = [
 ];
 
 export const REALISATIONS = [
-  { img: '/realisations/eklalight-cctp.jpg', qui: 'Eklalight · grossiste en luminaires', titre: 'Analyse de cahier des charges et devis', chip: 'En production', alt: 'Outil d’analyse de CCTP : besoins, références fournisseurs proposées, création du devis' },
-  { img: '/realisations/positionnement-prix-litre.jpg', qui: 'Fabricant de peintures et finitions', titre: 'Positionnement prix face aux concurrents', chip: 'Analyse livrée', alt: 'Comparaison des prix au litre de 5 produits face à 21 produits concurrents', pos: 'top left' },
-  { img: '/realisations/peinture-chiffrage.jpg', qui: 'Entreprise de peinture', titre: 'Chiffrage d’un lot sur plan', chip: 'Prototype', alt: 'Outil de chiffrage : repérage des surfaces sur plan, comparaison avec le DPGF' },
+  { img: '/realisations/eklalight-cctp.jpg', secteur: 'Négoce · éclairage', qui: 'Eklalight · grossiste en luminaires', titre: 'Analyse de cahier des charges et devis', chip: 'En production', alt: 'Outil d’analyse de CCTP : besoins, références fournisseurs proposées, création du devis' },
+  { img: '/realisations/positionnement-prix-litre.jpg', secteur: 'Industrie · peintures', qui: 'Fabricant de peintures et finitions', titre: 'Positionnement prix face aux concurrents', chip: 'Analyse livrée', alt: 'Comparaison des prix au litre de 5 produits face à 21 produits concurrents', pos: 'top left' },
+  { img: '/realisations/peinture-chiffrage.jpg', secteur: 'Bâtiment · peinture', qui: 'Entreprise de peinture', titre: 'Chiffrage d’un lot sur plan', chip: 'Prototype', alt: 'Outil de chiffrage : repérage des surfaces sur plan, comparaison avec le DPGF' },
 ];
 
 export const INTERVENTIONS = [
@@ -55,7 +56,7 @@ export function Realisations() {
       {REALISATIONS.map((r) => (
         <figure key={r.img} className="mq-shot">
           <div className="mq-frame"><span className="mq-dots" aria-hidden="true"><i /><i /><i /></span><img src={r.img} alt={r.alt} loading="lazy" style={r.pos ? { objectPosition: r.pos } : undefined} /></div>
-          <figcaption><span className="mq-chip">{r.chip}</span><strong>{r.titre}</strong><span className="small muted">{r.qui}</span></figcaption>
+          <figcaption><span className="mq-label">[ {r.secteur} ]</span><span className="mq-chip">{r.chip}</span><strong>{r.titre}</strong><span className="small muted">{r.qui}</span></figcaption>
         </figure>
       ))}
     </div>
@@ -73,13 +74,13 @@ export function Interventions() {
   );
 }
 
-export function VeilleSemaine({ dark }) {
+export function VeilleSemaine({ dark, seen = new Set() }) {
   return (
     <div className={`mq-veille${dark ? ' dark' : ''}`}>
       {SEMAINE.topics.slice(0, 3).map((s) => (
         <article key={s.t}>
-          <h3>{s.t}</h3>
-          <Bullets items={s.ideas.slice(0, 2)} className="bullets muted" />
+          <h3>{g(s.t, seen)}</h3>
+          {Bullets({ items: s.ideas.slice(0, 2), className: 'bullets muted', seen })}
           <a className="link small" href={s.url} target="_blank" rel="noopener noreferrer">{s.src} · {s.d}</a>
         </article>
       ))}
@@ -87,14 +88,14 @@ export function VeilleSemaine({ dark }) {
   );
 }
 
-export function Secteurs() {
+export function Secteurs({ seen = new Set() }) {
   return (
     <div className="grid">
       {SECTORS.map((s) => (
         <article className="card" key={s.id}>
           <p className="small muted">{s.label} · {s.edition}</p>
-          <h3 className="h3">{s.headline}</h3>
-          <Bullets items={s.home} className="bullets muted" />
+          <h3 className="h3">{g(s.headline, seen)}</h3>
+          {Bullets({ items: s.home, className: 'bullets muted', seen })}
           <Link className="link" href={`/signaux-faibles/#${s.id}`}>Lire le rapport du mois →</Link>
         </article>
       ))}
@@ -102,12 +103,12 @@ export function Secteurs() {
   );
 }
 
-export function Cas() {
-  return <div className="grid">{REFERENCES.filter((r) => r.home).map((r) => <CaseCard key={r.titre} r={r} />)}</div>;
+export function Cas({ seen = new Set() }) {
+  return <div className="grid">{REFERENCES.filter((r) => r.home).map((r) => <div key={r.titre} style={{ display: 'contents' }}>{CaseCard({ r, seen })}</div>)}</div>;
 }
 
-export function Articles() {
-  return <div className="grid">{[...PUBLISHED, ...UPCOMING].slice(0, 3).map((a) => <ArticleCard key={a.titre} a={a} />)}</div>;
+export function Articles({ seen = new Set() }) {
+  return <div className="grid">{[...PUBLISHED, ...UPCOMING].slice(0, 3).map((a) => <div key={a.titre} style={{ display: 'contents' }}>{ArticleCard({ a, seen })}</div>)}</div>;
 }
 
 // Clients cités sans fiche de référence détaillée.

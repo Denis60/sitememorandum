@@ -1,10 +1,12 @@
 'use client';
 import { useState } from 'react';
 import { MESSAGES } from '../lib/site';
+import { g } from '../lib/glossaire';
 
 export default function DayPicker({ days }) {
   const [i, setI] = useState(0);
   const v = days[i];
+  const seen = new Set();
   return (
     <section className="band">
       <div className="wrap stack lg">
@@ -19,10 +21,10 @@ export default function DayPicker({ days }) {
             <article className="article" key={s.t}>
               <div className="stack" style={{ gap: 10 }}>
                 <span className="tag">{MESSAGES[s.m]}</span>
-                <h3>{s.t}</h3>
+                <h3>{g(s.t, seen)}</h3>
                 <p className="src">Source : <a href={s.url} target="_blank" rel="noopener noreferrer">{s.src}</a> · {s.d}</p>
               </div>
-              <ul className="ideas">{s.ideas.map((x) => <li key={x}>{x}</li>)}</ul>
+              <ul className="ideas">{s.ideas.map((x) => <li key={x}>{g(x, seen)}</li>)}</ul>
             </article>
           ))}
         </div>

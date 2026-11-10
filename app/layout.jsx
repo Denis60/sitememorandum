@@ -1,6 +1,7 @@
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import GlossaireAjust from '../components/GlossaireAjust';
 import { SITE } from '../lib/site';
 
 export const metadata = {
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="contenu">{children}</main>
         <Footer />
+        <GlossaireAjust />
       </body>
     </html>
   );
