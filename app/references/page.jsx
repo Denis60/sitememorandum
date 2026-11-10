@@ -1,6 +1,7 @@
 import { REFERENCES } from '../../lib/site';
 import { PageHead, Bullets, MessageTag, STATUT_CLASSE, BigFigure, Secteur } from '../../components/Parts';
 import { g } from '../../lib/glossaire';
+import ChatReferences from '../../components/ChatReferences';
 
 export const metadata = { title: 'Références', description: 'Missions IA menées pour Safran, Eklalight, Camaëlle, Hygie31 et d’autres entreprises : le problème, la solution, le résultat.', alternates: { canonical: '/references/' } };
 
@@ -35,6 +36,7 @@ export default function References() {
           ))}
         </div>
       </section>
+      <ChatReferences />
     </>
   );
 }
