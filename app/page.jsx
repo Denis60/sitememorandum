@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import DiagSection from '../components/DiagSection';
 import { Terme } from '../lib/glossaire';
+import ChatReferences from '../components/ChatReferences';
 import { Label, Chiffres, FilVeille, Realisations, Interventions, VeilleSemaine, Secteurs, Cas, Articles, Clients, SEMAINE, SITE } from '../components/Maquette';
 
 export default function Home() {
@@ -52,9 +53,10 @@ export default function Home() {
 
       <section className="band tint">
         <div className="wrap stack lg">
-          <div className="mq-head"><div className="stack"><Label>Références</Label><h2 className="h2">Des PME aux <em>grands groupes</em> industriels.</h2></div><Link className="link" href="/references/">Autres références des 12 derniers mois →</Link></div>
+          <div className="mq-head"><div className="stack"><Label>Références</Label><h2 className="h2">Des PME aux <em>grands groupes</em> industriels.</h2></div><ChatReferences variante="integre" /></div>
           <Clients />
           <Cas seen={seen} />
+          <Link className="link" href="/references/">Autres références des 12 derniers mois →</Link>
         </div>
       </section>
 

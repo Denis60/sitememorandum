@@ -389,3 +389,9 @@ form.panel .link { color: var(--gold-text); }
   .chatref-bouton { right: 16px; bottom: 16px; }
   .chatref { right: 16px; bottom: 76px; height: min(520px, calc(100vh - 100px)); }
 }
+.chatref header { position: relative; padding-right: 48px; }
+.chatref-fermer { position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; border: 0; border-radius: 8px; background: transparent; color: var(--on-night); font-size: 24px; line-height: 1; cursor: pointer; }
+.chatref-fermer:hover { background: var(--night-line); }
+.chatref.seul { bottom: 24px; }
+.chatref-integre::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 10px; border-radius: 50%; background: var(--navy); }
+@media (max-width: 640px) { .chatref.seul { bottom: 16px; } }

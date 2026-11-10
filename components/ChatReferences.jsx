@@ -26,7 +26,8 @@ function Texte({ t }) {
   ));
 }
 
-export default function ChatReferences() {
+// variante « flottante » (page Références) : bouton fixe en bas à droite ; « integre » (accueil) : bouton placé dans la page.
+export default function ChatReferences({ variante = 'flottante' }) {
   const [ouvert, setOuvert] = useState(false);
   const [msgs, setMsgs] = useState([]);
   const [saisie, setSaisie] = useState('');
@@ -64,12 +65,19 @@ export default function ChatReferences() {
 
   return (
     <>
-      <button type="button" className={`chatref-bouton${ouvert ? ' ouvert' : ''}`} onClick={() => setOuvert((o) => !o)} aria-expanded={ouvert} aria-controls="chatref">
-        {ouvert ? 'Fermer' : 'Interroger nos références'}
-      </button>
+      {variante === 'integre' ? (
+        <button type="button" className="btn gold chatref-integre" onClick={() => setOuvert((o) => !o)} aria-expanded={ouvert} aria-controls="chatref">
+          Interroger nos références
+        </button>
+      ) : (
+        <button type="button" className={`chatref-bouton${ouvert ? ' ouvert' : ''}`} onClick={() => setOuvert((o) => !o)} aria-expanded={ouvert} aria-controls="chatref">
+          {ouvert ? 'Fermer' : 'Interroger nos références'}
+        </button>
+      )}
       {ouvert ? (
-        <section id="chatref" className="chatref" aria-label="Questions sur nos références">
+        <section id="chatref" className={`chatref${variante === 'integre' ? ' seul' : ''}`} aria-label="Questions sur nos références">
           <header>
+            <button type="button" className="chatref-fermer" onClick={() => setOuvert(false)} aria-label="Fermer le chat">×</button>
             <strong>Questions sur nos missions</strong>
             <span>Vous dialoguez avec une IA, qui ne s’appuie que sur les fiches publiées. Ne saisissez pas de données personnelles.</span>
           </header>
