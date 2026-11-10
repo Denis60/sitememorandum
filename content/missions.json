@@ -20,6 +20,14 @@
         "Pilotage d’équipes de data scientists : adaptation des méthodes agiles aux projets de data science.",
         "Constitution et animation d’un backlog de projets IA auprès du comité de direction."
       ]
+    },
+    {
+      "client": null,
+      "description": "Retour d’expérience dans le raccordement à la fibre optique (mission confidentielle, client non nommé)",
+      "secteur": "Télécommunications · déploiement de la fibre optique",
+      "objectif": "Prédire les échecs de raccordement à la fibre optique, pour en anticiper les causes et améliorer le taux de réussite des interventions.",
+      "methode": "Un modèle prédictif dédié à chaque cause d’échec ; chaque cause prédite déclenche une action préventive spécifique.",
+      "benefice": "Les problèmes sont anticipés avant l’intervention plutôt que constatés sur place."
     }
   ]
 }
