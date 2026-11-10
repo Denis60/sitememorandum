@@ -31,6 +31,11 @@ export function MessageTag({ m }) {
   return m ? <span className="tag">{MESSAGES[m]}</span> : null;
 }
 
+// Chiffre clé et son libellé sur une même ligne (« ÷ 2 à 5 le temps d’analyse… ») : sans retour à la ligne, la phrase reste lisible.
+export function BigFigure({ r }) {
+  return <p className="big-line"><span className="big">{r.big}</span> <span className="muted">{r.bigTxt}</span></p>;
+}
+
 export const STATUT_CLASSE = { 'Résultat obtenu': 'ok', 'Prototype validé': 'proto', 'Mission en cours': 'encours' };
 
 export function CaseCard({ r }) {
@@ -39,7 +44,7 @@ export function CaseCard({ r }) {
       <p className="small muted">{r.who}</p>
       {r.statut ? <span className={`statut ${STATUT_CLASSE[r.statut] || ''}`}>{r.statut}</span> : null}
       <h3 className="h3">{r.titre}</h3>
-      {r.big ? (<><p className="big">{r.big}</p><p className="muted">{r.bigTxt}</p></>) : <p className="muted">{r.resultat}</p>}
+      {r.big ? <BigFigure r={r} /> : <p className="muted">{r.resultat}</p>}
       {r.cite ? <blockquote>« {r.cite} »</blockquote> : null}
     </article>
   );

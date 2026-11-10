@@ -87,6 +87,8 @@ blockquote { margin: 0; padding-left: 16px; border-left: 3px solid var(--gold); 
 .topic a { font-size: 13px; color: var(--gold-on-night); }
 .clients { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 36px; font-family: var(--display); font-weight: 600; font-size: 20px; color: var(--muted); }
 .big { font-family: var(--display); font-size: 40px; font-weight: 700; color: var(--gold-text); line-height: 1; }
+.big-line { line-height: 1.5; }
+.big-line .big { font-size: 34px; white-space: nowrap; margin-right: 4px; }
 .messages { counter-reset: m; list-style: none; padding: 0; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
 .messages li { counter-increment: m; border-top: 3px solid var(--gold); padding-top: 14px; font-weight: 500; }
 .messages li::before { content: counter(m); display: block; font-family: var(--display); font-weight: 700; color: var(--gold-text); font-size: 15px; margin-bottom: 4px; }
