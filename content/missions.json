@@ -2,8 +2,9 @@
   "_note": "Descriptifs de missions rédigés par Denis pour alimenter le chat des références (publiés tels quels dans /chat-references.json : n'y mettre que des informations publiables). Trame : client (nom autorisé ou description anonyme), secteur, taille, période et durée, problème de départ, ce qui a été fait, outils, résultats publiables, citation autorisée, difficultés et leçons, questions probables et réponses.",
   "missions": [
     {
-      "client": "Teract",
-      "secteur": "Commerce · distribution spécialisée (jardineries, animaleries)",
+      "client": null,
+      "description": "Distribution spécialisée (client anonyme, même mission que la fiche « La bonne offre pour chaque magasin »)",
+      "secteur": "Commerce · réseau de magasins",
       "taille": "Environ 1 000 magasins",
       "question_posee": "Personnaliser l’assortiment de chaque magasin à partir des données de vente, selon la localisation (zone géographique, climat, contexte urbain), le format du magasin (surface intérieure, extérieure, sous abri) et la semaine de l’année (saisonnalité).",
       "methode": "Un modèle prédictif calcule un score de vente à partir de toutes les données de contexte. Pour chaque magasin, il identifie les magasins qui lui ressemblent et vendent plus que lui, puis compare leurs assortiments.",
