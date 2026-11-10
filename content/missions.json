@@ -28,6 +28,14 @@
       "objectif": "Prédire les échecs de raccordement à la fibre optique, pour en anticiper les causes et améliorer le taux de réussite des interventions.",
       "methode": "Un modèle prédictif dédié à chaque cause d’échec ; chaque cause prédite déclenche une action préventive spécifique.",
       "benefice": "Les problèmes sont anticipés avant l’intervention plutôt que constatés sur place."
+    },
+    {
+      "client": null,
+      "description": "Retour d’expérience dans l’analyse de domaines de R&D (mission confidentielle, client non nommé)",
+      "secteur": "Conseil · innovation et R&D",
+      "objectif": "Analyser des domaines de recherche et développement à partir des demandes de brevet.",
+      "methode": "Une analyse sémantique du texte des demandes de brevet.",
+      "usage": "Une analyse stratégique des domaines de R&D."
     }
   ]
 }
