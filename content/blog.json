@@ -1,6 +1,15 @@
 {
   "articles": [
     {
+      "theme": "Enseignements de la veille",
+      "titre": "L’IA fait gagner du temps, pas du jugement",
+      "statut": "publie",
+      "slug": "veille-2026-11-12-ia-temps-pas-jugement",
+      "date": "2026-11-12",
+      "accroche": "Trois études de la semaine le montrent : sans vérification, sans savoir du terrain et sans cap pour le temps libéré, les gains de l’IA se perdent.",
+      "auteur": "ia"
+    },
+    {
       "theme": "Décider et piloter l’IA",
       "titre": "Par où commencer l’IA dans une PME ?",
       "statut": "publie",
