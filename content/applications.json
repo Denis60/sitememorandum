@@ -26,7 +26,10 @@
           "titre": "Un premier diagnostic des opportunités IA",
           "image": "/applications/diagnostic-ia.webp",
           "texte": "Notre assistant IA interroge l’entreprise sur ses activités et ses besoins, dans le cadre que nous lui fixons. Il en tire de premières pistes, que nous restituons lors d’un rendez-vous.",
-          "lien": { "href": "/diagnostic-ia/", "label": "Lancer le diagnostic" }
+          "lien": {
+            "href": "/diagnostic-ia/",
+            "label": "Lancer le diagnostic"
+          }
         },
         {
           "titre": "Réfléchir avec un outil qui fonctionne",
@@ -41,6 +44,23 @@
       ]
     },
     {
+      "id": "animer",
+      "label": "Animer et former",
+      "titre": "Nous faisons progresser les dirigeants ensemble.",
+      "applications": [
+        {
+          "titre": "Le club d’entraide IA des dirigeants",
+          "image": "/applications/club-dirigeants.webp",
+          "texte": "Dans notre club, un concierge IA disponible jour et nuit oriente chaque dirigeant vers les adhérents qui ont déjà résolu le même problème ; les échanges se font ensuite directement entre eux, sans discussion générale. Nous capitalisons les cas d’usage et préparons ainsi les rencontres du club en Charente."
+        },
+        {
+          "titre": "Le serious game de la transfo IA",
+          "image": "/applications/serious-game.webp",
+          "texte": "Dans Bassin 2030, un jeu sérieux en ligne, plusieurs dirigeants vivent en huit tours quatre années accélérées de transformation IA dans leur industrie : ils décident, négocient des alliances et expérimentent. Le débriefing les aide à passer de l’inquiétude au courage informé."
+        }
+      ]
+    },
+    {
       "id": "rapprocher",
       "label": "Rapprocher",
       "titre": "Nous mettons les personnes et les entreprises en relation.",
@@ -49,13 +69,19 @@
           "titre": "Une application pour renouer le dialogue",
           "image": "/applications/conciliation.webp",
           "texte": "Quand deux personnes ne parviennent plus à se parler, chacune expose son point de vue à l’IA dans un espace confidentiel. L’IA reformule et propose des pistes qui rendent un accord possible.",
-          "lien": { "href": "https://n8n-memorandum.app.n8n.cloud/webhook/conciliation", "label": "Essayer concilIAtion" }
+          "lien": {
+            "href": "https://n8n-memorandum.app.n8n.cloud/webhook/conciliation",
+            "label": "Essayer concilIAtion"
+          }
         },
         {
           "titre": "Une place de marché intermédiée par l’IA",
           "image": "/applications/place-de-marche.webp",
           "texte": "Sur Entremise, l’IA aide une entreprise à préciser son besoin, même flou, puis interroge les prestataires de Charente sans dévoiler qui demande. La mise en relation n’a lieu qu’avec l’accord des deux parties.",
-          "lien": { "href": "https://entremise.vercel.app/", "label": "Découvrir Entremise" }
+          "lien": {
+            "href": "https://entremise.vercel.app/",
+            "label": "Découvrir Entremise"
+          }
         }
       ]
     }
