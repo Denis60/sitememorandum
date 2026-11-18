@@ -1,4 +1,41 @@
 {
   "_note": "Descriptifs de missions rédigés par Denis pour alimenter le chat des références (publiés tels quels dans /chat-references.json : n'y mettre que des informations publiables). Trame : client (nom autorisé ou description anonyme), secteur, taille, période et durée, problème de départ, ce qui a été fait, outils, résultats publiables, citation autorisée, difficultés et leçons, questions probables et réponses.",
-  "missions": []
+  "missions": [
+    {
+      "client": null,
+      "description": "Distribution spécialisée (client anonyme, même mission que la fiche « La bonne offre pour chaque magasin »)",
+      "secteur": "Commerce · réseau de magasins",
+      "taille": "Environ 1 000 magasins",
+      "question_posee": "Personnaliser l’assortiment de chaque magasin à partir des données de vente, selon la localisation (zone géographique, climat, contexte urbain), le format du magasin (surface intérieure, extérieure, sous abri) et la semaine de l’année (saisonnalité).",
+      "methode": "Un modèle prédictif calcule un score de vente à partir de toutes les données de contexte. Pour chaque magasin, il identifie les magasins qui lui ressemblent et vendent plus que lui, puis compare leurs assortiments.",
+      "finesse_de_prediction": "Pour chaque magasin, chaque produit et chaque semaine de l’année.",
+      "resultat": "D’après les simulations, les recommandations permettraient une progression significative du chiffre d’affaires, en cours de confirmation. L’entreprise en a tiré de grandes lignes de personnalisation et s’est interrogée sur sa capacité à exploiter toute la finesse de recommandation désormais accessible."
+    },
+    {
+      "client": null,
+      "description": "Retour d’expérience auprès d’assureurs (missions confidentielles, clients non nommés)",
+      "secteur": "Assurance",
+      "travaux": [
+        "Stratégie IA annuelle : orienter les investissements, piloter les projets et partager les risques entre les directions opérationnelles et les fonctions support centrales.",
+        "Pilotage d’équipes de data scientists : adaptation des méthodes agiles aux projets de data science.",
+        "Constitution et animation d’un backlog de projets IA auprès du comité de direction."
+      ]
+    },
+    {
+      "client": null,
+      "description": "Retour d’expérience dans le raccordement à la fibre optique (mission confidentielle, client non nommé)",
+      "secteur": "Télécommunications · déploiement de la fibre optique",
+      "objectif": "Prédire les échecs de raccordement à la fibre optique, pour en anticiper les causes et améliorer le taux de réussite des interventions.",
+      "methode": "Un modèle prédictif dédié à chaque cause d’échec ; chaque cause prédite déclenche une action préventive spécifique.",
+      "benefice": "Les problèmes sont anticipés avant l’intervention plutôt que constatés sur place."
+    },
+    {
+      "client": null,
+      "description": "Retour d’expérience dans l’analyse de domaines de R&D (mission confidentielle, client non nommé)",
+      "secteur": "Conseil · innovation et R&D",
+      "objectif": "Analyser des domaines de recherche et développement à partir des demandes de brevet.",
+      "methode": "Une analyse sémantique du texte des demandes de brevet.",
+      "usage": "Une analyse stratégique des domaines de R&D."
+    }
+  ]
 }
