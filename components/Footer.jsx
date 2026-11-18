@@ -12,6 +12,7 @@ export default function Footer() {
           <Link href="/ia-en-action/">L’IA en action</Link>
           <Link href="/references/">Références</Link>
           <Link href="/blog/">Blog</Link>
+          <Link href="/nos-applications/">Nos applications</Link>
           <Link href="/mentions-legales/">Mentions légales</Link>
         </nav>
       </div>

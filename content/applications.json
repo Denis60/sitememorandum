@@ -1,0 +1,63 @@
+{
+  "groupes": [
+    {
+      "id": "communiquer-vendre",
+      "label": "Faire connaître et vendre",
+      "titre": "Nous communiquons et suivons nos clients avec l’IA.",
+      "applications": [
+        {
+          "titre": "Une idée, plusieurs réseaux",
+          "image": "/applications/publication-multireseaux.webp",
+          "texte": "Une idée nous vient : nous l’envoyons par WhatsApp, avec une photo si besoin. Claude la met en forme dans un tableau Trello, nous l’ajustons et la validons, puis Postiz la publie sur LinkedIn, Instagram, TikTok et Facebook."
+        },
+        {
+          "titre": "Pilotage commercial avec Hermès",
+          "image": "/applications/pilotage-commercial.webp",
+          "texte": "Nous confions nos informations et nos demandes à Hermès, un agent IA joignable sur Telegram. Il les range dans Airtable, sollicite Claude pour analyser ou rédiger, puis nous renvoie synthèses et rappels."
+        }
+      ]
+    },
+    {
+      "id": "conseiller",
+      "label": "Conseiller",
+      "titre": "Nous conseillons avec des outils qui fonctionnent.",
+      "applications": [
+        {
+          "titre": "Un premier diagnostic des opportunités IA",
+          "image": "/applications/diagnostic-ia.webp",
+          "texte": "Notre assistant IA interroge l’entreprise sur ses activités et ses besoins, dans le cadre que nous lui fixons. Il en tire de premières pistes, que nous restituons lors d’un rendez-vous.",
+          "lien": { "href": "/diagnostic-ia/", "label": "Lancer le diagnostic" }
+        },
+        {
+          "titre": "Réfléchir avec un outil qui fonctionne",
+          "image": "/applications/demonstrateur.webp",
+          "texte": "Pendant l’échange, un assistant IA construit un démonstrateur de l’idée discutée. Le client l’essaie, voit les résultats, et nous l’ajustons ensemble à partir de ses retours."
+        },
+        {
+          "titre": "Une équipe de conseil orchestrée par l’IA",
+          "image": "/applications/equipe-de-conseil.webp",
+          "texte": "Nous fixons l’objectif, le livrable et les personnes à interroger ; un agent « manager » répartit le travail entre des agents qui mènent les entretiens, collectent les documents et analysent. Un agent « associé » relit le livrable avant sa remise au client."
+        }
+      ]
+    },
+    {
+      "id": "rapprocher",
+      "label": "Rapprocher",
+      "titre": "Nous mettons les personnes et les entreprises en relation.",
+      "applications": [
+        {
+          "titre": "Une application pour renouer le dialogue",
+          "image": "/applications/conciliation.webp",
+          "texte": "Quand deux personnes ne parviennent plus à se parler, chacune expose son point de vue à l’IA dans un espace confidentiel. L’IA reformule et propose des pistes qui rendent un accord possible.",
+          "lien": { "href": "https://n8n-memorandum.app.n8n.cloud/webhook/conciliation", "label": "Essayer concilIAtion" }
+        },
+        {
+          "titre": "Une place de marché intermédiée par l’IA",
+          "image": "/applications/place-de-marche.webp",
+          "texte": "Sur Entremise, l’IA aide une entreprise à préciser son besoin, même flou, puis interroge les prestataires de Charente sans dévoiler qui demande. La mise en relation n’a lieu qu’avec l’accord des deux parties.",
+          "lien": { "href": "https://entremise.vercel.app/", "label": "Découvrir Entremise" }
+        }
+      ]
+    }
+  ]
+}
