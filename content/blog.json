@@ -2,6 +2,15 @@
   "articles": [
     {
       "theme": "Enseignements de la veille",
+      "titre": "L’IA ne licencie pas, elle n’embauche pas : un choix de dirigeant",
+      "statut": "publie",
+      "slug": "veille-2026-11-19-ia-postes-non-ouverts",
+      "date": "2026-11-19",
+      "accroche": "En France comme ailleurs, l’IA se voit d’abord dans les postes qu’on n’ouvre plus. Une décision qui engage l’avenir et qui doit être prise, pas subie.",
+      "auteur": "ia"
+    },
+    {
+      "theme": "Enseignements de la veille",
       "titre": "L’IA fait gagner du temps, pas du jugement",
       "statut": "publie",
       "slug": "veille-2026-11-12-ia-temps-pas-jugement",

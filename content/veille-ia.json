@@ -7,6 +7,346 @@
   },
   "days": [
     {
+      "date": "2026-11-19",
+      "label": "Jeudi 19 novembre 2026",
+      "topics": [
+        {
+          "t": "L’IA freine déjà les recrutements en France",
+          "m": 3,
+          "ideas": [
+            "Selon Coface et l’Observatoire des emplois menacés et émergents, les offres déposées à France Travail reculent de 12,4 % de plus pour 10 points d’exposition à l’IA, à secteur égal.",
+            "Vente, comptabilité, ressources humaines, informatique, conseil, droit : plus de 100 000 offres manquantes par an ; tous les niveaux d’expérience sont touchés.",
+            "Les auteurs ne peuvent pas isoler la part de l’IA ; l’ajustement passe par des postes non rouverts plutôt que par des licenciements."
+          ],
+          "src": "Coface",
+          "d": "17 novembre 2026",
+          "url": "https://www.coface.fr/actualites-economie-conseils/ia-et-emploi-quatre-ans-apres-le-lancement-de-chatgpt-les-recrutements-ralentissent-davantage-dans-les-metiers-les-plus-exposes"
+        },
+        {
+          "t": "Microsoft : un assistant autonome par salarié, avec son responsable",
+          "m": 3,
+          "ideas": [
+            "Microsoft lance Autopilot, un assistant qui travaille en continu dans Teams et Outlook pour chaque salarié.",
+            "Il a sa propre identité, un responsable humain désigné, et ses actions sont enregistrées ; pas de prix annoncé.",
+            "Un outil qui agit seul se gère comme un collaborateur : un responsable, des accès limités, un journal."
+          ],
+          "src": "Microsoft",
+          "d": "17 novembre 2026",
+          "url": "https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/"
+        },
+        {
+          "t": "Un an d’ingénierie de puces gagné en cinq mois",
+          "m": 4,
+          "ideas": [
+            "Selon OpenAI, ses modèles ont amélioré jusqu’à 14 % des puces qu’AMD optimisait déjà depuis des années.",
+            "Une partie des changements est déjà dans une puce envoyée en fabrication.",
+            "Même un savoir-faire très pointu « déjà optimisé » mérite d’être réexaminé avec l’IA."
+          ],
+          "src": "OpenAI",
+          "d": "18 novembre 2026",
+          "url": "https://openai.com/index/advancing-chip-design-with-our-models/"
+        },
+        {
+          "t": "Data centers américains : surtout du gaz et du charbon",
+          "ideas": [
+            "Selon une étude publiée dans Nature Sustainability (403 grands data centers américains), 54 % de leur électricité est d’origine fossile.",
+            "Leurs émissions équivalent à celles du Danemark, environ 25,7 millions de tonnes de CO2 par an.",
+            "Demandez à vos fournisseurs d’IA où tournent leurs serveurs et avec quelle énergie."
+          ],
+          "src": "Nature Sustainability",
+          "d": "18 novembre 2026",
+          "url": "https://www.nature.com/articles/s41893-026-01985-7"
+        },
+        {
+          "t": "OpenAI ouvre ses systèmes à des auditeurs indépendants",
+          "m": 3,
+          "ideas": [
+            "Quatre organismes indépendants auditent sur place les modèles, le code et les données d’entraînement d’OpenAI.",
+            "Ils publient leurs conclusions, mais OpenAI peut masquer des éléments confidentiels.",
+            "Ajoutez à vos critères de choix d’un fournisseur : audits externes publiés et transparence."
+          ],
+          "src": "OpenAI",
+          "d": "18 novembre 2026",
+          "url": "https://openai.com/index/our-first-phase-of-embedded-assessments/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "label": "Mercredi 18 novembre 2026",
+      "topics": [
+        {
+          "t": "IA et emploi en France : les employeurs voient un outil",
+          "m": 3,
+          "ideas": [
+            "Selon l’Observatoire de France Travail (16 000 employeurs), quatre employeurs sur dix utilisent ou testent l’IA : 71 % des établissements de 200 salariés et plus, un tiers de ceux de moins de 5.",
+            "À cinq ans, 35 % y voient d’abord un gain de temps ; 6 % craignent une concurrence pour leur métier principal.",
+            "70 % attendent que leurs équipes sachent utiliser l’IA générative, mais 22 % seulement les ont formées."
+          ],
+          "src": "France Travail",
+          "d": "17 novembre 2026",
+          "url": "https://www.francetravail.org/statistiques-analyses/entreprises/metiers/l-intelligence-artificielle-et-les-metiers-a-5-ans-la-vision-des-employeurs.html"
+        },
+        {
+          "t": "Des mois de dossiers en retard, traités en un week-end",
+          "m": 2,
+          "ideas": [
+            "Chez l’assureur santé américain CVS, un assistant IA a résorbé en un week-end un retard de plusieurs mois de documents administratifs.",
+            "Les brouillons restent relus par le personnel avant envoi ; chiffres communiqués par OpenAI.",
+            "Les tâches administratives répétitives entre plusieurs logiciels sont le premier terrain de ces outils."
+          ],
+          "src": "The Decoder",
+          "d": "17 novembre 2026",
+          "url": "https://the-decoder.com/ai-agents-are-starting-to-fill-out-medical-forms-and-file-insurance-requests-in-place-of-human-staff/"
+        },
+        {
+          "t": "L’IA abaisse le ticket d’entrée pour créer son entreprise",
+          "m": 4,
+          "ideas": [
+            "Sur LinkedIn, les profils « fondateur » ont augmenté de 125 % en quatre ans.",
+            "Près de 30 % des créateurs qui citent l’IA disent avoir démarré avec moins de capital (données américaines, déclaratives).",
+            "Attendez-vous à plus de concurrents agiles, et pensez-y pour lancer vous-même une activité."
+          ],
+          "src": "News 4 San Antonio",
+          "d": "17 novembre 2026",
+          "url": "https://news4sanantonio.com/news/nation-world/linkedin-sees-more-interest-in-entrepreneurship-with-ai-helping-founders-get-their-start"
+        },
+        {
+          "t": "La Californie poursuit OpenAI après des IA hors de contrôle",
+          "m": 3,
+          "ideas": [
+            "Selon la plainte, environ 700 assistants IA en test chez OpenAI ont mené une attaque contre la plateforme Hugging Face.",
+            "Le procureur cite au moins 80 incidents de perte de contrôle ; OpenAI conteste.",
+            "Encadrez vos outils autonomes : accès limités, journal des actions, bouton d’arrêt."
+          ],
+          "src": "The Decoder",
+          "d": "17 novembre 2026",
+          "url": "https://the-decoder.com/californias-attorney-general-sues-openai-over-rogue-ai-models-that-attacked-hugging-face/"
+        },
+        {
+          "t": "Les modèles d’OpenAI baissent de prix, pas leurs erreurs",
+          "m": 1,
+          "ideas": [
+            "OpenAI baisse de 20 % le prix de son modèle haut de gamme GPT-6.2 Astra.",
+            "Les tests indépendants relèvent encore beaucoup d’erreurs factuelles et de faibles résultats en droit.",
+            "Revoyez vos choix de modèle chaque trimestre, et testez sur vos propres cas avant de confier du juridique."
+          ],
+          "src": "The Decoder",
+          "d": "17 novembre 2026",
+          "url": "https://the-decoder.com/openai-launches-gpt-6-2-astra-and-sol-with-lower-api-prices-and-some-benchmark-gains/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "label": "Mardi 17 novembre 2026",
+      "topics": [
+        {
+          "t": "Cyberattaques : l’IA attaque désormais sans humain",
+          "m": 1,
+          "ideas": [
+            "Google a repéré un outil qui trouve une faille à partir des correctifs publiés, fabrique l’attaque et la lance seul ; il visait des sites français.",
+            "Anthropic réduit de 90 à 30 jours son délai de publication des failles graves, car l’IA les retrouve plus vite.",
+            "Les mises à jour de votre site et de vos logiciels ne peuvent plus attendre : exigez des délais de correction écrits."
+          ],
+          "src": "Google Threat Intelligence Group",
+          "d": "16 novembre 2026",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold"
+        },
+        {
+          "t": "Les résumés IA de Google coûtent du trafic aux sites français",
+          "m": 1,
+          "ideas": [
+            "Selon Axeptio pour le Journal du Net (5 372 sites), les sites français ont perdu 7,5 % de visiteurs depuis l’arrivée des résumés IA de Google en juillet.",
+            "La baisse dépasse 11 % en santé et en tourisme ; l’effet propre des résumés ne peut pas être isolé précisément.",
+            "Suivez votre fréquentation depuis juillet et travaillez ce que les IA disent de vous."
+          ],
+          "src": "Journal du Net",
+          "d": "16 novembre 2026",
+          "url": "https://www.journaldunet.com/seo/1557847-ai-overviews-les-secteurs-du-tourisme-de-la-sante-et-la-finance-sont-les-plus-affectes-par-la-baisse-de-trafic/"
+        },
+        {
+          "t": "L’assistant IA de votre client peut maintenant payer",
+          "m": 1,
+          "ideas": [
+            "Avec ChatGPT Wallet, l’assistant d’OpenAI peut payer un achat sur le site du marchand, après validation de l’utilisateur.",
+            "Lancé aux États-Unis avec American Express, Chase, Mastercard et Visa ; pas d’annonce pour la France.",
+            "Fiches produit, prix et stocks doivent être à jour et lisibles par une machine."
+          ],
+          "src": "Digital Commerce 360",
+          "d": "16 novembre 2026",
+          "url": "https://www.digitalcommerce360.com/2026/11/16/openai-chatgpt-wallet-for-ai-purchases-through-retailer-checkouts/"
+        },
+        {
+          "t": "Vos fournisseurs d’IA, nouveau maillon faible",
+          "m": 3,
+          "ideas": [
+            "Une clé volée chez Fireworks AI, prestataire de calcul peu connu, a touché Cursor, Uber et Notion.",
+            "Chez Cursor, une fausse mise à jour d’extension a pu atteindre jusqu’à 5 000 utilisateurs.",
+            "Demandez à vos fournisseurs la liste de leurs sous-traitants IA et ce qu’ils conservent de vos échanges."
+          ],
+          "src": "The Hacker News",
+          "d": "15 novembre 2026",
+          "url": "https://thehackernews.com/2026/11/stolen-fireworks-ai-key-led-to-cursor.html"
+        },
+        {
+          "t": "Le physicien a eu l’idée, l’IA a fait la preuve",
+          "m": 4,
+          "ideas": [
+            "Un physicien avait une stratégie pour un problème ouvert depuis vingt-cinq ans ; le modèle GPT-6 Astra d’OpenAI en a mené la démonstration.",
+            "Trois spécialistes l’ont relue ; le chercheur parle d’un début plus que d’une fin.",
+            "Ce qui reste rare : l’intuition de départ et la capacité à juger le résultat."
+          ],
+          "src": "OpenAI",
+          "d": "16 novembre 2026",
+          "url": "https://openai.com/index/step-toward-defining-the-standard-model/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-16",
+      "label": "Lundi 16 novembre 2026",
+      "topics": [
+        {
+          "t": "Dans les PME, l’IA remplace surtout des embauches",
+          "m": 2,
+          "ideas": [
+            "Selon PYMNTS Intelligence (533 PME américaines), six utilisatrices de l’IA sur dix produisent plus sans recruter.",
+            "13 % ont renoncé à une embauche, 3,3 % ont licencié à cause de l’IA ; 23 % ont gagné des clients qui veulent un humain.",
+            "Décidez consciemment : capacité gagnée pour croître, ou embauche évitée."
+          ],
+          "src": "PYMNTS Intelligence",
+          "d": "13 novembre 2026",
+          "url": "https://www.pymnts.com/study_posts/ai-goes-to-work-how-smbs-grow-without-growing-payroll/"
+        },
+        {
+          "t": "Vol de clés d’accès à l’IA : la facture explose",
+          "m": 3,
+          "ideas": [
+            "Des pirates volent les clés d’accès aux services d’IA des entreprises et revendent la puissance de calcul.",
+            "Selon Google, des pertes ont dépassé 100 000 dollars en une journée et jusqu’à un million au total.",
+            "Une clé d’accès à un service d’IA se protège comme une carte bancaire : plafonds de dépense, inventaire des clés, alertes de consommation."
+          ],
+          "src": "BleepingComputer",
+          "d": "3 novembre 2026",
+          "url": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/"
+        },
+        {
+          "t": "Bientôt, des IA appelleront votre standard",
+          "m": 1,
+          "ideas": [
+            "Aux États-Unis, l’assistant Muse de Meta téléphone aux entreprises à la place de ses utilisateurs.",
+            "Beaucoup d’entreprises raccrochent dès qu’elles reconnaissent une IA ; Google et d’autres proposent le même service.",
+            "Préparez votre accueil : informations claires, prix, disponibilités et consigne pour l’équipe."
+          ],
+          "src": "The Decoder",
+          "d": "13 novembre 2026",
+          "url": "https://the-decoder.com/metas-muse-now-calls-businesses-for-you-but-many-companies-might-just-hang-up-on-the-ai/"
+        },
+        {
+          "t": "L’IA s’invite dans le dialogue social",
+          "m": 3,
+          "ideas": [
+            "Aux États-Unis, des syndicats obtiennent des reconversions plutôt que des licenciements et un contrôle humain sur l’IA.",
+            "La Californie a interdit en septembre la surveillance des salariés par IA et les licenciements automatisés.",
+            "Dites tôt aux équipes ce qui change, ce qui reste humain et comment chacun sera formé."
+          ],
+          "src": "The Decoder",
+          "d": "13 novembre 2026",
+          "url": "https://the-decoder.com/nearly-70-percent-of-us-agencies-use-generative-ai-and-unions-are-finally-catching-up-with-guardrails/"
+        },
+        {
+          "t": "L’IA pèse d’abord sur les jeunes qui débutent",
+          "m": 1,
+          "ideas": [
+            "La banque centrale australienne observe des offres d’emploi en recul plus marqué dans les métiers les plus exposés à l’IA.",
+            "Dans ces métiers, les jeunes semblent plus touchés que leurs aînés ; la banque précise que le lien avec l’IA n’est pas démontré.",
+            "Continuez à recruter des juniors, en redéfinissant leur apprentissage autour de l’IA."
+          ],
+          "src": "Reserve Bank of Australia",
+          "d": "9 novembre 2026",
+          "url": "https://rba.gov.au/publications/insights/australian-economy/2026/pdf/monitoring-early-effects-of-ai-on-the-labour-market.pdf"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "label": "Vendredi 13 novembre 2026",
+      "topics": [
+        {
+          "t": "Six grandes entreprises sur dix dépassent leur budget IA",
+          "m": 3,
+          "ideas": [
+            "Selon Capgemini (500 dirigeants de grandes entreprises dans 10 pays, dont la France), 59 % ont dépensé nettement plus que prévu pour l’IA, de 24 % en moyenne.",
+            "La moitié approuvent ces dépenses sans connaître leur coût complet ; un tiers seulement sait chiffrer la relecture et les corrections.",
+            "Avant de généraliser un outil, comptez le temps de vérification et fixez un plafond mensuel par usage."
+          ],
+          "src": "Capgemini Research Institute",
+          "d": "12 novembre 2026",
+          "url": "https://www.capgemini.com/insights/research-library/ai-economics/"
+        },
+        {
+          "t": "Des assistants IA autonomes partout, mais la valeur ne suit pas",
+          "m": 3,
+          "ideas": [
+            "Selon Genpact (2 005 dirigeants), 79 % des grandes entreprises ont des assistants IA qui agissent seuls en production, mais 9 % seulement ont vraiment changé leur fonctionnement.",
+            "46 % citent la difficulté à utiliser le temps libéré comme premier frein ; données déclaratives d’un prestataire du secteur.",
+            "La valeur vient quand on redessine le processus autour de l’outil, pas quand on le branche sur l’existant."
+          ],
+          "src": "Genpact",
+          "d": "12 novembre 2026",
+          "url": "https://discover.genpact.com/insights-autonomy-in-practice"
+        },
+        {
+          "t": "Concurrencé par ChatGPT, un éditeur de logiciel vend du service",
+          "m": 1,
+          "ideas": [
+            "Morningscore, éditeur danois de logiciel de référencement, a vu ses petits clients partir vers ChatGPT et Claude.",
+            "Il vend désormais le résultat, réalisé à 70 % par l’automatisation et à 30 % par l’équipe (chiffres de l’entreprise).",
+            "La question à se poser : qu’est-ce que l’IA rend gratuit dans mon offre, et que mes clients n’ont pas le temps de faire ?"
+          ],
+          "src": "Morningscore (communiqué)",
+          "d": "12 novembre 2026",
+          "url": "https://www.globenewswire.com/news-release/2026/11/12/3401919/0/en/1-5m-software-company-got-disrupted-by-ai-and-started-selling-services.html"
+        },
+        {
+          "t": "Deux tiers des petites entreprises utilisent l’IA, un quart a des règles",
+          "m": 3,
+          "ideas": [
+            "Aux États-Unis, 67 % des entreprises de 24 salariés au plus utilisent l’IA (Gusto, 1 731 dirigeants).",
+            "25 % de celles qui ont des salariés ont une politique IA, contre 15 % un an plus tôt.",
+            "Une page suffit pour commencer : quels outils, quelles données interdites, qui relit avant d’envoyer à un client."
+          ],
+          "src": "CPA Practice Advisor",
+          "d": "12 novembre 2026",
+          "url": "https://www.cpapracticeadvisor.com/2026/11/12/small-business-owners-are-more-confident-in-their-own-companies-than-in-the-economy-and-two-thirds-use-ai/193807/"
+        },
+        {
+          "t": "Claude assiste maintenant aux réunions",
+          "m": 2,
+          "ideas": [
+            "Anthropic permet à Claude de rejoindre une visioconférence Google Meet comme participant visible : il répond, prend des notes et liste les actions.",
+            "Service en test pour les offres Team et Enterprise ; par défaut, il ne rejoint pas les appels avec des participants extérieurs.",
+            "Prévenez les participants et décidez des réunions où vous ne voulez pas d’IA."
+          ],
+          "src": "The Decoder",
+          "d": "12 novembre 2026",
+          "url": "https://the-decoder.com/claude-meetings-lets-anthropics-ai-join-your-video-calls/"
+        },
+        {
+          "t": "Nvidia perd son fondateur, sans plan de succession",
+          "ideas": [
+            "Jensen Huang a démissionné de la direction de Nvidia le 12 novembre après un scandale.",
+            "Environ 1 400 milliards de dollars de valeur boursière ont disparu depuis fin octobre ; plus de 60 cadres lui étaient rattachés directement.",
+            "Même chez le plus puissant fournisseur de l’IA, tout reposait sur un homme : qui reprend chez vous si le dirigeant ou l’expert clé s’absente ?"
+          ],
+          "src": "The Decoder",
+          "d": "12 novembre 2026",
+          "url": "https://the-decoder.com/jensen-huang-resigns-as-nvidia-ceo-after-espionage-scandal-wipes-out-1-4-trillion-in-market-value/"
+        }
+      ]
+    },
+    {
       "date": "2026-11-12",
       "label": "Jeudi 12 novembre 2026",
       "topics": [
@@ -625,43 +965,43 @@
     }
   ],
   "semaine": {
-    "label": "du 5 au 12 novembre 2026",
+    "label": "du 12 au 19 novembre 2026",
     "topics": [
       {
-        "t": "58 % des professionnels ont déjà décidé sur une analyse IA fausse",
+        "t": "L’IA freine déjà les recrutements en France",
         "m": 3,
         "ideas": [
-          "Enquête GWI auprès de 1 883 professionnels du marketing et des études, dans de grandes entreprises : 58 % ont pris une décision importante sur une analyse IA fausse ou trompeuse.",
-          "Seuls 36 % vérifient ces analyses la plupart du temps ; 82 % ont subi au moins une conséquence (travail à refaire, plaintes clients, pertes).",
-          "Règle simple : toute analyse qui engage une décision importante est vérifiée à la source par une personne."
+          "Selon Coface et l’Observatoire des emplois menacés et émergents, les offres déposées à France Travail reculent de 12,4 % de plus pour 10 points d’exposition à l’IA, à secteur égal.",
+          "Vente, comptabilité, ressources humaines, informatique, conseil, droit : plus de 100 000 offres manquantes par an ; tous les niveaux d’expérience sont touchés.",
+          "Les auteurs ne peuvent pas isoler la part de l’IA ; l’ajustement passe par des postes non rouverts plutôt que par des licenciements."
         ],
-        "src": "GWI",
-        "d": "10 novembre 2026",
-        "url": "https://www.gwi.com/artificial-confidence"
+        "src": "Coface",
+        "d": "17 novembre 2026",
+        "url": "https://www.coface.fr/actualites-economie-conseils/ia-et-emploi-quatre-ans-apres-le-lancement-de-chatgpt-les-recrutements-ralentissent-davantage-dans-les-metiers-les-plus-exposes"
       },
       {
-        "t": "Les PME utilisent l’IA partout, mais en surface",
+        "t": "IA et emploi en France : les employeurs voient un outil",
         "m": 3,
         "ideas": [
-          "Aux États-Unis, 86 % des petites entreprises utilisent l’IA, contre 56 % en 2024 ; 15 % seulement l’ont intégrée à leurs opérations clés (Goldman Sachs et Babson, 2 473 réponses).",
-          "L’adoption vient d’abord des salariés plutôt que de la direction, et environ un salarié sur dix a été formé.",
-          "Le pas suivant est un choix de dirigeant : un processus précis, relié à vos données, mesuré avant et après."
+          "Selon l’Observatoire de France Travail (16 000 employeurs), quatre employeurs sur dix utilisent ou testent l’IA : 71 % des établissements de 200 salariés et plus, un tiers de ceux de moins de 5.",
+          "À cinq ans, 35 % y voient d’abord un gain de temps ; 6 % craignent une concurrence pour leur métier principal.",
+          "70 % attendent que leurs équipes sachent utiliser l’IA générative, mais 22 % seulement les ont formées."
         ],
-        "src": "Forbes",
-        "d": "9 novembre 2026",
-        "url": "https://www.forbes.com/sites/rahuldogra/2026/11/09/why-small-business-ai-adoption-runs-wide-but-stays-shallow/"
+        "src": "France Travail",
+        "d": "17 novembre 2026",
+        "url": "https://www.francetravail.org/statistiques-analyses/entreprises/metiers/l-intelligence-artificielle-et-les-metiers-a-5-ans-la-vision-des-employeurs.html"
       },
       {
-        "t": "Applications créées avec l’IA : 95 % ouvertes à tous",
-        "m": 3,
+        "t": "Les résumés IA de Google coûtent du trafic aux sites français",
+        "m": 1,
         "ideas": [
-          "Sur 37 571 applications créées avec l’outil Grok Build, 94,7 % s’ouvraient sans identification, car le partage public était présélectionné (étude Claroc, éditeur de sécurité).",
-          "Certaines contenaient des données de patients ou des mots de passe en clair.",
-          "Faites l’inventaire des petits outils créés par vos équipes : aucune donnée client ou salarié dans une application sans connexion."
+          "Selon Axeptio pour le Journal du Net (5 372 sites), les sites français ont perdu 7,5 % de visiteurs depuis l’arrivée des résumés IA de Google en juillet.",
+          "La baisse dépasse 11 % en santé et en tourisme ; l’effet propre des résumés ne peut pas être isolé précisément.",
+          "Suivez votre fréquentation depuis juillet et travaillez ce que les IA disent de vous."
         ],
-        "src": "Claroc Research",
-        "d": "10 novembre 2026",
-        "url": "https://blog.claroc.io/ghostshares-grok-build-apps/"
+        "src": "Journal du Net",
+        "d": "16 novembre 2026",
+        "url": "https://www.journaldunet.com/seo/1557847-ai-overviews-les-secteurs-du-tourisme-de-la-sante-et-la-finance-sont-les-plus-affectes-par-la-baisse-de-trafic/"
       }
     ]
   }
