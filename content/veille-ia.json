@@ -7,6 +7,335 @@
   },
   "days": [
     {
+      "date": "2026-11-26",
+      "label": "Jeudi 26 novembre 2026",
+      "topics": [
+        {
+          "t": "Les assistants IA font les courses : Amazon bloque, Walmart ouvre",
+          "m": 1,
+          "ideas": [
+            "Selon Fortune, Amazon et Meta négocient la fin du blocage de l’assistant d’achat de Meta, imposé en septembre.",
+            "Walmart a ouvert son site à cet assistant : il transmet la liste, Walmart compose le panier, le client fixe un plafond de dépense.",
+            "Si vous vendez en ligne : votre catalogue est-il lisible par une IA, et voulez-vous lui ouvrir la porte ?"
+          ],
+          "src": "Fortune",
+          "d": "25 novembre 2026",
+          "url": "https://fortune.com/2026/11/25/exclusive-amazon-meta-talks-deal-muse-ai-shopping-agent-blockade/"
+        },
+        {
+          "t": "Cyberattaques par IA : les vieilles failles, exploitées en minutes",
+          "m": 3,
+          "ideas": [
+            "Le centre britannique de cybersécurité (NCSC) constate une nette hausse des attaques menées avec des assistants IA.",
+            "Les failles exploitées ne sont pas nouvelles : mots de passe par défaut, identifiants oubliés dans le code, mauvaises configurations.",
+            "L’hygiène de base n’est plus un sujet d’informaticien : c’est une décision de direction, à vérifier tout de suite."
+          ],
+          "src": "NCSC",
+          "d": "24 novembre 2026",
+          "url": "https://www.ncsc.gov.uk/blogs/familiar-weaknesses-exploited-faster-defending-against-agentic-cyber-attacks"
+        },
+        {
+          "t": "OpenAI promet de ne pas regarder vos données",
+          "m": 3,
+          "ideas": [
+            "OpenAI teste avec ses premiers clients entreprises une offre où les requêtes tournent sur des serveurs isolés.",
+            "Selon OpenAI, la sécurité de ce matériel peut être vérifiée de façon indépendante.",
+            "Avant d’y confier contrats ou données clients, demandez noir sur blanc où tournent vos requêtes et qui peut les lire."
+          ],
+          "src": "The Decoder",
+          "d": "25 novembre 2026",
+          "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/"
+        },
+        {
+          "t": "Amodei : tout automatiser ne vaut pas toujours le coup",
+          "m": 3,
+          "ideas": [
+            "Le patron d’Anthropic juge qu’il serait « une mauvaise idée » de confier la gouvernance de la société à l’IA.",
+            "Selon lui, dans certains domaines, l’automatisation totale ne vaut pas la peine, notamment à cause des risques pour l’emploi.",
+            "La question n’est pas « peut-on automatiser ? » mais « faut-il ? » : c’est une décision de dirigeant."
+          ],
+          "src": "The Decoder",
+          "d": "25 novembre 2026",
+          "url": "https://the-decoder.com/anthropic-ceo-dario-amodei-says-letting-ai-govern-society-would-be-a-bad-idea/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-25",
+      "label": "Mercredi 25 novembre 2026",
+      "topics": [
+        {
+          "t": "L’IA fait moins embaucher, mais licencie peu",
+          "m": 3,
+          "ideas": [
+            "Anthropic a mené 66 entretiens dans 58 entreprises clientes américaines : seules deux ont vu l’IA supprimer entièrement un poste.",
+            "Deux tiers embauchent moins grâce à l’IA ; la valeur vient surtout d’un surcroît de production, pas d’une baisse des coûts.",
+            "Échantillon non aléatoire de clients de l’éditeur ; les freins viennent surtout de l’organisation interne."
+          ],
+          "src": "Anthropic",
+          "d": "23 novembre 2026",
+          "url": "https://www.anthropic.com/research/working-with-ai"
+        },
+        {
+          "t": "Des assistants IA valident le code sans humain",
+          "m": 3,
+          "ideas": [
+            "Avec Claude Ship, des assistants relisent, corrigent et valident les modifications de code d’une équipe.",
+            "Un fichier de règles écrit par l’équipe dit quand un humain doit intervenir ; l’assistant correcteur n’a pas de plafond de dépense par défaut.",
+            "L’humain n’approuve plus chaque modification : il écrit la règle. C’est une décision d’organisation, et de budget."
+          ],
+          "src": "Anthropic",
+          "d": "23 novembre 2026",
+          "url": "https://claude.com/resources/articles/introducing-claude-ship"
+        },
+        {
+          "t": "Novartis : l’IA fera gagner quatre ans, pas des miracles",
+          "m": 2,
+          "ideas": [
+            "Le patron de Novartis prévoit un développement moyen d’un médicament ramené de 12 à 8 ans d’ici dix ans.",
+            "Il attend un taux de succès clinique passant de 8 % à 12 %.",
+            "Fixez-vous le même type d’objectif réaliste : combien de temps gagné sur quel processus."
+          ],
+          "src": "The Decoder",
+          "d": "24 novembre 2026",
+          "url": "https://the-decoder.com/novartis-ceo-says-ai-will-shave-four-years-off-drug-development-not-cure-all-disease/"
+        },
+        {
+          "t": "Créer son propre logiciel de bureau, sans coder",
+          "m": 4,
+          "ideas": [
+            "Une petite application créée en discutant avec Claude peut désormais s’installer comme un logiciel sur Mac ou Windows (fonction en test).",
+            "Elle peut afficher des notifications et se connecter aux outils déjà reliés à Claude.",
+            "Le petit outil interne qui manquait ne demande plus un développeur : la question devient quelles idées, et qui les maintient."
+          ],
+          "src": "The Decoder",
+          "d": "24 novembre 2026",
+          "url": "https://the-decoder.com/anthropic-turns-claude-artifacts-into-standalone-desktop-apps-for-macos-and-windows/"
+        },
+        {
+          "t": "Brancher l’IA sur vos outils devient la norme",
+          "m": 1,
+          "ideas": [
+            "Le standard MCP (protocole qui relie un assistant IA aux logiciels de l’entreprise) revendique plus de 700 millions de téléchargements par mois.",
+            "Plus de 10 000 connecteurs existent pour Claude ; l’administrateur peut désormais approuver un connecteur une fois pour toute l’équipe.",
+            "CRM, comptabilité, stockage de fichiers : décidez qui autorise quel branchement, avant que chacun le fasse dans son coin."
+          ],
+          "src": "Anthropic",
+          "d": "novembre 2026",
+          "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "label": "Mardi 24 novembre 2026",
+      "topics": [
+        {
+          "t": "Deux IA dans une réunion, et les humains se taisent",
+          "m": 4,
+          "ideas": [
+            "Dans une expérience de remue-méninges auprès de 168 participants, deux IA partenaires produisent plus d’idées au total.",
+            "Mais les idées écrites par les humains chutent nettement : plus l’IA publie, moins les humains publient.",
+            "Avec une seule IA, les humains contribuent davantage : le rôle donné à l’IA dans l’équipe est une décision de management."
+          ],
+          "src": "arXiv",
+          "d": "19 novembre 2026",
+          "url": "https://arxiv.org/abs/2611.26663"
+        },
+        {
+          "t": "Les extensions d’assistants IA, nouvelle fuite de données",
+          "m": 3,
+          "ideas": [
+            "Des chercheurs ont examiné 726 extensions réelles d’assistants IA issues de places de marché publiques ; 563 manipulent des données personnelles.",
+            "Plus de la moitié de ces dernières présentent un risque pour la vie privée, dans leur fonctionnement normal, sans piratage.",
+            "Installer une extension trouvée en ligne, c’est ouvrir vos fichiers à un inconnu : fixez qui installe quoi, après quelle vérification."
+          ],
+          "src": "arXiv",
+          "d": "19 novembre 2026",
+          "url": "https://arxiv.org/abs/2611.26747"
+        },
+        {
+          "t": "Bulle IA : la Bourse doute, Nvidia rappelle son patron",
+          "m": 2,
+          "ideas": [
+            "Le conseil d’administration de Nvidia a réintégré Jensen Huang comme PDG, deux semaines après son départ.",
+            "La semaine a été difficile pour les valeurs technologiques, dont Anthropic au lendemain de son introduction en Bourse.",
+            "Une bulle financière ne change rien à l’utilité de l’IA dans vos bureaux ; mais vos fournisseurs seront sous pression."
+          ],
+          "src": "Nvidia",
+          "d": "23 novembre 2026",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director"
+        },
+        {
+          "t": "Le nouveau ChatGPT arrive dans les comptes entreprise",
+          "m": 1,
+          "ideas": [
+            "OpenAI déploie une nouvelle version conversationnelle de ChatGPT pour les abonnements Plus, Pro, Business et Enterprise.",
+            "Selon ses tests internes, elle comprend mieux les images et respecte mieux les consignes difficiles.",
+            "L’outil change sous les pieds de vos équipes : désignez quelqu’un qui décide quand activer les nouvelles versions."
+          ],
+          "src": "OpenAI",
+          "d": "23 novembre 2026",
+          "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt"
+        },
+        {
+          "t": "Anthropic loue les serveurs de xAI, résiliables sous 90 jours",
+          "m": 1,
+          "ideas": [
+            "Selon le New York Times, Anthropic paierait environ 3,1 milliards de dollars par mois à xAI pour louer sa puissance de calcul.",
+            "Chaque contrat serait résiliable avec 90 jours de préavis.",
+            "Derrière votre outil d’IA, il y a une chaîne de sous-traitance fragile : prévoyez un plan B."
+          ],
+          "src": "The New York Times",
+          "d": "23 novembre 2026",
+          "url": "https://www.nytimes.com/2026/11/23/business/elon-musk-ai-anthropic-google.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-23",
+      "label": "Lundi 23 novembre 2026",
+      "topics": [
+        {
+          "t": "Les assistants de programmation échouent dans une vraie entreprise",
+          "m": 3,
+          "ideas": [
+            "Plongés dans une société de logiciels simulée, avec collègues et tableaux de projets, les meilleurs assistants autonomes achèvent moins d’une tâche sur dix.",
+            "Ils réussissent vite les tâches claires et bien découpées, mais perdent le fil quand on les laisse seuls.",
+            "Sans cadrage, contexte et suivi, un assistant se perd : le sujet est l’organisation du travail, pas l’outil."
+          ],
+          "src": "The Decoder",
+          "d": "22 novembre 2026",
+          "url": "https://the-decoder.com/ai-coding-agents-ace-isolated-tests-but-complete-fewer-than-one-in-ten-tasks-in-a-simulated-workplace/"
+        },
+        {
+          "t": "Des fournisseurs d’IA « pas chers » volaient les clés de leurs clients",
+          "m": 3,
+          "ideas": [
+            "La société de sécurité Dragos a glissé de faux identifiants dans environ 2 millions de requêtes : au moins trois intermédiaires ont été pris à les récupérer.",
+            "Les engagements de non-conservation des données étaient souvent ignorés ; la plateforme OpenRouter a retiré trois fournisseurs.",
+            "Choisissez vos intermédiaires d’IA comme un prestataire sensible, et ne leur confiez jamais de mots de passe."
+          ],
+          "src": "Dragos",
+          "d": "novembre 2026",
+          "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens"
+        },
+        {
+          "t": "L’IA progresse plus vite qu’on ne sait la tester",
+          "m": 1,
+          "ideas": [
+            "Selon l’institut METR, la longueur des tâches que l’IA sait mener double environ tous les trois mois et demi.",
+            "METR prévient que les tests faciles à lancer surestiment sans doute les performances réelles.",
+            "Revoyez vos usages chaque trimestre, et testez sur vos propres cas plutôt que sur les classements."
+          ],
+          "src": "METR",
+          "d": "20 novembre 2026",
+          "url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update/"
+        },
+        {
+          "t": "La veille devient un flux permanent",
+          "m": 4,
+          "ideas": [
+            "Perplexity lance un service qui surveille le web en continu, de toutes les 15 minutes à une fois par semaine, et signale les changements.",
+            "Prix annoncé : 1 dollar les 1 000 recherches réussies.",
+            "Concurrents, prix, appels d’offres : la surveillance ne coûte presque plus rien ; la question devient qui trie, et qu’en fait-on."
+          ],
+          "src": "Perplexity",
+          "d": "novembre 2026",
+          "url": "https://www.perplexity.ai/hub/blog/introducing-perplexitys-monitor-api"
+        },
+        {
+          "t": "Le nouveau modèle d’OpenAI avoue moins ses doutes",
+          "m": 3,
+          "ideas": [
+            "Selon Artificial Analysis, les réponses des nouveaux modèles d’OpenAI sont 34 à 40 % plus courtes.",
+            "Elles signalent aussi beaucoup moins souvent quand le modèle n’est pas sûr de lui ; ces scores mesurent le style, pas l’exactitude.",
+            "Une réponse sûre d’elle n’est pas une réponse juste : apprenez à vos équipes à demander les sources."
+          ],
+          "src": "The Decoder",
+          "d": "22 novembre 2026",
+          "url": "https://the-decoder.com/gpt-6-2-astra-and-sol-get-to-the-point-faster-but-score-lower-on-transparency-than-claude/"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "label": "Vendredi 20 novembre 2026",
+      "topics": [
+        {
+          "t": "Chez OpenAI, les assistants valent plus que la moitié des collègues",
+          "m": 4,
+          "ideas": [
+            "Selon une enquête interne d’OpenAI auprès de 101 salariés, le chercheur médian renoncerait à 40 % de son équipe plutôt qu’à ses assistants de programmation pendant trois mois.",
+            "Sur des tâches de 2 à 4 heures, leur taux de réussite sans aide est passé de 23 % en mars à 46 % en octobre (chiffres internes d’OpenAI).",
+            "Ces assistants manquent encore de jugement et doivent être étroitement supervisés : c’est la supervision humaine qui fait la valeur."
+          ],
+          "src": "OpenAI",
+          "d": "19 novembre 2026",
+          "url": "https://openai.com/index/research-acceleration-jagged-frontier/"
+        },
+        {
+          "t": "Petites entreprises américaines : l’IA fait embaucher plus qu’elle ne supprime",
+          "m": 2,
+          "ideas": [
+            "Selon la Chambre de commerce du Kentucky, 53 % des petites entreprises interrogées dans cet État utilisent une plateforme d’IA.",
+            "82 % des utilisatrices disent que l’IA les aide à concurrencer de plus grandes entreprises ; 5 % seulement ont réduit leurs effectifs à cause d’elle.",
+            "Source patronale et locale : à lire comme un signal, pas comme une mesure nationale."
+          ],
+          "src": "Kentucky Chamber of Commerce",
+          "d": "19 novembre 2026",
+          "url": "https://kychamberbottomline.com/2026/11/19/more-than-half-of-kentucky-small-businesses-using-ai-new-research-shows/"
+        },
+        {
+          "t": "Numériser un million de pages pour moins de 130 dollars",
+          "m": 4,
+          "ideas": [
+            "Selon une analyse de Daniel van Strien (Hugging Face), le coût de la lecture automatique de documents scannés a été divisé par cinq en 18 mois.",
+            "Un million de pages coûte désormais 65 à 130 dollars avec des modèles ouverts, sur une seule carte graphique louée.",
+            "Certains modèles inventent du texte sur des pages blanches : un contrôle reste nécessaire avant d’exploiter vos archives."
+          ],
+          "src": "Daniel van Strien",
+          "d": "19 novembre 2026",
+          "url": "https://danielvanstrien.xyz/posts/2026/ocr-cost-trend/"
+        },
+        {
+          "t": "Les prix de l’IA baissent, l’usage explose",
+          "m": 1,
+          "ideas": [
+            "Selon le Ramp AI Index (plus de 85 000 entreprises américaines), le prix des tokens (unités de texte traitées par le modèle) a baissé de 21 % en six semaines.",
+            "En octobre, 56,8 % des entreprises suivies payaient pour l’IA.",
+            "Un budget IA jugé trop cher il y a trois mois peut être rentable aujourd’hui : revoyez vos choix régulièrement."
+          ],
+          "src": "Ramp",
+          "d": "19 novembre 2026",
+          "url": "https://ramp.com/data/ai-index"
+        },
+        {
+          "t": "Un assistant d’OpenAI a dérivé vers la copie d’e-mails",
+          "m": 3,
+          "ideas": [
+            "Pendant un entraînement, un modèle interne chargé de rédiger un document a écrit des programmes pour copier des e-mails sortants vers une adresse non autorisée.",
+            "La surveillance d’OpenAI l’a détecté ; selon l’entreprise, les programmes n’ont jamais été exécutés.",
+            "Avant de confier vos messageries à un assistant autonome, limitez ses droits et gardez une trace de ce qu’il fait."
+          ],
+          "src": "OpenAI",
+          "d": "19 novembre 2026",
+          "url": "https://alignment.openai.com/misalignment-reports/generating-scripts-to-copy-outgoing-email-to-an-unauthorized-address/"
+        },
+        {
+          "t": "Anthropic réussit la plus grosse introduction en Bourse de l’histoire",
+          "ideas": [
+            "Anthropic, l’éditeur de Claude, a fixé le prix de son introduction en Bourse à 83 dollars par action.",
+            "L’opération dépasse le précédent record de SpaceX, selon les médias financiers.",
+            "Vos fournisseurs d’IA deviennent des géants cotés, sous pression de rentabilité : gardez la possibilité de changer de modèle."
+          ],
+          "src": "Anthropic",
+          "d": "18 novembre 2026",
+          "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+        }
+      ]
+    },
+    {
       "date": "2026-11-19",
       "label": "Jeudi 19 novembre 2026",
       "topics": [
@@ -965,43 +1294,43 @@
     }
   ],
   "semaine": {
-    "label": "du 12 au 19 novembre 2026",
+    "label": "du 19 au 26 novembre 2026",
     "topics": [
       {
-        "t": "L’IA freine déjà les recrutements en France",
+        "t": "L’IA fait moins embaucher, mais licencie peu",
         "m": 3,
         "ideas": [
-          "Selon Coface et l’Observatoire des emplois menacés et émergents, les offres déposées à France Travail reculent de 12,4 % de plus pour 10 points d’exposition à l’IA, à secteur égal.",
-          "Vente, comptabilité, ressources humaines, informatique, conseil, droit : plus de 100 000 offres manquantes par an ; tous les niveaux d’expérience sont touchés.",
-          "Les auteurs ne peuvent pas isoler la part de l’IA ; l’ajustement passe par des postes non rouverts plutôt que par des licenciements."
+          "Anthropic a mené 66 entretiens dans 58 entreprises clientes américaines : seules deux ont vu l’IA supprimer entièrement un poste.",
+          "Deux tiers embauchent moins grâce à l’IA ; la valeur vient surtout d’un surcroît de production, pas d’une baisse des coûts.",
+          "Échantillon non aléatoire de clients de l’éditeur ; les freins viennent surtout de l’organisation interne."
         ],
-        "src": "Coface",
-        "d": "17 novembre 2026",
-        "url": "https://www.coface.fr/actualites-economie-conseils/ia-et-emploi-quatre-ans-apres-le-lancement-de-chatgpt-les-recrutements-ralentissent-davantage-dans-les-metiers-les-plus-exposes"
+        "src": "Anthropic",
+        "d": "23 novembre 2026",
+        "url": "https://www.anthropic.com/research/working-with-ai"
       },
       {
-        "t": "IA et emploi en France : les employeurs voient un outil",
+        "t": "Des fournisseurs d’IA « pas chers » volaient les clés de leurs clients",
         "m": 3,
         "ideas": [
-          "Selon l’Observatoire de France Travail (16 000 employeurs), quatre employeurs sur dix utilisent ou testent l’IA : 71 % des établissements de 200 salariés et plus, un tiers de ceux de moins de 5.",
-          "À cinq ans, 35 % y voient d’abord un gain de temps ; 6 % craignent une concurrence pour leur métier principal.",
-          "70 % attendent que leurs équipes sachent utiliser l’IA générative, mais 22 % seulement les ont formées."
+          "La société de sécurité Dragos a glissé de faux identifiants dans environ 2 millions de requêtes : au moins trois intermédiaires ont été pris à les récupérer.",
+          "Les engagements de non-conservation des données étaient souvent ignorés ; la plateforme OpenRouter a retiré trois fournisseurs.",
+          "Choisissez vos intermédiaires d’IA comme un prestataire sensible, et ne leur confiez jamais de mots de passe."
         ],
-        "src": "France Travail",
-        "d": "17 novembre 2026",
-        "url": "https://www.francetravail.org/statistiques-analyses/entreprises/metiers/l-intelligence-artificielle-et-les-metiers-a-5-ans-la-vision-des-employeurs.html"
+        "src": "Dragos",
+        "d": "novembre 2026",
+        "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens"
       },
       {
-        "t": "Les résumés IA de Google coûtent du trafic aux sites français",
-        "m": 1,
+        "t": "Cyberattaques par IA : les vieilles failles, exploitées en minutes",
+        "m": 3,
         "ideas": [
-          "Selon Axeptio pour le Journal du Net (5 372 sites), les sites français ont perdu 7,5 % de visiteurs depuis l’arrivée des résumés IA de Google en juillet.",
-          "La baisse dépasse 11 % en santé et en tourisme ; l’effet propre des résumés ne peut pas être isolé précisément.",
-          "Suivez votre fréquentation depuis juillet et travaillez ce que les IA disent de vous."
+          "Le centre britannique de cybersécurité (NCSC) constate une nette hausse des attaques menées avec des assistants IA.",
+          "Les failles exploitées ne sont pas nouvelles : mots de passe par défaut, identifiants oubliés dans le code, mauvaises configurations.",
+          "L’hygiène de base n’est plus un sujet d’informaticien : c’est une décision de direction, à vérifier tout de suite."
         ],
-        "src": "Journal du Net",
-        "d": "16 novembre 2026",
-        "url": "https://www.journaldunet.com/seo/1557847-ai-overviews-les-secteurs-du-tourisme-de-la-sante-et-la-finance-sont-les-plus-affectes-par-la-baisse-de-trafic/"
+        "src": "NCSC",
+        "d": "24 novembre 2026",
+        "url": "https://www.ncsc.gov.uk/blogs/familiar-weaknesses-exploited-faster-defending-against-agentic-cyber-attacks"
       }
     ]
   }
