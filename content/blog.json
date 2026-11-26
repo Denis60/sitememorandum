@@ -2,6 +2,15 @@
   "articles": [
     {
       "theme": "Enseignements de la veille",
+      "titre": "Brancher l’IA sur vos outils, c’est lui confier des clés",
+      "statut": "publie",
+      "slug": "veille-2026-11-26-brancher-ia-confier-cles",
+      "date": "2026-11-26",
+      "accroche": "Extensions, intermédiaires, attaquants : chaque accès donné à l’IA se décide comme pour un collaborateur, avec un responsable, des droits limités et un journal.",
+      "auteur": "ia"
+    },
+    {
+      "theme": "Enseignements de la veille",
       "titre": "L’IA ne licencie pas, elle n’embauche pas : un choix de dirigeant",
       "statut": "publie",
       "slug": "veille-2026-11-19-ia-postes-non-ouverts",
